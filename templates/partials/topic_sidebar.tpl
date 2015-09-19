@@ -12,7 +12,6 @@
 		</div>
 	</div>
 
-	<!-- IF tags.length -->
 	<div class="tags">
 		<!-- BEGIN tags -->
 		<a href="{config.relative_path}/tags/{tags.value}">
@@ -20,7 +19,6 @@
 		<span class="tag-topic-count human-readable-number" title="{tags.score}">{tags.score}</span></a>
 		<!-- END tags -->
 	</div>
-	<!-- ENDIF tags.length -->
 
 	<div class="topic-main-buttons">
 		<span class="loading-indicator btn pull-left hidden" done="0">
