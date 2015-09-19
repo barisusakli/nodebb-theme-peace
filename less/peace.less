@@ -1,0 +1,43 @@
+.affix-top,.affix{
+ position: static;
+}
+
+#topic-sidebar {
+	border-left: 1px solid #eee;
+	padding-left: 20px;
+
+	> div {
+		margin-bottom: 20px;
+	}
+}
+
+@media (min-width: 979px) {
+  #topic-sidebar.affix-top {
+    position: static;
+  	margin-top:100px;
+  	width:100%;
+  }
+
+  #topic-sidebar.affix {
+    position: fixed;
+    top:70px;
+    width:100%;
+  }
+}
+
+.topic {
+	.topic-main-buttons a.btn {
+		margin-left: 0px!important;
+	}
+
+
+	.stats {
+		text-align: left!important;
+	}
+
+	.tags {
+		.tag-item {
+			padding-left: 0px;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+{
+  "name": "nodebb-theme-peace",
+  "version": "1.0.0",
+  "nbbpm": {
+    "compatibility": "^0.8.2"
+  },
+  "description": "Peace theme for NodeBB",
+  "main": "theme.less",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/barisusakli/nodebb-theme-peace"
+  },
+  "keywords": [
+    "nodebb",
+    "theme",
+    "forum",
+    "bootstrap",
+    "responsive"
+  ],
+  "contributors": [
+    {
+      "name": "Barış Soner Uşaklı",
+      "email": "baris@designcreateplay.com",
+      "url": "https://github.com/barisusakli"
+    }
+  ],
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/barisusakli/nodebb-theme-peace/issues"
+  }
+}
