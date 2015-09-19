@@ -1,7 +1,7 @@
 Peace theme for NodeBB
 ====================
 
-Peace is a theme based on Persona, that modified the topic view with a sidebar
+Peace is a theme based on Persona, that modifies the topic view with a sidebar
 
 ## Screenshots
 
