@@ -29,9 +29,6 @@
 			<!-- IMPORT partials/paginator.tpl -->
 		<!-- ENDIF config.usePagination -->
 
-		<!-- IMPORT partials/move_thread_modal.tpl -->
-		<!-- IMPORT partials/fork_thread_modal.tpl -->
-		<!-- IMPORT partials/move_post_modal.tpl -->
 	</div>
 	<div class="col-lg-4">
 		<!-- IMPORT partials/topic_sidebar.tpl -->
