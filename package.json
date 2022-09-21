@@ -2,10 +2,10 @@
   "name": "nodebb-theme-peace",
   "version": "1.0.1",
   "nbbpm": {
-    "compatibility": "^0.8.2"
+    "compatibility": "^3.0.0"
   },
   "description": "Peace theme for NodeBB",
-  "main": "theme.less",
+  "main": "lib/library.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/barisusakli/nodebb-theme-peace"
@@ -20,7 +20,7 @@
   "contributors": [
     {
       "name": "Barış Soner Uşaklı",
-      "email": "baris@designcreateplay.com",
+      "email": "baris@nodebb.org",
       "url": "https://github.com/barisusakli"
     }
   ],
