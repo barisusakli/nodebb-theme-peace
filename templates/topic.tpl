@@ -1,9 +1,9 @@
 <div class="topic row">
 	<div class="col-lg-10">
 		<div class="row mb-3" component="post/header">
-			<div class="col-12 text-center">
+			<div class="col-12">
 				<h4 class="topic-title" component="topic/title">{title}</h4>
-				<div class="d-flex justify-content-center">
+				<div class="d-flex">
 					<div class="d-inline-block me-2">
 						<a href="{config.relative_path}/category/{category.slug}">
 							<span class="badge rounded-1" style="color:{category.color}; background-color: {category.bgColor};"><i class="fa {category.icon}"></i>&nbsp;{category.name}</span>

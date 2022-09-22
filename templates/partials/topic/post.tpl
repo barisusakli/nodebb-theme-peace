@@ -20,7 +20,7 @@
 					</div>
 				</div>
 				<!-- content -->
-				<div class="content flex-grow-1 border-start ms-2 ps-3" component="post/content" itemprop="text">
+				<div class="content flex-grow-1 border-start text-wrap text-truncate ms-2 ps-3" component="post/content" itemprop="text">
 					{posts.content}
 				</div>
 			</div>
