@@ -6,11 +6,13 @@
 				<div class="d-flex justify-content-center">
 					<div class="d-inline-block me-2">
 						<a href="{config.relative_path}/category/{category.slug}">
-							<span class="badge rounded-1" style="color:{category.color}; background-color: {category.bgColor};"><i class="fa fa-fw {category.icon}"></i> {category.name}</span>
+							<span class="badge rounded-1" style="color:{category.color}; background-color: {category.bgColor};"><i class="fa {category.icon}"></i>&nbsp;{category.name}</span>
 						</a>
 					</div>
 					<div class="tags tag-list d-inline-block hidden-xs">
-						<!-- IMPORT partials/topic/tags.tpl -->
+						{{{ each tags }}}
+						<!-- IMPORT partials/topic/tag.tpl -->
+						{{{ end }}}
 					</div>
 				</div>
 			</div>
