@@ -1,15 +1,13 @@
 <div class="topic row">
 	<div class="col-lg-10">
 		<div class="row mb-3" component="post/header">
-			<div class="col-2 text-muted text-end" component="topic/labels">
-				<i component="topic/pinned" class="fa fa-fw fa-thumb-tack {{{ if !pinned }}}hidden{{{ end }}}"></i>
-				<i component="topic/locked" class="fa fa-fw fa-lock {{{ if !locked }}}hidden{{{ end }}}"></i>
-			</div>
-			<div class="col-10">
-				<h4 class="topic-title mb-0" component="topic/title">{title}</h4>
-				<div class="d-flex">
-					<div class="me-2">
-						{category.name}
+			<div class="col-12 text-center">
+				<h4 class="topic-title" component="topic/title">{title}</h4>
+				<div class="d-flex justify-content-center">
+					<div class="d-inline-block me-2">
+						<a href="{config.relative_path}/category/{category.slug}">
+							<span class="badge rounded-1" style="color:{category.color}; background-color: {category.bgColor};"><i class="fa fa-fw {category.icon}"></i> {category.name}</span>
+						</a>
 					</div>
 					<div class="tags tag-list d-inline-block hidden-xs">
 						<!-- IMPORT partials/topic/tags.tpl -->
