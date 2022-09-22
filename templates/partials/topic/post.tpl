@@ -2,12 +2,12 @@
 	<div class="col-12 mb-3">
 		<div class="card card-body pb-2 shadow-sm h-100 rounded-0">
 			<!-- timestamp -->
-			<div class="text-end card card-body p-1 position-absolute rounded-0" style="top: -15px; right: 20px;">
+			<div class="text-end card card-body px-1 py-0 position-absolute rounded-0" style="top: -1px; right: -1px;">
 				<a class="permalink opacity-75" href="{config.relative_path}/post/{posts.pid}"><small><span class="timeago" title="{posts.timestampISO}"></span></small></a>
 			</div>
 
 			<!-- profile pic-->
-			<div class="d-flex pt-2">
+			<div class="d-flex pt-3">
 				<div class="">
 					<div class="text-center">
 						<div class="rounded">
