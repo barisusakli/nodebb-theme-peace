@@ -2,7 +2,6 @@
 	"id": "nodebb-theme-peace",
 	"hooks": [],
 	"scripts": [
-		"public/peace.js",
-		"public/modules/autohidingnavbar.min.js"
+		"public/peace.js"
 	]
 }

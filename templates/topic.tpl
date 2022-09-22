@@ -1,16 +1,30 @@
-<!-- IMPORT partials/breadcrumbs.tpl -->
-
 <div class="topic row">
-	<div class="col-lg-8">
-		<h1 component="post/header" itemprop="name">
-			<i class="fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
-		</h1>
+	<div class="col-lg-10">
+		<div class="row mb-3" component="post/header">
+			<div class="col-2 text-muted text-end" component="topic/labels">
+				<i component="topic/pinned" class="fa fa-fw fa-thumb-tack {{{ if !pinned }}}hidden{{{ end }}}"></i>
+				<i component="topic/locked" class="fa fa-fw fa-lock {{{ if !locked }}}hidden{{{ end }}}"></i>
+			</div>
+			<div class="col-10">
+				<h4 class="topic-title mb-0" component="topic/title">{title}</h4>
+				<div class="d-flex">
+					<div class="me-2">
+						{category.name}
+					</div>
+					<div class="tags tag-list d-inline-block hidden-xs">
+						<!-- IMPORT partials/topic/tags.tpl -->
+					</div>
+				</div>
+			</div>
+		</div>
 
-		<div component="topic/deleted/message" class="alert alert-warning<!-- IF !deleted --> hidden<!-- ENDIF !deleted -->">[[topic:deleted_message]]</div>
+		{{{ if !scheduled }}}
+		<!-- IMPORT partials/topic/deleted-message.tpl -->
+		{{{ end }}}
 
-		<ul component="topic" class="posts" data-tid="{tid}">
-			<!-- BEGIN posts -->
-				<li component="post" class="clearfix <!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted -->" <!-- IMPORT partials/data/topic.tpl -->>
+		<ul component="topic" class="posts list-unstyled" data-tid="{tid}">
+			{{{ each posts }}}
+				<li component="post" class="mb-3 {{{ if posts.deleted }}}deleted{{{ end }}}" <!-- IMPORT partials/data/topic.tpl -->>
 					<a component="post/anchor" data-index="{posts.index}" name="{posts.index}"></a>
 
 					<meta itemprop="datePublished" content="{posts.relativeTime}">
@@ -18,8 +32,7 @@
 
 					<!-- IMPORT partials/topic/post.tpl -->
 				</li>
-
-			<!-- END posts -->
+			{{{ end }}}
 		</ul>
 
 		<!-- IF config.usePagination -->
@@ -27,10 +40,9 @@
 		<!-- ENDIF config.usePagination -->
 
 	</div>
-	<div class="col-lg-4">
-		<!-- IMPORT partials/topic_sidebar.tpl -->
+	<div class="col-lg-2">
+		<!-- IMPORT partials/topic/sidebar.tpl -->
 	</div>
-
 </div>
 
 <!-- IF !config.usePagination -->
