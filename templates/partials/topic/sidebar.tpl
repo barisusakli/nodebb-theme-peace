@@ -1,5 +1,5 @@
 
-<div id="topic-sidebar" class="sticky-top pt-4">
+<div id="topic-sidebar" class="sticky-top" style="top: 1.5rem;">
 	<div class="">
 		<div class="hidden">
 			<div class="stats">
@@ -16,9 +16,13 @@
 			<!-- IMPORT partials/topic/reply-button.tpl -->
 		</div>
 
-		<div class="topic-main-buttons">
-			<!-- IMPORT partials/topic/sort.tpl -->
+		<div class="topic-main-buttons mb-2">
 			<!-- IMPORT partials/topic/watch.tpl -->
+		</div>
+		<div class="topic-main-buttons mb-2">
+			<!-- IMPORT partials/topic/sort.tpl -->
+		</div>
+		<div class="topic-main-buttons mb-2">
 			<!-- IMPORT partials/thread_tools.tpl -->
 		</div>
 

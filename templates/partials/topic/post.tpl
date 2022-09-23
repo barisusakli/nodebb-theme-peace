@@ -6,8 +6,9 @@
 				<a class="permalink opacity-75" href="{config.relative_path}/post/{posts.pid}"><small><span class="timeago" title="{posts.timestampISO}"></span></small></a>
 			</div>
 
-			<!-- profile pic-->
+
 			<div class="d-flex pt-3">
+				<!-- profile pic-->
 				<div class="">
 					<div class="text-center">
 						<div class="rounded">
@@ -19,9 +20,30 @@
 						<a class="" href="{{{ if posts.user.userslug }}}{config.relative_path}/user/{posts.user.userslug}{{{ else }}}#{{{ end }}}" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}" title="{posts.user.displayname}">{posts.user.displayname}</a>
 					</div>
 				</div>
-				<!-- content -->
-				<div class="content flex-grow-1 border-start text-wrap text-truncate ms-2 ps-3" component="post/content" itemprop="text">
-					{posts.content}
+				<div class="border-start ms-2 ps-3 text-wrap text-truncate">
+					{{{ if !posts.index }}}
+					<div class="row mb-3" component="post/header">
+						<div class="col-12">
+							<h4 class="topic-title" component="topic/title">{title}</h4>
+							<div class="d-flex">
+								<div class="d-inline-block me-2">
+									<a href="{config.relative_path}/category/{category.slug}">
+										<span class="badge rounded-1" style="color:{category.color}; background-color: {category.bgColor};"><i class="fa {category.icon}"></i>&nbsp;{category.name}</span>
+									</a>
+								</div>
+								<div class="tags tag-list d-inline-block hidden-xs">
+									{{{ each tags }}}
+									<!-- IMPORT partials/topic/tag.tpl -->
+									{{{ end }}}
+								</div>
+							</div>
+						</div>
+					</div>
+					{{{ end }}}
+					<!-- content -->
+					<div class="content flex-grow-1" component="post/content" itemprop="text">
+						{posts.content}
+					</div>
 				</div>
 			</div>
 

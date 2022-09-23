@@ -1,23 +1,5 @@
 <div class="topic row">
 	<div class="col-lg-10">
-		<div class="row mb-3" component="post/header">
-			<div class="col-12">
-				<h4 class="topic-title" component="topic/title">{title}</h4>
-				<div class="d-flex">
-					<div class="d-inline-block me-2">
-						<a href="{config.relative_path}/category/{category.slug}">
-							<span class="badge rounded-1" style="color:{category.color}; background-color: {category.bgColor};"><i class="fa {category.icon}"></i>&nbsp;{category.name}</span>
-						</a>
-					</div>
-					<div class="tags tag-list d-inline-block hidden-xs">
-						{{{ each tags }}}
-						<!-- IMPORT partials/topic/tag.tpl -->
-						{{{ end }}}
-					</div>
-				</div>
-			</div>
-		</div>
-
 		{{{ if !scheduled }}}
 		<!-- IMPORT partials/topic/deleted-message.tpl -->
 		{{{ end }}}
