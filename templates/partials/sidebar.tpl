@@ -1,4 +1,7 @@
 <div class="sticky-top pt-4" style="">
+
+	<!-- IMPORT partials/search.tpl -->
+
 	<div class="p-3 card card-body border-0 rounded-0">
 		<div class="d-flex justify-content-center">
 			{{{ if brand:logo }}}
@@ -25,20 +28,6 @@
 			<div class="collapse show" id="navigation-collapse">
 			<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 				<!-- IMPORT partials/navigation.tpl -->
-			</ul>
-			</div>
-		</li>
-
-		<li class="mb-1">
-			<button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-			[[global:header.categories]]
-			</button>
-			<div class="collapse" id="dashboard-collapse">
-			<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-				<li><a href="#" class="d-inline-flex text-decoration-none rounded">Overview</a></li>
-				<li><a href="#" class="d-inline-flex text-decoration-none rounded">Weekly</a></li>
-				<li><a href="#" class="d-inline-flex text-decoration-none rounded">Monthly</a></li>
-				<li><a href="#" class="d-inline-flex text-decoration-none rounded">Annually</a></li>
 			</ul>
 			</div>
 		</li>
