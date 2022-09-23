@@ -26,7 +26,7 @@
 					{{{ each ../children }}}
 					{{{ if !../isSection }}}
 					<div class="category-children-item mb-1">
-						<div class="icon d-inline-block rounded-1 p-1 text-center" style="{function.generateCategoryBackground}; width: 32px; height: 32px;">
+						<div class="icon rounded-1 d-inline-flex justify-content-center align-items-center" style="{function.generateCategoryBackground}; width: 32px; height: 32px;">
 							{{{ if ../icon }}}
 							<i class="fa fa-fw {../icon}"></i>
 							{{{ end }}}

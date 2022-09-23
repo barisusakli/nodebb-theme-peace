@@ -147,7 +147,7 @@
 									</div>
 
 									<div class="d-inline-block">
-										<span class="timeago badge rounded-1 text-body" title="{./timestampISO}"></span>
+										<span class="timeago badge rounded-1 text-body px-0" title="{./timestampISO}"></span>
 									</div>
 								</div>
 							</div>

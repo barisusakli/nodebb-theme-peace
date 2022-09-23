@@ -23,3 +23,15 @@
 		opacity: 0;
 	}
 }
+
+.tag-item {
+	background-color: #808080;
+	color: white;
+}
+
+// fix for quartz skin, backdrop-filter breaks layout and
+// post tools dropdowns go behind the card of the next post
+// https://github.com/thomaspark/bootswatch/issues/1199
+[component="post"] .card {
+	backdrop-filter: none;
+}
