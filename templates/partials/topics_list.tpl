@@ -1,8 +1,9 @@
-<ul component="category" class="topic-list list-unstyled" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}" data-set="{set}">
+<ul component="category" class="topic-list list-unstyled mt-3" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}" data-set="{set}">
 	{{{each topics}}}
 	<li component="category/topic" class="row mb-2 category-item {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
 		<div class="col-12">
-			<div class="card card-body shadow-sm">
+			<!-- persona topic-list item -->
+			<div class="card card-body shadow-sm hidden">
 				<link itemprop="url" content="{config.relative_path}/topic/{../slug}" />
 				<meta itemprop="name" content="{function.stripTags, ../title}" />
 				<meta itemprop="itemListOrder" content="descending" />
@@ -100,6 +101,57 @@
 						</p>
 						<!-- ENDIF topics.teaser.pid -->
 						<!-- ENDIF topics.unreplied -->
+					</div>
+				</div>
+			</div>
+
+			<div class="card card-body shadow-sm h-100 rounded-0">
+				<link itemprop="url" content="{config.relative_path}/topic/{../slug}" />
+				<meta itemprop="name" content="{function.stripTags, ../title}" />
+				<meta itemprop="itemListOrder" content="descending" />
+				<meta itemprop="position" content="{../index}" />
+				<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
+
+				<div class="d-flex pt-1">
+					<!-- profile pic-->
+					<div class="">
+						<div class="text-center" style="width: 100px;">
+							<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
+								<div class="rounded">
+									{buildAvatar(./user, "64px")}
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="border-start ms-2 ps-3 text-wrap text-truncate">
+						<div class="row" component="post/header">
+							<div class="col-12">
+								<h4 component="topic/header" class="title">
+									{{{ if !topics.noAnchor }}}
+									<a href="{config.relative_path}/topic/{./slug}{{{ if topics.bookmark }}}/{./bookmark}{{{ end }}}">{./title}</a>
+									{{{ else }}}
+									<span>{./title}</span>
+									{{{ end }}}
+								</h4>
+
+								<div class="d-flex opacity-75 gap-1">
+									<div class="d-inline-block">
+										<a href="{config.relative_path}/category/{./category.slug}">
+											<span class="badge rounded-1" style="color:{./category.color}; background-color: {./category.bgColor};"><i class="fa {./category.icon}"></i>&nbsp;{./category.name}</span>
+										</a>
+									</div>
+									<div class="tags tag-list d-inline-block hidden-xs">
+										{{{ each ./tags }}}
+										<!-- IMPORT partials/topic/tag.tpl -->
+										{{{ end }}}
+									</div>
+
+									<div class="d-inline-block">
+										<span class="timeago badge rounded-1 text-body" title="{./timestampISO}"></span>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

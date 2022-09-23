@@ -2,17 +2,19 @@
 	<div class="col-12 mb-3">
 		<div class="card card-body pb-2 shadow-sm h-100 rounded-0">
 			<!-- timestamp -->
-			<div class="text-end card card-body px-1 py-0 position-absolute rounded-0" style="top: -1px; right: -1px;">
-				<a class="permalink opacity-75" href="{config.relative_path}/post/{posts.pid}"><small><span class="timeago" title="{posts.timestampISO}"></span></small></a>
+			{{{ if posts.index }}}
+			<div class="text-end badge px-1 py-1 position-absolute rounded-0" style="top: -1px; right: -1px;">
+				<a class="permalink opacity-75" href="{config.relative_path}/post/{posts.pid}"><span class="timeago" title="{posts.timestampISO}"></span></a>
 			</div>
+			{{{ end }}}
 
 
-			<div class="d-flex pt-3">
+			<div class="d-flex pt-1">
 				<!-- profile pic-->
 				<div class="">
 					<div class="text-center">
 						<div class="rounded">
-							{buildAvatar(posts.user, "70px")}
+							{buildAvatar(posts.user, "64px")}
 						</div>
 					</div>
 
@@ -25,16 +27,21 @@
 					<div class="row mb-3" component="post/header">
 						<div class="col-12">
 							<h4 class="topic-title" component="topic/title">{title}</h4>
-							<div class="d-flex">
-								<div class="d-inline-block me-2">
+							<div class="d-flex gap-1">
+								<div class="d-inline-block">
 									<a href="{config.relative_path}/category/{category.slug}">
 										<span class="badge rounded-1" style="color:{category.color}; background-color: {category.bgColor};"><i class="fa {category.icon}"></i>&nbsp;{category.name}</span>
 									</a>
 								</div>
+
 								<div class="tags tag-list d-inline-block hidden-xs">
 									{{{ each tags }}}
 									<!-- IMPORT partials/topic/tag.tpl -->
 									{{{ end }}}
+								</div>
+
+								<div class="d-inline-block">
+									<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago badge rounded-1 text-body" title="{posts.timestampISO}"></span></a>
 								</div>
 							</div>
 						</div>
