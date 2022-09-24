@@ -28,10 +28,16 @@
 // fix for quartz skin, backdrop-filter breaks layout and
 // post tools dropdowns go behind the card of the next post
 // https://github.com/thomaspark/bootswatch/issues/1199
-[component="post"] .card {
-	backdrop-filter: none!important;
-}
+.skin-quartz {
+	[component="post"] .card {
+		backdrop-filter: none!important;
+	}
 
+	.tool-modal .dropdown-menu {
+		backdrop-filter: none!important;
+		background-color: rgba($color: $primary, $alpha: 0.75);
+	}
+}
 
 // topic selection on topics_list
 .topic-list li {
@@ -48,4 +54,14 @@
 }
 .page-category .breadcrumb {
 	display: flex;
+}
+
+// like button toggle
+.post-footer [component="post/upvote"] {
+	.fa-heart-o { display: inline-block; }
+	.fa-heart { display: none; }
+	&.upvoted {
+		.fa-heart-o { display: none; }
+		.fa-heart { display: inline-block; color: $red; }
+	}
 }

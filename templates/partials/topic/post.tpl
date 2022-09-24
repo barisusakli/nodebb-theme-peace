@@ -3,29 +3,34 @@
 		<div class="card card-body pb-2 shadow-sm h-100 rounded-0">
 			<!-- timestamp -->
 			{{{ if posts.index }}}
-			<div class="text-end badge p-2 position-absolute rounded-0" style="top: -1px; right: -1px;">
-				<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago text-body opacity-75" title="{posts.timestampISO}"></span></a>
+			<div class="mb-2">
+				<div class="text-end badge p-2 position-absolute rounded-0" style="top: -1px; right: -1px;">
+					<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago text-muted opacity-75 text-decoration-underline" title="{posts.timestampISO}"></span></a>
+				</div>
 			</div>
 			{{{ end }}}
 
 
-			<div class="d-flex pt-2">
+			<div class="d-flex mb-2">
 				<!-- profile pic-->
-				<div class="" style="max-width:96px;">
+				<div class="" style="min-width:100px; max-width: 100px;">
 					<div class="mx-2">
 						<div class="text-center">
-							<div class="rounded">
-								{buildAvatar(posts.user, "64px")}
-							</div>
+							<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
+								<div class="rounded">
+									{buildAvatar(posts.user, "64px")}
+								</div>
+							</a>
 						</div>
 					</div>
 
 					<div class="text-muted text-center text-wrap">
-						<a class="" href="{{{ if posts.user.userslug }}}{config.relative_path}/user/{posts.user.userslug}{{{ else }}}#{{{ end }}}" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}" title="{posts.user.displayname}">{posts.user.displayname}</a>
+						<a class="fs-6" href="{{{ if posts.user.userslug }}}{config.relative_path}/user/{posts.user.userslug}{{{ else }}}#{{{ end }}}" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}" title="{posts.user.displayname}">{posts.user.displayname}</a>
 					</div>
 				</div>
 
-				<div class="border-start ms-2 ps-3 text-wrap text-truncate">
+				<div class="border-start ms-2 ps-4 text-wrap text-truncate">
+					<!-- main post topic info -->
 					{{{ if !posts.index }}}
 					<div class="row mb-3" component="post/header">
 						<div class="col-12">
@@ -44,7 +49,7 @@
 								</div>
 
 								<div class="d-inline-block">
-									<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago badge rounded-1 text-body opacity-75" title="{posts.timestampISO}"></span></a>
+									<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago badge rounded-1 text-muted opacity-75 text-decoration-underline" title="{posts.timestampISO}"></span></a>
 								</div>
 							</div>
 						</div>
@@ -59,7 +64,15 @@
 
 			<!-- footer -->
 			<div class="post-footer d-flex justify-content-end align-items-end h-100">
+
 				<small class="post-tools text-muted d-flex gap-3">
+					<span class="">
+						<span component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
+						<a component="post/upvote" href="#" class="text-muted {{{ if posts.upvoted }}}upvoted{{{ end }}}">
+							<i class="fa fa-heart"></i><i class="fa fa-heart-o"></i>
+						</a>
+					</span>
+
 					<a component="post/reply" href="#" class="user-select-none opacity-75 {{{ if !privileges.topics:reply }}}hidden{{{ end }}}">[[topic:reply]]</a>
 					<a component="post/quote" href="#" class="user-select-none opacity-75 {{{ if !privileges.topics:reply }}}hidden{{{ end }}}">[[topic:quote]]</a>
 					<span component="post/tools" class="dropdown moderator-tools bottom-sheet <!-- IF !posts.display_post_menu -->hidden<!-- ENDIF !posts.display_post_menu -->">
