@@ -20,7 +20,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="border-start ms-2 ps-4 text-wrap text-truncate">
+					<div class="border-start ms-2 ps-3 text-wrap text-truncate">
 						<div class="row" component="post/header">
 							<div class="col-12">
 								<h4 component="topic/header" class="title text-truncate" title="{./title}">

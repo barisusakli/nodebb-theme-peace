@@ -29,7 +29,7 @@
 					</div>
 				</div>
 
-				<div class="border-start ms-2 ps-4 text-wrap text-truncate">
+				<div class="border-start ms-2 ps-3 text-wrap text-truncate">
 					<!-- main post topic info -->
 					{{{ if !posts.index }}}
 					<div class="row mb-3" component="post/header">
@@ -67,7 +67,7 @@
 
 				<small class="post-tools text-muted d-flex gap-3">
 					<span class="">
-						<span component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
+						<span class="me-1" component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
 						<a component="post/upvote" href="#" class="text-muted {{{ if posts.upvoted }}}upvoted{{{ end }}}">
 							<i class="fa fa-heart"></i><i class="fa fa-heart-o"></i>
 						</a>

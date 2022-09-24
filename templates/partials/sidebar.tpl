@@ -1,5 +1,5 @@
-<div class="sticky-top pt-4" style="">
-	<div class="p-3 mb-2 card card-body border-0 rounded-0 justify-content-center" style="aspect-ratio: 1 / 1;">
+<div class="sticky-top pt-4">
+	<div class="p-3 mb-2 card card-body shadow-sm border-0 rounded-0 justify-content-center" style="aspect-ratio: 1 / 1;">
 		<div class="d-flex justify-content-center">
 			{{{ if brand:logo }}}
 			<a href="{{{ if brand:logo:url }}}{brand:logo:url}{{{ else }}}{relative_path}/{{{ end }}}">
@@ -64,5 +64,21 @@
 			</div>
 		</li>
 		{{{ end }}}
+
+		<li class="border-top my-3"></li>
+
+		<!-- skin switcher-->
+		<li class="mb-1 d-flex align-items-center">
+			<select class="form-select me-2" id="skinSwitcher">
+				{{{each bootswatchSkinOptions}}}
+				<option value="{bootswatchSkinOptions.value}" {{{ if bootswatchSkinOptions.selected }}}selected{{{ end }}}>{bootswatchSkinOptions.name}</option>
+				{{{end}}}
+			</select>
+			<div class="d-flex justify-content-center invisible" id="skinSpinner">
+				<div class="spinner-border text-info" role="status">
+					<span class="visually-hidden">Loading...</span>
+				</div>
+			</div>
+		</li>
 	</ul>
 </div>
