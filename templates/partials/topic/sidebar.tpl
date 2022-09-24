@@ -16,6 +16,14 @@
 			<!-- IMPORT partials/topic/reply-button.tpl -->
 		</div>
 
+		{{{ if config.loggedIn }}}
+		<div class="topic-main-buttons mb-2">
+			<button component="topic/mark-unread" class="btn btn-sm btn-outline-secondary" title="[[topic:mark_unread]]">
+				<i class="fa fa-fw fa-inbox"></i><span class="visible-sm-inline visible-md-inline visible-lg-inline"></span>
+			</button>
+		</div>
+		{{{ end }}}
+
 		<div class="topic-main-buttons mb-2">
 			<!-- IMPORT partials/topic/watch.tpl -->
 		</div>

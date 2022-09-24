@@ -1,8 +1,5 @@
 <div class="sticky-top pt-4" style="">
-
-	<!-- IMPORT partials/search.tpl -->
-
-	<div class="p-3 card card-body border-0 rounded-0">
+	<div class="p-3 mb-2 card card-body border-0 rounded-0 justify-content-center" style="aspect-ratio: 1 / 1;">
 		<div class="d-flex justify-content-center">
 			{{{ if brand:logo }}}
 			<a href="{{{ if brand:logo:url }}}{brand:logo:url}{{{ else }}}{relative_path}/{{{ end }}}">
@@ -11,16 +8,18 @@
 			{{{ end }}}
 		</div>
 
-		<div class="text-center pb-3 mb-3 border-bottom">
+		<div class="text-center">
 		{{{ if config.showSiteTitle }}}
 			<a class="fs-6 fw-semibold text-decoration-none" href="{{{ if title:url }}}{title:url}{{{ else }}}{relative_path}/{{{ end }}}">
 				<span class="forum-title">{config.siteTitle}</span>
 			</a>
 		{{{ end }}}
 		</div>
+	</div>
 
-		<ul class="list-unstyled ps-0">
+	<!-- IMPORT partials/search.tpl -->
 
+	<ul class="list-unstyled ps-0">
 		<!-- navigation -->
 		<li class="mb-1">
 			<button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#navigation-collapse" aria-expanded="true">
@@ -65,6 +64,5 @@
 			</div>
 		</li>
 		{{{ end }}}
-		</ul>
-	</div>
+	</ul>
 </div>

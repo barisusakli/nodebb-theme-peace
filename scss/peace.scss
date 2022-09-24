@@ -12,10 +12,6 @@
 
 
 #content, .footer {
-	-webkit-transition: opacity 150ms linear;
-	-moz-transition: opacity 150ms linear;
-	-ms-transition: opacity 150ms linear;
-	-o-transition: opacity 150ms linear;
 	transition: opacity 150ms linear;
 
 	&.ajaxifying {
@@ -33,5 +29,23 @@
 // post tools dropdowns go behind the card of the next post
 // https://github.com/thomaspark/bootswatch/issues/1199
 [component="post"] .card {
-	backdrop-filter: none;
+	backdrop-filter: none!important;
+}
+
+
+// topic selection on topics_list
+.topic-list li {
+	&.selected {
+		.card {
+			outline: 2px solid $success;
+		}
+	}
+}
+
+// only show breadcrumbs on category page
+.breadcrumb {
+	display: none;
+}
+.page-category .breadcrumb {
+	display: flex;
 }

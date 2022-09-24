@@ -1,6 +1,10 @@
 {
 	"id": "nodebb-theme-peace",
-	"hooks": [],
+	"hooks": [
+		{ "hook": "static:app.load", "method": "init" },
+		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" },
+		{ "hook": "filter:topic.build", "method": "addUserToTopic" }
+	],
 	"scripts": [
 		"public/peace.js"
 	]

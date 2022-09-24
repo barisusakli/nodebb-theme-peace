@@ -4,24 +4,27 @@
 			<!-- timestamp -->
 			{{{ if posts.index }}}
 			<div class="text-end badge p-2 position-absolute rounded-0" style="top: -1px; right: -1px;">
-				<a class="permalink opacity-75" href="{config.relative_path}/post/{posts.pid}"><span class="timeago" title="{posts.timestampISO}"></span></a>
+				<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago text-body opacity-75" title="{posts.timestampISO}"></span></a>
 			</div>
 			{{{ end }}}
 
 
 			<div class="d-flex pt-2">
 				<!-- profile pic-->
-				<div class="">
-					<div class="text-center">
-						<div class="rounded">
-							{buildAvatar(posts.user, "64px")}
+				<div class="" style="max-width:96px;">
+					<div class="mx-2">
+						<div class="text-center">
+							<div class="rounded">
+								{buildAvatar(posts.user, "64px")}
+							</div>
 						</div>
 					</div>
 
-					<div class="text-muted text-center text-wrap" style="width: 100px;">
+					<div class="text-muted text-center text-wrap">
 						<a class="" href="{{{ if posts.user.userslug }}}{config.relative_path}/user/{posts.user.userslug}{{{ else }}}#{{{ end }}}" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}" title="{posts.user.displayname}">{posts.user.displayname}</a>
 					</div>
 				</div>
+
 				<div class="border-start ms-2 ps-3 text-wrap text-truncate">
 					{{{ if !posts.index }}}
 					<div class="row mb-3" component="post/header">
@@ -41,7 +44,7 @@
 								</div>
 
 								<div class="d-inline-block">
-									<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago badge rounded-1 text-body" title="{posts.timestampISO}"></span></a>
+									<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago badge rounded-1 text-body opacity-75" title="{posts.timestampISO}"></span></a>
 								</div>
 							</div>
 						</div>

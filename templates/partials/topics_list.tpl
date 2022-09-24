@@ -4,11 +4,6 @@
 		<div class="col-12">
 			<!-- persona topic-list item -->
 			<div class="card card-body shadow-sm hidden">
-				<link itemprop="url" content="{config.relative_path}/topic/{../slug}" />
-				<meta itemprop="name" content="{function.stripTags, ../title}" />
-				<meta itemprop="itemListOrder" content="descending" />
-				<meta itemprop="position" content="{../index}" />
-				<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
 
 				<div class="col-sm-9 col-10 content">
 					<div class="avatar float-start me-2">
@@ -105,7 +100,7 @@
 				</div>
 			</div>
 
-			<div class="card card-body shadow-sm h-100 rounded-0">
+			<div class="card card-body shadow-sm h-100 rounded-0" {{{ if showSelect }}}component="topic/select"{{{ end }}}>
 				<link itemprop="url" content="{config.relative_path}/topic/{../slug}" />
 				<meta itemprop="name" content="{function.stripTags, ../title}" />
 				<meta itemprop="itemListOrder" content="descending" />
@@ -115,7 +110,7 @@
 				<div class="d-flex pt-1">
 					<!-- profile pic-->
 					<div class="">
-						<div class="text-center" style="width: 100px;">
+						<div class="text-center mx-2">
 							<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 								<div class="rounded">
 									{buildAvatar(./user, "64px")}
