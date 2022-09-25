@@ -35,7 +35,8 @@
 
 	.tool-modal .dropdown-menu, .composer .dropdown-menu {
 		backdrop-filter: none!important;
-		background-color: rgba($color: $primary, $alpha: 0.75);
+		background-color: $body-bg;
+		color: $body-color;
 	}
 }
 
@@ -48,6 +49,13 @@
 	}
 }
 
+// block quote :dull
+blockquote {
+	border-left: 5px solid $body-color;
+	margin-left: $spacer;
+	padding-left: $spacer;
+}
+
 // only show breadcrumbs on category page
 .breadcrumb {
 	display: none;
@@ -55,6 +63,10 @@
 .page-category .breadcrumb {
 	display: flex;
 }
+
+// no taskbar
+.taskbar { display: none }
+
 
 // like button toggle
 .post-footer [component="post/upvote"] {
