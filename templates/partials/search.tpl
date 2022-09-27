@@ -1,5 +1,5 @@
 {{{ if config.searchEnabled }}}
-<div class="mb-2 position-relative">
+<div class="mb-3 position-relative">
 	<form id="search-form" class="d-flex justify-content-end align-items-center" role="search" method="GET">
 		<div class="" id="search-fields">
 			<div class="input-group flex-nowrap">

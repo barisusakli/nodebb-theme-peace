@@ -1,5 +1,5 @@
 <div class="sticky-top pt-4">
-	<div class="p-3 mb-2 card card-body shadow-sm border-0 rounded-0 justify-content-center" style="aspect-ratio: 1 / 1;">
+	<div class="p-3 mb-3 card card-body shadow-sm border-0 rounded-0 justify-content-center" style="aspect-ratio: 1 / 1;">
 		<div class="d-flex justify-content-center">
 			{{{ if brand:logo }}}
 			<a href="{{{ if brand:logo:url }}}{brand:logo:url}{{{ else }}}{relative_path}/{{{ end }}}">
@@ -22,9 +22,9 @@
 	<ul class="list-unstyled ps-0">
 		<!-- navigation -->
 		<li class="mb-1">
-			<button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#navigation-collapse" aria-expanded="true">
+			<h6 class="fw-bold d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#navigation-collapse" aria-expanded="true">
 			[[global:header.navigation]]
-			</button>
+			</h6>
 			<div class="collapse show" id="navigation-collapse">
 			<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 				<!-- IMPORT partials/navigation.tpl -->
@@ -36,9 +36,9 @@
 		<!-- logged in menu -->
 		{{{ if config.loggedIn }}}
 		<li class="mb-1">
-			<button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+			<h6 class="fw-bold d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
 			Account
-			</button>
+			</h6>
 			<div class="collapse" id="account-collapse">
 			<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 				<li><a href="{config.relative_path}/user/{user.userslug}" class="d-inline-flex text-decoration-none rounded">[[user:profile]]</a></li>
