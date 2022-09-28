@@ -1,5 +1,5 @@
 
-<div id="topic-sidebar" class="sticky-top" style="top: 1.5rem;">
+<div id="topic-sidebar" class="sticky-top">
 	<div class="">
 		<div class="hidden">
 			<div class="stats">

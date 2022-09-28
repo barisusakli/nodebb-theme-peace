@@ -24,19 +24,18 @@
 </head>
 
 <body class="{bodyClass} skin-{{{if bootswatchSkin}}}{bootswatchSkin}{{{else}}}noskin{{{end}}}">
-	<nav id="menu" class="slideout-menu hidden">
-		<!-- IMPORT partials/slideout-menu.tpl -->
-	</nav>
-	<nav id="chats-menu" class="slideout-menu hidden">
-		<!-- IMPORT partials/chats-menu.tpl -->
-	</nav>
 
+	<!-- IMPORT partials/offcanvas.tpl -->
+
+	<!-- IMPORT partials/mobile-nav.tpl -->
 	<main id="panel" class="slideout-panel container">
 		<div class="row">
-			<div class="col-2">
+			<div class="col-lg-2 d-none d-lg-block">
+				<div class="sticky-top pt-4">
 				<!-- IMPORT partials/sidebar.tpl -->
+				</div>
 			</div>
-			<div class="col-10">
+			<div class="col-12 col-lg-10">
 				<div class="container pt-4" id="content">
 				<!-- IMPORT partials/noscript/warning.tpl -->
 				<!-- IMPORT partials/noscript/message.tpl -->

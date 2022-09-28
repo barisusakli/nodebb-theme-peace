@@ -1,5 +1,5 @@
 <div class="topic row">
-	<div class="col-lg-10">
+	<div class="col-10">
 		{{{ if !scheduled }}}
 		<!-- IMPORT partials/topic/deleted-message.tpl -->
 		{{{ end }}}
@@ -29,7 +29,7 @@
 		<!-- ENDIF config.usePagination -->
 
 	</div>
-	<div class="col-lg-2">
+	<div class="col-2">
 		<!-- IMPORT partials/topic/sidebar.tpl -->
 	</div>
 </div>

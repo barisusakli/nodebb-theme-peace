@@ -1,7 +1,7 @@
 {{{ if config.searchEnabled }}}
 <div class="mb-3 position-relative">
-	<form id="search-form" class="d-flex justify-content-end align-items-center" role="search" method="GET">
-		<div class="" id="search-fields">
+	<form component="search/form" id="search-form" class="d-flex align-items-center" role="search" method="GET">
+		<div component="search/fields" id="search-fields" class="w-100">
 			<div class="input-group flex-nowrap">
 				<input autocomplete="off" type="text" class="form-control form-control-sm border-1" placeholder="[[global:search]]" name="query" value="">
 

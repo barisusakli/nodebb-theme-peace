@@ -9,7 +9,7 @@
 		{{{ if pagination.pages.length }}}
 		<div><!-- IMPORT partials/category-selector.tpl --></div>
 		{{{ end }}}
-		<ul class="categories" itemscope itemtype="http://www.schema.org/ItemList">
+		<ul class="categories list-unstyled" itemscope itemtype="http://www.schema.org/ItemList">
 			{{{each categories}}}
 			<!-- IMPORT partials/categories/item.tpl -->
 			{{{end}}}

@@ -1,4 +1,4 @@
-<ul component="category" class="topic-list list-unstyled mt-3" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}" data-set="{set}">
+<ul component="category" class="topic-list list-unstyled" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}" data-set="{set}">
 	{{{each topics}}}
 	<li component="category/topic" class="row mb-2 category-item {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
 		<div class="col-12">
@@ -23,7 +23,7 @@
 					<div class="border-start ms-2 ps-3 text-wrap text-truncate">
 						<div class="row" component="post/header">
 							<div class="col-12">
-								<h4 component="topic/header" class="title text-truncate" title="{./title}">
+								<h4 component="topic/header" class="title text-truncate" title="{./title}" style="line-height: normal;">
 									{{{ if !topics.noAnchor }}}
 									<a href="{config.relative_path}/topic/{./slug}{{{ if topics.bookmark }}}/{./bookmark}{{{ end }}}">{./title}</a>
 									{{{ else }}}

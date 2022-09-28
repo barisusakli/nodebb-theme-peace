@@ -46,6 +46,14 @@
 	outline: 2px solid $success;
 }
 
+// topic sidebar sticky-top, change based on viewport
+@include media-breakpoint-down(lg) {
+	#topic-sidebar { top: 6.5rem; }
+}
+@include media-breakpoint-up(md) {
+	#topic-sidebar { top: 1.5rem; }
+}
+
 // block quote :dull
 blockquote {
 	border-left: 5px solid $body-color;
