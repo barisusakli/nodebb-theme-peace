@@ -13,7 +13,7 @@
 
 			<div class="d-flex mb-2">
 				<!-- profile pic-->
-				<div class="" style="min-width:100px; max-width: 100px;">
+				<div class="d-none d-lg-block border-end me-3" style="min-width:100px; max-width: 100px;">
 					<div class="mx-2">
 						<div class="text-center">
 							<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
@@ -28,8 +28,13 @@
 						<a class="fs-6" href="{{{ if posts.user.userslug }}}{config.relative_path}/user/{posts.user.userslug}{{{ else }}}#{{{ end }}}" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}" title="{posts.user.displayname}">{posts.user.displayname}</a>
 					</div>
 				</div>
+				<div class="d-inline-block d-lg-none me-2">
+					<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
+						{buildAvatar(./user, "24px", true)}
+					</a>
+				</div>
 
-				<div class="border-start ms-2 ps-3 text-wrap text-truncate">
+				<div class="text-wrap text-truncate">
 					<!-- main post topic info -->
 					{{{ if !posts.index }}}
 					<div class="row mb-3" component="post/header">

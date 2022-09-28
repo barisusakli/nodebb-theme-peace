@@ -45,10 +45,15 @@
 .posts li.selected .card {
 	outline: 2px solid $success;
 }
-
+.topic-list-header{
+	position: static;
+}
 // topic sidebar sticky-top, change based on viewport
 @include media-breakpoint-down(lg) {
-	#topic-sidebar { top: 6.5rem; }
+	#topic-sidebar {
+		top: 6.0rem;
+		z-index: $zindex-sticky - 1;
+	}
 }
 @include media-breakpoint-up(md) {
 	#topic-sidebar { top: 1.5rem; }
