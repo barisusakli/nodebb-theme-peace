@@ -22,7 +22,7 @@
 	<ul class="list-unstyled ps-0">
 		<!-- navigation -->
 		<li class="mb-1">
-			<h6 class="fw-bold d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#navigation-collapse" aria-expanded="true">
+			<h6 class="pointer fw-bold d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#navigation-collapse" aria-expanded="true">
 			[[global:header.navigation]]
 			</h6>
 			<div class="collapse show" id="navigation-collapse">
@@ -36,7 +36,7 @@
 		<!-- logged in menu -->
 		{{{ if config.loggedIn }}}
 		<li class="mb-1">
-			<h6 class="fw-bold d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+			<h6 class="pointer fw-bold d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
 			Account
 			</h6>
 			<div class="collapse" id="account-collapse">

@@ -3,10 +3,8 @@
 
 	<div class="content col-12">
 		<div class="d-flex">
-			<div>
-				<div class="icon rounded-1 d-flex justify-content-center align-items-center" style="{function.generateCategoryBackground} width: 64px!important; height: 64px!important;">
-					<i class="fs-3 fa fa-fw {../icon}"></i>
-				</div>
+			<div class="fs-3">
+				{buildCategoryIcon(@value, "64px", "rounded-1")}
 			</div>
 
 			<div class="ms-3">
@@ -26,11 +24,7 @@
 					{{{ each ../children }}}
 					{{{ if !../isSection }}}
 					<div class="category-children-item mb-1">
-						<div class="icon rounded-1 d-inline-flex justify-content-center align-items-center" style="{function.generateCategoryBackground}; width: 32px; height: 32px;">
-							{{{ if ../icon }}}
-							<i class="fa fa-fw {../icon}"></i>
-							{{{ end }}}
-						</div>
+						{buildCategoryIcon(@value, "32px", "rounded-1")}
 						{{{ if ../link }}}
 						<a href="{../link}">{../name}</a></span>
 						{{{ else }}}
