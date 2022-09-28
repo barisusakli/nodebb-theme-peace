@@ -40,13 +40,10 @@
 	}
 }
 
-// topic selection on topics_list
-.topic-list li {
-	&.selected {
-		.card {
-			outline: 2px solid $success;
-		}
-	}
+// topic & post selection outline
+.topic-list li.selected .card,
+.posts li.selected .card {
+	outline: 2px solid $success;
 }
 
 // block quote :dull
