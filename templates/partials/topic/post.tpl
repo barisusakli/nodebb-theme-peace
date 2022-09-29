@@ -41,7 +41,16 @@
 					{{{ if !posts.index }}}
 					<div class="row mb-3" component="post/header">
 						<div class="col-12">
-							<h4 class="topic-title" component="topic/title">{title}</h4>
+							<h4 class="topic-title">
+								<span component="topic/labels">
+									<i component="topic/scheduled" class="text-muted fa fa-clock-o {{{ if !scheduled }}}hidden{{{ end }}}" title="[[topic:scheduled]]"></i>
+									<i component="topic/pinned" class="text-muted fa fa-thumb-tack {{{ if (scheduled || !pinned) }}}hidden{{{ end }}}" title="{{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {pinExpiryISO}]]{{{ end }}}"></i>
+									<i component="topic/locked" class="text-muted fa fa-lock {{{ if !locked }}}hidden{{{ end }}}" title="[[topic:locked]]"></i>
+									<i class="text-muted fa fa-arrow-circle-right {{{ if !oldCid }}}hidden{{{ end }}}" title="{{{ if privileges.isAdminOrMod }}}[[topic:moved-from, {oldCategory.name}]]{{{ else }}}[[topic:moved]]{{{ end }}}"></i>
+									{{{each icons}}}{@value}{{{end}}}
+								</span>
+								<span component="topic/title">{title}</span>
+							</h4>
 							<div class="d-flex">
 								<div class="d-flex gap-1">
 									<div class="d-inline-block">
