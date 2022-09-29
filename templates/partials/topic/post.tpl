@@ -14,18 +14,20 @@
 			<div class="d-flex mb-2">
 				<!-- profile pic-->
 				<div class="d-none d-lg-block border-end me-3" style="min-width:100px; max-width: 100px;">
-					<div class="mx-2">
-						<div class="text-center">
-							<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
-								<div class="rounded">
-									{buildAvatar(posts.user, "64px")}
-								</div>
-							</a>
+					<div class="sticky-top">
+						<div class="mx-2">
+							<div class="text-center">
+								<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
+									<div class="rounded">
+										{buildAvatar(posts.user, "64px")}
+									</div>
+								</a>
+							</div>
 						</div>
-					</div>
 
-					<div class="text-muted text-center text-wrap">
-						<a class="fs-6" href="{{{ if posts.user.userslug }}}{config.relative_path}/user/{posts.user.userslug}{{{ else }}}#{{{ end }}}" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}" title="{posts.user.displayname}">{posts.user.displayname}</a>
+						<div class="text-muted text-center text-wrap">
+							<a class="fs-6" href="{{{ if posts.user.userslug }}}{config.relative_path}/user/{posts.user.userslug}{{{ else }}}#{{{ end }}}" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}" title="{posts.user.displayname}">{posts.user.displayname}</a>
+						</div>
 					</div>
 				</div>
 				<div class="d-inline-block d-lg-none me-2">
@@ -34,29 +36,35 @@
 					</a>
 				</div>
 
-				<div class="text-wrap text-truncate">
+				<div class="text-wrap text-truncate w-100">
 					<!-- main post topic info -->
 					{{{ if !posts.index }}}
 					<div class="row mb-3" component="post/header">
 						<div class="col-12">
 							<h4 class="topic-title" component="topic/title">{title}</h4>
-							<div class="d-flex gap-1">
-								<div class="d-inline-block">
-									<a href="{config.relative_path}/category/{category.slug}">
-										<span class="badge rounded-1" style="color:{category.color}; background-color: {category.bgColor};"><i class="fa {category.icon}"></i>&nbsp;{category.name}</span>
-									</a>
-								</div>
+							<div class="d-flex">
+								<div class="d-flex gap-1">
+									<div class="d-inline-block">
+										<a href="{config.relative_path}/category/{category.slug}">
+											<span class="badge rounded-1" style="color:{category.color}; background-color: {category.bgColor};"><i class="fa {category.icon}"></i>&nbsp;{category.name}</span>
+										</a>
+									</div>
 
-								<div class="tags tag-list d-inline-block hidden-xs">
-									{{{ each tags }}}
-									<!-- IMPORT partials/topic/tag.tpl -->
-									{{{ end }}}
-								</div>
+									<div class="tags tag-list d-inline-block hidden-xs">
+										{{{ each tags }}}
+										<!-- IMPORT partials/topic/tag.tpl -->
+										{{{ end }}}
+									</div>
 
-								<div class="d-inline-block">
-									<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago badge rounded-1 text-muted opacity-75 text-decoration-underline" title="{posts.timestampISO}"></span></a>
+									<div class="d-inline-block">
+										<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago badge rounded-1 text-muted opacity-75 text-decoration-underline" title="{posts.timestampISO}"></span></a>
+									</div>
+								</div>
+								<div class="d-flex flex-grow-1 justify-content-end gap-2 d-none d-lg-inline-block">
+									<span class="badge border text-muted rounded-1"><i class="fa fa-pencil"></i> {postcount}</span>
 								</div>
 							</div>
+
 						</div>
 					</div>
 					{{{ end }}}

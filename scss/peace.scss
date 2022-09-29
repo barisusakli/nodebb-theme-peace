@@ -10,10 +10,8 @@
     border-left: 4px solid transparent;
 }
 
-
 #content, .footer {
 	transition: opacity 150ms linear;
-
 	&.ajaxifying {
 		-moz-opacity: 0;
 		opacity: 0;
@@ -51,8 +49,9 @@
 
 .topic-list {
 	.category-item {
-		&.unread .card {
-			border-left: 3px solid $info;
+		.unread-bar { width: 3px; }
+		&.unread .unread-bar {
+			background-color: $info;
 		}
 	}
 }
