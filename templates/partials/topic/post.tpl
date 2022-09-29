@@ -14,7 +14,7 @@
 			<div class="d-flex mb-2">
 				<!-- profile pic-->
 				<div class="d-none d-lg-block border-end me-3" style="min-width:100px; max-width: 100px;">
-					<div class="sticky-top">
+					<div class="sticky-top" style="top: 1rem;">
 						<div class="mx-2">
 							<div class="text-center">
 								<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
@@ -25,7 +25,7 @@
 							</div>
 						</div>
 
-						<div class="text-muted text-center text-wrap">
+						<div class="text-muted text-center text-truncate">
 							<a class="fs-6" href="{{{ if posts.user.userslug }}}{config.relative_path}/user/{posts.user.userslug}{{{ else }}}#{{{ end }}}" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}" title="{posts.user.displayname}">{posts.user.displayname}</a>
 						</div>
 					</div>
@@ -60,7 +60,7 @@
 										<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago badge rounded-1 text-muted opacity-75 text-decoration-underline" title="{posts.timestampISO}"></span></a>
 									</div>
 								</div>
-								<div class="d-flex flex-grow-1 justify-content-end gap-2 d-none d-lg-inline-block">
+								<div class="d-flex flex-grow-1 justify-content-end gap-2 d-none d-lg-inline-flex">
 									<span class="badge border text-muted rounded-1"><i class="fa fa-pencil"></i> {postcount}</span>
 								</div>
 							</div>
