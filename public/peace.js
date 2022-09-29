@@ -22,8 +22,13 @@ $(document).ready(function() {
 				.toggleClass('hidden', !payload.count);
 		});
 		hooks.on('action:chat.updateCount', function (payload) {
-			console.log('update chat count', payload);
 			$('[component="chat/badge"]')
+				.text(payload.count)
+				.toggleClass('hidden', !payload.count);
+		});
+		hooks.on('action:unread.updateCount', function (payload) {
+			const href=  $('a[href="' + config.relative_path + payload.url + '"].navigation-link')
+			href.parent().find('[component="nav/content/badge"]')
 				.text(payload.count)
 				.toggleClass('hidden', !payload.count);
 		});

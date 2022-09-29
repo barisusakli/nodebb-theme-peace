@@ -45,8 +45,16 @@
 .posts li.selected .card {
 	outline: 2px solid $success;
 }
-.topic-list-header{
+.topic-list-header {
 	position: static;
+}
+
+.topic-list {
+	.category-item {
+		&.unread .card {
+			border-left: 3px solid $info;
+		}
+	}
 }
 // topic sidebar sticky-top, change based on viewport
 @include media-breakpoint-down(lg) {
