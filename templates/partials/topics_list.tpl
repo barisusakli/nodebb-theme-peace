@@ -46,7 +46,7 @@
 											</a>
 										</div>
 
-										<div class="tags tag-list d-none d-lg-inline-block {{{ if !tags.length}}}hidden{{{ end }}}">
+										<div class="tags tag-list d-none d-lg-inline-block {{{ if !./tags.length}}}hidden{{{ end }}}">
 											{{{ each ./tags }}}
 											<!-- IMPORT partials/topic/tag.tpl -->
 											{{{ end }}}
