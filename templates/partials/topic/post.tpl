@@ -79,7 +79,7 @@
 			<div class="post-footer d-flex justify-content-end align-items-end h-100">
 
 				<small class="post-tools text-muted d-flex gap-3">
-					<span class="">
+					<span class="votes">
 						<span class="me-1" component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
 						<a component="post/upvote" href="#" class="text-muted {{{ if posts.upvoted }}}upvoted{{{ end }}}">
 							<i class="fa fa-heart"></i><i class="fa fa-heart-o"></i>

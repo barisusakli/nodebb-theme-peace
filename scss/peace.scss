@@ -55,6 +55,15 @@
 		}
 	}
 }
+
+.topic .posts>li.deleted {
+ 	.content {
+		opacity: 0.3;
+	}
+	.votes {
+		display:none;
+	}
+}
 // topic sidebar sticky-top, change based on viewport
 @include media-breakpoint-down(lg) {
 	#topic-sidebar {
