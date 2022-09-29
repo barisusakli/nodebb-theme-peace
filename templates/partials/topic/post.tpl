@@ -50,7 +50,7 @@
 										</a>
 									</div>
 
-									<div class="tags tag-list d-inline-block hidden-xs">
+									<div class="tags tag-list d-inline-flex gap-1 hidden-md {{{ if !tags.length}}}hidden{{{ end }}}">
 										{{{ each tags }}}
 										<!-- IMPORT partials/topic/tag.tpl -->
 										{{{ end }}}

@@ -45,21 +45,20 @@
 												<span class="badge rounded-1" style="color:{./category.color}; background-color: {./category.bgColor};"><i class="fa {./category.icon}"></i>&nbsp;{./category.name}</span>
 											</a>
 										</div>
-										{{{ if ./tags.length }}}
-										<div class="tags tag-list d-none d-lg-inline-block">
+
+										<div class="tags tag-list d-none d-lg-inline-block {{{ if !tags.length}}}hidden{{{ end }}}">
 											{{{ each ./tags }}}
 											<!-- IMPORT partials/topic/tag.tpl -->
 											{{{ end }}}
 										</div>
-										{{{ end }}}
 
 										<div class="d-inline-block">
 											<span class="timeago badge rounded-1 text-body px-0" title="{./timestampISO}"></span>
 										</div>
 									</div>
 									<div class="d-flex flex-grow-1 justify-content-end gap-2">
-										<span class="badge border text-muted rounded-1 d-none d-lg-inline-block"><i class="fa fa-heart"></i> {./votes}</span>
-										<span class="badge border text-muted rounded-1"><i class="fa fa-pencil"></i> {./postcount}</span>
+										<span class="badge border text-muted rounded-1 d-none d-lg-inline-block">{./votes} <i class="fa fa-heart"></i></span>
+										<span class="badge border text-muted rounded-1">{./postcount} <i class="fa fa-pencil"></i></span>
 									</div>
 								</div>
 							</div>
