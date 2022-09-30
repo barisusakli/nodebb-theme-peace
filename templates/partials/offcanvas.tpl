@@ -9,10 +9,11 @@
 	<div class="offcanvas-body py-0 h-100">
 		<ul class="list-unstyled">
 			<!-- IMPORT partials/navigation.tpl -->
-			<li class="border-top my-3"></li>
+			<li class="border-top my-2"></li>
 			<!-- IMPORT partials/loggedin-menu.tpl -->
 			<!-- IMPORT partials/loggedout-menu.tpl -->
-			<li class="border-top my-3"></li>
+			<li class="border-top my-2"></li>
+			<!-- IMPORT partials/manage-menu.tpl -->
 			<!-- IMPORT partials/skin-switcher.tpl -->
 		</ul>
 	</div>

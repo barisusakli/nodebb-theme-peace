@@ -22,9 +22,10 @@
 
 <ul class="list-unstyled ps-0">
 	<!-- IMPORT partials/navigation.tpl -->
-	<li class="border-top my-3"></li>
+	<li class="border-top my-2"></li>
 	<!-- IMPORT partials/loggedin-menu.tpl -->
 	<!-- IMPORT partials/loggedout-menu.tpl -->
-	<li class="border-top my-3"></li>
+	<li class="border-top my-2"></li>
+	<!-- IMPORT partials/manage-menu.tpl -->
 	<!-- IMPORT partials/skin-switcher.tpl -->
 </ul>

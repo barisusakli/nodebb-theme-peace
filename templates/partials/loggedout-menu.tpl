@@ -1,8 +1,8 @@
 <!-- logged out menu -->
 {{{ if !config.loggedIn }}}
-<li class="mb-1">
+<li class="">
 	<h6 class="pointer fw-bold d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-	Account
+	[[global:header.account]]
 	</h6>
 	<div class="collapse show" id="account-collapse">
 		<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
