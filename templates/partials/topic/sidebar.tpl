@@ -1,6 +1,6 @@
 
-<div id="topic-sidebar" class="sticky-top vh-100">
-	<div class="d-flex flex-column gap-2 h-100 pb-4">
+<div id="topic-sidebar" class="sticky-top">
+	<div class="d-flex flex-column gap-2 pb-4">
 		<div class="d-flex flex-column flex-shrink-1 gap-2 mb-2">
 			<div class="topic-main-buttons">
 				<!-- IMPORT partials/topic/reply-button.tpl -->
