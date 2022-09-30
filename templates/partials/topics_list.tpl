@@ -45,11 +45,13 @@
 
 								<div class="d-flex opacity-75">
 									<div class="d-flex gap-2 text-truncate">
+										{{{ if !template.category }}}
 										<div class="d-inline-block">
 											<a class="lh-1" href="{config.relative_path}/category/{./category.slug}">
 												<span class="badge rounded-1" style="color:{./category.color}; background-color: {./category.bgColor};"><i class="fa {./category.icon}"></i>&nbsp;{./category.name}</span>
 											</a>
 										</div>
+										{{{ end }}}
 
 										<div class="tags tag-list d-none d-lg-inline-block {{{ if !./tags.length}}}hidden{{{ end }}}">
 											{{{ each ./tags }}}
