@@ -69,11 +69,7 @@
 										<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago badge rounded-1 text-muted opacity-75 text-decoration-underline" title="{posts.timestampISO}"></span></a>
 									</div>
 								</div>
-								<div class="d-flex flex-grow-1 justify-content-end gap-2 d-none d-lg-inline-flex">
-									<span class="badge border text-muted rounded-1"><i class="fa fa-pencil"></i> {postcount}</span>
-								</div>
 							</div>
-
 						</div>
 					</div>
 					{{{ end }}}

@@ -103,3 +103,34 @@ blockquote {
 		.fa-heart { display: inline-block; color: $red; }
 	}
 }
+
+.scroller-container {
+	height: 300px;
+	border-left: 3px solid $border-color;
+	margin-left: 3px;
+	cursor: pointer;
+	.scroller-thumb {
+		height: 40px;
+		position: relative;
+		left: -6px;
+		padding-right: 15px;
+		margin-right: -15px;
+
+
+		.scroller-thumb-icon {
+			width: 9px;
+			height: 40px;
+			background-color: $primary;
+			position: relative;
+			display: inline-block;
+			border-radius: 3px;
+		}
+		.thumb-text {
+			font-weight: bolder;
+			user-select: none;
+			position: relative;
+			top: -15px;
+			padding-left: 10px;
+		}
+	}
+}
