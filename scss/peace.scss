@@ -1,6 +1,10 @@
 @import "./sidebar";
 @import "./chats.scss";
 
+html {
+	overflow-y: scroll;
+}
+
 .caret {
     display: inline-block;
     width: 0;
