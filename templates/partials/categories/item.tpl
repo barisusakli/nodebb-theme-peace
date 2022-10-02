@@ -1,4 +1,4 @@
-<li component="categories/category" data-cid="{../cid}" data-numRecentReplies="1" class="row category-{../cid} mb-4">
+<li component="categories/category" data-cid="{../cid}" class="row category-{../cid} mb-4">
 	<meta itemprop="name" content="{../name}">
 
 	<div class="content col-12">
