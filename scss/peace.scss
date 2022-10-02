@@ -54,7 +54,7 @@ html {
 
 .topic-list {
 	.category-item {
-		.unread-bar { width: 3px; }
+		.unread-bar { width: 3px; right: 0px; }
 		&.unread .unread-bar {
 			background-color: $info;
 		}
@@ -113,7 +113,7 @@ blockquote {
 .scroller-container {
 	height: 300px;
 	border-left: 3px solid $border-color;
-	margin-left: 3px;
+	margin-left: 4px;
 	cursor: pointer;
 	.scroller-thumb {
 		height: 40px;

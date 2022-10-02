@@ -2,7 +2,9 @@
 	{{{each topics}}}
 	<li component="category/topic" class="mb-2 category-item {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
 		<div class="d-flex align-items-stretch">
-			<div class="unread-bar"></div>
+			<div class="position-relative">
+				<div class="unread-bar position-absolute h-100"></div>
+			</div>
 			<div class="card card-body shadow-sm h-100 rounded-0 ps-0" {{{ if showSelect }}}component="topic/select"{{{ end }}}>
 				<link itemprop="url" content="{config.relative_path}/topic/{../slug}" />
 				<meta itemprop="name" content="{function.stripTags, ../title}" />
@@ -17,16 +19,17 @@
 							{buildAvatar(./user, "64px", false, "rounded")}
 						</a>
 					</div>
-					<div class="vr d-none d-lg-block text-muted me-3" style="width: 2px;"></div>
+					<div class="vr d-none d-lg-block text-muted me-3" style="min-width: 2px;"></div>
+
 					<div class="d-inline-block d-lg-none mx-2">
 						<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 							{buildAvatar(./user, "24px", false, "rounded")}
 						</a>
 					</div>
 
-					<div class="text-wrap text-truncate w-100">
-						<div class="row" component="post/header">
-							<div class="col-12">
+					<div class="text-wrap text-truncate flex-grow-1">
+						<div class="" component="post/header">
+							<div class="d-flex flex-column">
 								<h5 component="topic/header" class="title" title="{./title}" style="line-height: normal;">
 									<i component="topic/scheduled" class="text-muted fa fa-clock-o {{{ if !topics.scheduled }}}hide{{{ end }}}" title="[[topic:scheduled]]"></i>
 									<i component="topic/pinned" class="text-muted fa fa-thumb-tack {{{ if (topics.scheduled || !topics.pinned) }}}hide{{{ end}}}" title="{{{ if !../pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {../pinExpiryISO}]]{{{ end }}}"></i>
