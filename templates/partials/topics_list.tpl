@@ -43,23 +43,23 @@
 									{{{ end }}}
 								</h5>
 
-								<div class="d-flex opacity-75">
-									<div class="d-flex gap-2 text-truncate">
+								<div class="d-flex gap-1 opacity-75 align-items-stretch">
+									<div class="d-flex gap-2 text-truncate align-items-center">
 										{{{ if !template.category }}}
-										<div class="d-inline-block">
-											<a class="lh-1" href="{config.relative_path}/category/{./category.slug}">
-												<span class="badge rounded-1" style="color:{./category.color}; background-color: {./category.bgColor};"><i class="fa {./category.icon}"></i>&nbsp;{./category.name}</span>
+										<div class="lh-1">
+											<a class="badge rounded-1 h-100" style="color:{./category.color}; background-color: {./category.bgColor};" href="{config.relative_path}/category/{./category.slug}">
+												<i class="fa {./category.icon}"></i>&nbsp;{./category.name}
 											</a>
 										</div>
 										{{{ end }}}
 
-										<div class="tags tag-list d-none d-lg-inline-block {{{ if !./tags.length}}}hidden{{{ end }}}">
+										<div class="tags tag-list d-none d-md-inline-flex gap-1 lh-1 {{{ if !./tags.length}}}hidden{{{ end }}}">
 											{{{ each ./tags }}}
 											<!-- IMPORT partials/topic/tag.tpl -->
 											{{{ end }}}
 										</div>
 
-										<div class="d-inline-block">
+										<div class="lh-1">
 											<span class="timeago badge rounded-1 text-body px-0" title="{./timestampISO}"></span>
 										</div>
 									</div>

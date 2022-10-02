@@ -1,5 +1,6 @@
 @import "./sidebar";
 @import "./chats.scss";
+@import "./nprogress.scss";
 
 html {
 	overflow-y: scroll;
@@ -26,6 +27,9 @@ html {
 .tag-item {
 	background-color: #808080;
 	color: white;
+	&:hover {
+		color:white;
+	}
 }
 
 // fix for quartz skin, backdrop-filter breaks layout and

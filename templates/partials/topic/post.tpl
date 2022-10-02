@@ -14,15 +14,15 @@
 				</span>
 				<span component="topic/title">{title}</span>
 			</h4>
-			<div class="d-flex overflow-auto">
-				<div class="d-flex gap-1">
-					<div class="d-inline-block">
-						<a href="{config.relative_path}/category/{category.slug}">
-							<span class="badge rounded-1" style="color:{category.color}; background-color: {category.bgColor};"><i class="fa {category.icon}"></i>&nbsp;{category.name}</span>
+			<div class="d-flex gap-1 overflow-auto align-items-stretch">
+				<div class="d-flex gap-1 align-items-center">
+					<div class="lh-1">
+						<a class="badge rounded-1 h-100" style="color:{category.color}; background-color: {category.bgColor};" href="{config.relative_path}/category/{category.slug}">
+							<i class="fa {category.icon}"></i>&nbsp;{category.name}
 						</a>
 					</div>
 
-					<div class="tags tag-list d-inline-flex gap-1 hidden-md {{{ if !tags.length}}}hidden{{{ end }}}">
+					<div class="tags tag-list gap-1 d-flex lh-1 {{{ if !tags.length}}}hidden{{{ end }}}">
 						{{{ each tags }}}
 						<!-- IMPORT partials/topic/tag.tpl -->
 						{{{ end }}}
@@ -52,6 +52,7 @@
 		<div class="text-wrap text-truncate flex-grow-1">
 			<!-- username & timestamp-->
 			<div class="small text-muted d-flex flex-nowrap align-items-center gap-1 mb-2">
+				<!-- profile pic-->
 				<div class="d-inline-block d-lg-none">
 					<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 						{buildAvatar(./user, "24px", false, "rounded")}

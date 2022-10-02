@@ -1,5 +1,5 @@
 <li component="chat/message" class="chat-message mx-2 pe-2 fw-light clear<!-- IF ../deleted --> deleted<!-- END -->" data-index="{messages.index}" data-mid="{messages.messageId}" data-uid="{messages.fromuid}" data-self="{messages.self}" data-break="{messages.newSet}" data-timestamp="{messages.timestamp}">
-	<div class="message-header {{{ if !messages.newSet }}}hidden{{{ end }}} pb-3">
+	<div class="message-header {{{ if !messages.newSet }}}hidden{{{ end }}} pb-2">
 		<a href="{config.relative_path}/user/{messages.fromUser.userslug}">{buildAvatar(messages.fromUser, "24px", false, "not-responsive rounded")}</a>
 		<span class="chat-user fw-bold"><a href="{config.relative_path}/user/{messages.fromUser.userslug}">{messages.fromUser.displayname}</a></span>
 		<!-- IF ../fromUser.banned -->

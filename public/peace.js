@@ -3,6 +3,7 @@
 /*globals ajaxify, config, utils, NProgress*/
 
 $(document).ready(function() {
+	setupNProgress();
 	$('[component="skinSwitcher"]').on('change', function () {
 		const skin = $(this).val();
 		require(['forum/account/settings'], function (accountSettings) {
@@ -43,4 +44,17 @@ $(document).ready(function() {
 		});
 	});
 
+	function setupNProgress() {
+		require(['nprogress'], function (NProgress) {
+			if (NProgress) {
+				$(window).on('action:ajaxify.start', function () {
+					NProgress.set(0.7);
+				});
+
+				$(window).on('action:ajaxify.end', function () {
+					NProgress.done();
+				});
+			}
+		});
+	}
 });
