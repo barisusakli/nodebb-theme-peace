@@ -3,7 +3,7 @@
 	<li component="category/topic" class="mb-2 category-item {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
 		<div class="d-flex align-items-stretch">
 			<div class="unread-bar"></div>
-			<div class="card card-body shadow-sm h-100 rounded-0" {{{ if showSelect }}}component="topic/select"{{{ end }}}>
+			<div class="card card-body shadow-sm h-100 rounded-0 ps-0" {{{ if showSelect }}}component="topic/select"{{{ end }}}>
 				<link itemprop="url" content="{config.relative_path}/topic/{../slug}" />
 				<meta itemprop="name" content="{function.stripTags, ../title}" />
 				<meta itemprop="itemListOrder" content="descending" />
@@ -12,18 +12,16 @@
 
 				<div class="d-flex">
 					<!-- profile pic-->
-					<div class="d-none d-lg-block border-end me-3" style="min-width:100px; max-width: 100px;">
-						<div class="text-center mx-2">
+					<div class="d-none d-lg-block border-end me-3" style="min-width:128px; max-width: 128px;">
+						<div class="text-center">
 							<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
-								<div class="rounded">
-									{buildAvatar(./user, "64px")}
-								</div>
+								{buildAvatar(./user, "64px", false, "rounded")}
 							</a>
 						</div>
 					</div>
-					<div class="d-inline-block d-lg-none me-2">
+					<div class="d-inline-block d-lg-none mx-2">
 						<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
-							{buildAvatar(./user, "24px", true)}
+							{buildAvatar(./user, "24px", false, "rounded")}
 						</a>
 					</div>
 

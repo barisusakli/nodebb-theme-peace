@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-12">
-		<div class="card card-body pb-2 shadow-sm h-100 rounded-0">
+		<div class="card card-body pb-2 ps-0 shadow-sm h-100 rounded-0">
 			<!-- timestamp -->
 			{{{ if posts.index }}}
 			<div class="mb-2">
@@ -13,16 +13,12 @@
 
 			<div class="d-flex mb-2">
 				<!-- profile pic-->
-				<div class="d-none d-lg-block border-end me-3" style="min-width:100px; max-width: 100px;">
-					<div class="sticky-top" style="top: 1rem;">
-						<div class="mx-2">
-							<div class="text-center">
-								<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
-									<div class="rounded">
-										{buildAvatar(posts.user, "64px")}
-									</div>
-								</a>
-							</div>
+				<div class="d-none d-lg-block border-end me-3" style="min-width:128px; max-width: 128px;">
+					<div class="sticky-top px-3" style="top: 1rem;">
+						<div class="text-center">
+							<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
+								{buildAvatar(posts.user, "64px", false, "rounded")}
+							</a>
 						</div>
 
 						<div class="text-muted text-center text-truncate">
@@ -30,9 +26,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="d-inline-block d-lg-none me-2">
+				<div class="d-inline-block d-lg-none mx-2">
 					<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
-						{buildAvatar(./user, "24px", true)}
+						{buildAvatar(./user, "24px", false, "rounded")}
 					</a>
 				</div>
 
@@ -51,7 +47,7 @@
 								</span>
 								<span component="topic/title">{title}</span>
 							</h4>
-							<div class="d-flex">
+							<div class="d-flex overflow-auto">
 								<div class="d-flex gap-1">
 									<div class="d-inline-block">
 										<a href="{config.relative_path}/category/{category.slug}">
@@ -82,7 +78,6 @@
 
 			<!-- footer -->
 			<div class="post-footer d-flex justify-content-end align-items-end h-100">
-
 				<small class="post-tools text-muted d-flex gap-3">
 					<span class="votes">
 						<span class="me-1" component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
