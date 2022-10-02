@@ -4,8 +4,10 @@
 
 $(document).ready(function() {
 	setupNProgress();
-	$('[component="skinSwitcher"]').on('change', function () {
-		const skin = $(this).val();
+	$('[component="skinSwitcher"]').on('click', '.dropdown-item', function () {
+		const skin = $(this).attr('data-value');
+		$('[component="skinSwitcher"] .dropdown-item .fa-check').addClass('invisible');
+		$(this).find('.fa-check').removeClass('invisible');
 		require(['forum/account/settings'], function (accountSettings) {
 			$('[component="skinSpinner"]').removeClass('invisible');
 			accountSettings.changeSkin(skin);

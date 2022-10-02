@@ -11,12 +11,12 @@
 			</div>
 			<div class="text-center profile-meta">
 				<div class="small mb-1">
-					<div class="text-muted">[[user:joined]]</div>
-					<strong class="timeago" title="{joindateISO}"></strong>
+					<div class="text-muted">[[user:lastonline]]</div>
+					<strong class="timeago" title="{lastonlineISO}"></strong>
 				</div>
 				<div class="small mb-1">
-					<div class="text-muted">[[user:lastonline]]</div>
-					<strong class="timeago" title="{lastonlineISO}"></strong><br />
+					<div class="text-muted">[[user:joined]]</div>
+					<strong class="timeago" title="{joindateISO}"></strong>
 				</div>
 				{{{ if email }}}
 				<div class="small mb-1">

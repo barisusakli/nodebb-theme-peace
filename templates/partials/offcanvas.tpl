@@ -14,7 +14,9 @@
 			<!-- IMPORT partials/loggedout-menu.tpl -->
 			<li class="border-top my-2"></li>
 			<!-- IMPORT partials/manage-menu.tpl -->
-			<!-- IMPORT partials/skin-switcher.tpl -->
 		</ul>
+	</div>
+	<div class="offcanvas-body py-0 overflow-visible">
+		<!-- IMPORT partials/skin-switcher.tpl -->
 	</div>
 </div>
