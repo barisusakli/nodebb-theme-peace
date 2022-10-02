@@ -12,13 +12,12 @@
 
 				<div class="d-flex">
 					<!-- profile pic-->
-					<div class="d-none d-lg-block border-end me-3" style="min-width:128px; max-width: 128px;">
-						<div class="text-center">
-							<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
-								{buildAvatar(./user, "64px", false, "rounded")}
-							</a>
-						</div>
+					<div class="d-none d-lg-block px-3">
+						<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
+							{buildAvatar(./user, "64px", false, "rounded")}
+						</a>
 					</div>
+					<div class="vr d-none d-lg-block text-muted me-3" style="width: 2px;"></div>
 					<div class="d-inline-block d-lg-none mx-2">
 						<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 							{buildAvatar(./user, "24px", false, "rounded")}
@@ -62,8 +61,8 @@
 										</div>
 									</div>
 									<div class="d-flex flex-grow-1 justify-content-end gap-2">
-										<span class="badge border text-muted rounded-1 d-none d-lg-inline-block">{./votes} <i class="fa fa-heart"></i></span>
-										<span class="badge border text-muted rounded-1">{./postcount} <i class="fa fa-pencil"></i></span>
+										<span class="badge border border-muted text-muted rounded-1 d-none d-lg-inline-block">{./votes} <i class="fa fa-heart"></i></span>
+										<span class="badge border border-muted text-muted rounded-1">{./postcount} <i class="fa fa-pencil"></i></span>
 									</div>
 								</div>
 							</div>

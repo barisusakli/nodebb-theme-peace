@@ -41,9 +41,8 @@
 		<div class="col-md-9">
 			<div class="card card-body flex-row mb-4">
 				<div class="d-flex flex-column w-100">
-					<h4 class="text-center">
-						{displayname} <span class="fw-bold">(@{username})</span>
-					</h4>
+					<h4 class="text-center">{displayname}</h4>
+					<h5 class="text-center">(@{username})</h5>
 					{{{ if selectedGroup.length }}}
 					<div class="mb-3 text-center">
 						<div class="small">
@@ -60,28 +59,28 @@
 						{{{ if !reputation:disabled }}}
 						<div class="stat text-center">
 							<div class="human-readable-number fs-2" title="{reputation}">{reputation}</div>
-							<span class="stat-label">[[global:reputation]]</span>
+							<span class="text-muted">[[global:reputation]]</span>
 						</div>
 						{{{ end }}}
 
 						<div class="stat text-center">
 							<div class="human-readable-number fs-2" title="{profileviews}">{profileviews}</div>
-							<span class="stat-label">[[user:profile_views]]</span>
+							<span class="text-muted">[[user:profile_views]]</span>
 						</div>
 
 						<div class="stat text-center">
 							<div><a class="human-readable-number fs-2" title="{counts.posts}" href="{config.relative_path}/user/{userslug}/posts">{counts.posts}</a></div>
-							<span class="stat-label">[[global:posts]]</span>
+							<span class="text-muted">[[global:posts]]</span>
 						</div>
 
 						<div class="stat text-center">
 							<div><a class="human-readable-number fs-2" title="{counts.followers}" href="{config.relative_path}/user/{userslug}/followers">{counts.followers}</a></div>
-							<span class="stat-label">[[user:followers]]</span>
+							<span class="text-muted">[[user:followers]]</span>
 						</div>
 
 						<div class="stat text-center">
 							<div><a class="human-readable-number fs-2" title="{counts.following}" href="{config.relative_path}/user/{userslug}/following">{counts.following}</a></div>
-							<span class="stat-label">[[user:following]]</span>
+							<span class="text-muted">[[user:following]]</span>
 						</div>
 					</div>
 
