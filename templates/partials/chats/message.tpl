@@ -21,7 +21,7 @@
 		<!-- IF !config.disableChatMessageEditing -->
 		<!-- IF messages.self -->
 		<div class="position-relative">
-			<div class="btn-group border shadow-sm controls position-absolute small hover-display" style="bottom:5px; right:30px; display:none;">
+			<div class="btn-group border shadow-sm controls position-absolute small hover-d-block" style="bottom:5px; right:30px; display:none;">
 				<button class="btn btn-sm btn-link" data-action="edit"><i class="fa fa-pencil"></i></button>
 				<button class="btn btn-sm btn-link" data-action="delete"><i class="fa fa-trash"></i></button>
 				<button class="btn btn-sm btn-link" data-action="restore"><i class="fa fa-repeat"></i></button>
