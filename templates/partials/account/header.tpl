@@ -1,17 +1,17 @@
-<div class="d-flex justify-content-between mb-3">
-	<ul class="nav justify-content-start">
-		<li class="nav-item">
+<div class="d-flex mb-3">
+	<ul class="nav">
+		<li class="nav-item me-3">
 			<a class="nav-link active" aria-current="page" href="{config.relative_path}/user/{userslug}">[[user:profile]]</a>
 		</li>
 		{{{ if canEdit }}}
-		<li class="nav-item">
+		<li class="nav-item me-3">
 			<a class="nav-link" href="{config.relative_path}/user/{userslug}/edit">[[user:edit]]</a>
 		</li>
-		<li class="nav-item">
+		<li class="nav-item me-3">
 			<a class="nav-link" href="{config.relative_path}/user/{userslug}/settings">[[user:settings]]</a>
 		</li>
 		{{{ end }}}
-		<li class="nav-item dropdown">
+		<li class="nav-item dropdown me-0">
 			<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="fa fa-ellipsis-h"></i></a>
 			<ul class="dropdown-menu">
 				<!-- IF loggedIn -->

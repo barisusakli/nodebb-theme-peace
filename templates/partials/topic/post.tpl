@@ -29,8 +29,9 @@
 					</div>
 				</div>
 				<div class="d-flex flex-grow-1 justify-content-end gap-2">
-					<span class="badge border border-muted text-muted rounded-1 d-none d-lg-inline-block">{votes} <i class="fa fa-heart"></i></span>
-					<span class="badge border border-muted text-muted rounded-1">{postcount} <i class="fa fa-pencil"></i></span>
+					<span class="badge border border-muted text-muted rounded-1 d-none d-lg-inline-block"><span class="human-readable-number" title="{postercount}">{postercount}</span> <i class="fa fa-fw fa-user"></i></span>
+					<span class="badge border border-muted text-muted rounded-1"><span class="human-readable-number" title="{postcount}">{postcount}</span> <i class="fa fa-fw fa-pencil"></i></span>
+					<span class="badge border border-muted text-muted rounded-1"><span class="human-readable-number" title="{viewcount}">{viewcount}</span> <i class="fa fa-fw fa-eye"></i></span>
 				</div>
 			</div>
 		</div>
