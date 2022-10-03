@@ -1,13 +1,17 @@
 Peace theme for NodeBB
 ====================
 
-Peace is a theme based on Persona, that modifies the topic view with a sidebar
+Peace is a simple theme with a sidebar navigation, it comes with a builtin bootswatch theme switcher.
 
 ## Screenshots
+### Categories
+<img height="450" src="screenshots/categories.png"> <img height="450" src="screenshots/categories-m.png">
 
-![](http://i.imgur.com/KWJEHc4.png)
+### Category
+<img height="450" src="screenshots/category.png"> <img height="450" src="screenshots/category-m.png">
 
-![](https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/original/000/570/286/570286-db378dfd28256a8fabacc9129b3638dc678ac393.png?1439315393)
+### Topic
+<img height="450" src="screenshots/topic.png"> <img height="450" src="screenshots/topic-m.png">
 
-<br />
-![](https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/original/000/570/287/570287-5875c63ce086d361b76d94e5bc7cc88a5fd34b8b.png?1439315419)
+### Skin Switcher && Sidebar
+<img height="450" src="screenshots/skins.png"> <img height="450" src="screenshots/sidebar.png">
