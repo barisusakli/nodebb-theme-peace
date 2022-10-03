@@ -31,9 +31,14 @@ $(document).ready(function() {
 		});
 		hooks.on('action:unread.updateCount', function (payload) {
 			const href=  $('a[href="' + config.relative_path + payload.url + '"].navigation-link')
-			href.parent().find('[component="nav/content/badge"]')
-				.text(payload.count)
-				.toggleClass('hidden', !payload.count);
+			const el = href.parent().find('[component="nav/content/badge"]');
+			if (el.length) {
+				el.text(payload.count)
+					.toggleClass('hidden', !payload.count);
+				$('[component="unread/badge"]')
+					.text(payload.count)
+					.toggleClass('hidden', !payload.count);
+			}
 		});
 	});
 
