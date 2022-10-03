@@ -2,13 +2,15 @@
 	{{{each users}}}
 	<div class="mb-3" data-uid="{users.uid}" style="">
 		<div class="card card-body h-100 text-center">
-			<a href="{config.relative_path}/user/{users.userslug}">{buildAvatar(users, "64px", false, "rounded")}</a>
-
+			<div class="mb-2">
+				<a href="{config.relative_path}/user/{users.userslug}">{buildAvatar(users, "100px", false, "rounded")}</a>
+			</div>
 			<div class="user-info">
-				<div class="text-nowrap text-truncate">
+				<div class="text-truncate">
 					<a href="{config.relative_path}/user/{users.userslug}" title="{users.username}">{users.username}</a>
 				</div>
-				<div class="text-center profile-meta">
+				<hr/>
+				<div class="profile-meta">
 					<div class="small mb-1 text-truncate">
 						<div class="text-muted">[[user:lastonline]]</div>
 						<strong class="timeago" title="{./lastonlineISO}"></strong>
