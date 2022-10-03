@@ -13,5 +13,5 @@ Peace is a simple theme with a sidebar navigation, it comes with a builtin boots
 ### Topic
 <img height="450" src="screenshots/topic.png"> <img height="450" src="screenshots/topic-m.png">
 
-### Skin Switcher && Sidebar
+### Skin Switcher & Sidebar
 <img height="450" src="screenshots/skins.png"> <img height="450" src="screenshots/sidebar.png">
