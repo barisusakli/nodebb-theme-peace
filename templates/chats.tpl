@@ -1,4 +1,4 @@
-<div class="chats-full row pb-5">
+<div class="chats-full row">
 	<div class="d-flex flex-column col-lg-3 h-100" component="chat/nav-wrapper" data-loaded="{{{ if roomId }}}1{{{ else }}}0{{{ end }}}">
 		<div class="chat-search dropdown mb-2">
 			<input class="form-control" type="text" component="chat/search" placeholder="[[users:search-user-for-chat]]" data-bs-toggle="dropdown" />
