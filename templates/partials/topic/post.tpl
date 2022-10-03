@@ -66,7 +66,7 @@
 
 				<!-- timestamp -->
 				<div class="d-flex flex-grow-1 justify-content-end">
-					<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago text-muted opacity-75 text-decoration-underline" title="{posts.timestampISO}"></span></a>
+					<a class="permalink text-nowrap" href="{config.relative_path}/post/{posts.pid}"><span class="timeago text-muted opacity-75 text-decoration-underline" title="{posts.timestampISO}"></span></a>
 				</div>
 			</div>
 
