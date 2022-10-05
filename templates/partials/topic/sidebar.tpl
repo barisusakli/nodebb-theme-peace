@@ -1,5 +1,5 @@
 
-<div id="topic-sidebar" class="sticky-top">
+<div id="topic-sidebar" class="sticky-top" style="z-index: 1;">
 	<div class="d-flex flex-column gap-2 pb-4">
 		<div class="d-flex flex-column flex-shrink-1 gap-2 mb-2">
 			<div class="topic-main-buttons">

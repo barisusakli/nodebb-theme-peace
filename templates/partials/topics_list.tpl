@@ -12,7 +12,7 @@
 				<meta itemprop="position" content="{../index}" />
 				<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
 
-				<div class="d-flex">
+				<div class="d-flex align-items-center">
 					<!-- profile pic-->
 					<div class="d-none d-lg-block px-3">
 						<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
@@ -44,7 +44,7 @@
 								</h5>
 
 								<div class="d-flex gap-1 opacity-75 align-items-stretch">
-									<div class="d-flex gap-2 text-truncate align-items-center">
+									<div class="d-flex gap-1 text-truncate align-items-center">
 										{{{ if !template.category }}}
 										<div class="lh-1">
 											<a class="badge rounded-1 h-100" style="color:{./category.color}; background-color: {./category.bgColor};" href="{config.relative_path}/category/{./category.slug}">

@@ -29,7 +29,7 @@
 		<!-- ENDIF config.usePagination -->
 
 	</div>
-	<div class="col-2">
+	<div class="col-2 px-0 px-lg-2">
 		<!-- IMPORT partials/topic/sidebar.tpl -->
 	</div>
 </div>
