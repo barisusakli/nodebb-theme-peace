@@ -12,7 +12,7 @@
 				<meta itemprop="position" content="{../index}" />
 				<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
 
-				<div class="d-flex align-items-center">
+				<div class="d-flex">
 					<!-- profile pic-->
 					<div class="d-none d-lg-block px-3">
 						<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
@@ -20,16 +20,16 @@
 						</a>
 					</div>
 					<div class="vr d-none d-lg-block text-muted me-3" style="min-width: 2px;"></div>
-
+					<!-- mobile profile picture -->
 					<div class="d-inline-block d-lg-none mx-2">
 						<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 							{buildAvatar(./user, "24px", false, "rounded")}
 						</a>
 					</div>
 
-					<div class="text-wrap text-truncate flex-grow-1">
-						<div class="" component="post/header">
-							<div class="d-flex flex-column">
+					<div class="text-wrap text-truncate flex-grow-1 d-flex align-items-center">
+						<div class="w-100" component="post/header">
+							<div class="d-flex flex-column w-100">
 								<h5 component="topic/header" class="title" title="{./title}" style="line-height: normal;">
 									<i component="topic/scheduled" class="text-muted fa fa-clock-o {{{ if !topics.scheduled }}}hide{{{ end }}}" title="[[topic:scheduled]]"></i>
 									<i component="topic/pinned" class="text-muted fa fa-thumb-tack {{{ if (topics.scheduled || !topics.pinned) }}}hide{{{ end}}}" title="{{{ if !../pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {../pinExpiryISO}]]{{{ end }}}"></i>

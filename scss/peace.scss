@@ -67,12 +67,18 @@ html {
 }
 
 // deleted posts in topic
-.topic .posts>li.deleted {
- 	.content {
-		opacity: 0.3;
+.topic .posts {
+	> li.deleted {
+		.content {
+			opacity: 0.3;
+		}
+		.votes {
+			display:none;
+		}
 	}
-	.votes {
-		display:none;
+	.highlight .card {
+		transition: 0.75s ease-in-out border-color;
+		border-color: $info;
 	}
 }
 
@@ -125,7 +131,7 @@ blockquote {
 		height: 40px;
 		position: relative;
 		left: -6px;
-		padding-right: 15px;
+		padding-right: 0px;
 		margin-right: -15px;
 
 		.scroller-thumb-icon {

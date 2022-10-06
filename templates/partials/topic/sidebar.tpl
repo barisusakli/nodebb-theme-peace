@@ -17,7 +17,7 @@
 			<div class="topic-main-buttons">
 				<!-- IMPORT partials/topic/watch.tpl -->
 			</div>
-			<div class="topic-main-buttons">
+			<div class="topic-main-buttons hidden-xs">
 				<!-- IMPORT partials/topic/sort.tpl -->
 			</div>
 			<div class="topic-main-buttons">
@@ -29,9 +29,9 @@
 				<div class="scroller-content">
 					<span class="pointer pagetop"><i class="fa fa-angle-double-up"></i> <span class="d-none d-md-inline-block">[[topic:first-post]]</span></span>
 					<div class="scroller-container">
-						<div class="scroller-thumb">
+						<div class="scroller-thumb w-100">
 							<div class="scroller-thumb-icon"></div>
-							<span class="thumb-text d-none d-md-inline-block"></span>
+							<span class="small thumb-text d-none d-md-inline-block"></span>
 						</div>
 					</div>
 					<span class="pointer pagebottom"><i class="fa fa-angle-double-down"></i> <span class="d-none d-md-inline-block">[[topic:last-post]]</span></span>
