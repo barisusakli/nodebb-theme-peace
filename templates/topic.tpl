@@ -24,10 +24,13 @@
 			{{{ end }}}
 		</ul>
 
-		<!-- IF config.usePagination -->
-			<!-- IMPORT partials/paginator.tpl -->
-		<!-- ENDIF config.usePagination -->
+		{{{ if config.enableQuickReply }}}
+		<!-- IMPORT partials/topic/quickreply.tpl -->
+		{{{ end }}}
 
+		{{{ if config.usePagination }}}
+		<!-- IMPORT partials/paginator.tpl -->
+		{{{ end }}}
 	</div>
 	<div class="col-2 px-0 px-lg-2">
 		<!-- IMPORT partials/topic/sidebar.tpl -->

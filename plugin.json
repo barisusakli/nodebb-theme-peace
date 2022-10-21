@@ -3,10 +3,16 @@
 	"hooks": [
 		{ "hook": "static:app.load", "method": "init" },
 		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" },
-		{ "hook": "filter:topic.build", "method": "addUserToTopic" },
-		{ "hook": "filter:middleware.renderHeader", "method": "filterMiddlewareRenderHeader" }
+		{ "hook": "filter:config.get", "method": "filterConfigGet" },
+		{ "hook": "filter:topic.build", "method": "filterTopicBuild" },
+		{ "hook": "filter:middleware.renderHeader", "method": "filterMiddlewareRenderHeader" },
+		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" }
 	],
 	"scripts": [
 		"public/peace.js"
-	]
+	],
+	"modules": {
+		"../admin/plugins/peace.js": "public/admin.js",
+		"persona/quickreply.js": "../nodebb-theme-persona/public/modules/quickreply.js"
+	}
 }
