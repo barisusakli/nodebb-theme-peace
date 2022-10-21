@@ -1,6 +1,6 @@
 <div id="chat-modal" class="chat-modal d-flex flex-nowrap modal hide" tabindex="-1" role="dialog" aria-labelledby="Chat" aria-hidden="true" data-backdrop="none">
 	<div class="modal-dialog">
-		<div class="modal-content" style="width: 600px;">
+		<div class="modal-content">
 			<div class="modal-header d-flex">
 				<div class="fs-5 flex-grow-1" component="chat/room/name"><!-- IF roomName -->{roomName}<!-- ELSE -->{usernames}<!-- ENDIF roomName --></div>
 				<button type="button" class="btn btn-link d-none d-md-block p-2 text-muted align-text-top" data-action="maximize">
