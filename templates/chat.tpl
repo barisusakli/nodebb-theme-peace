@@ -18,7 +18,7 @@
 
 			<div class="modal-body d-flex flex-column" style="height: 500px;">
 				<div class="position-relative">
-					<div component="chat/messages/scroll-up-alert" class="position-absolute scroll-up-alert alert alert-info hidden w-100" role="button">[[modules:chat.scroll-up-alert]]</div>
+					<div component="chat/messages/scroll-up-alert" class="position-absolute scroll-up-alert alert alert-info hidden w-100" role="button" style="z-index: 1;">[[modules:chat.scroll-up-alert]]</div>
 				</div>
 				<ul class="chat-content p-0 m-0 list-unstyled d-flex flex-column overflow-auto flex-grow-1" component="chat/messages">
 					<!-- IMPORT partials/chats/messages.tpl -->
