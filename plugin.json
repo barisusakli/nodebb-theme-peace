@@ -12,7 +12,6 @@
 		"public/peace.js"
 	],
 	"modules": {
-		"../admin/plugins/peace.js": "public/admin.js",
-		"persona/quickreply.js": "../nodebb-theme-persona/public/modules/quickreply.js"
+		"../admin/plugins/peace.js": "public/admin.js"
 	}
 }

@@ -4,7 +4,6 @@
 
 $(document).ready(function() {
 	setupNProgress();
-	setupQuickReply();
 
 	$('[component="skinSwitcher"]').on('click', '.dropdown-item', function () {
 		const skin = $(this).attr('data-value');
@@ -63,20 +62,6 @@ $(document).ready(function() {
 				$(window).on('action:ajaxify.end', function () {
 					NProgress.done();
 				});
-			}
-		});
-	}
-
-	function setupQuickReply() {
-		$(window).on('action:ajaxify.end', function (ev, data) {
-			if (data.url && data.url.match('^topic/')) {
-				if (config.enableQuickReply) {
-					require(['persona/quickreply'], function (quickreply) {
-						if (quickreply) {
-							quickreply.init();
-						}
-					});
-				}
 			}
 		});
 	}
