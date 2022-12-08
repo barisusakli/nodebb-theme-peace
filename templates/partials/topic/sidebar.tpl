@@ -21,7 +21,7 @@
 				<!-- IMPORT partials/topic/sort.tpl -->
 			</div>
 			<div class="topic-main-buttons">
-				<!-- IMPORT partials/thread_tools.tpl -->
+				<!-- IMPORT partials/topic/tools.tpl -->
 			</div>
 		</div>
 		<div class="pagination-block flex-grow-1">
