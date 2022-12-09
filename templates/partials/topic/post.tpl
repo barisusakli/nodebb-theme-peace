@@ -1,8 +1,8 @@
-<div class="card card-body pb-2 ps-0 shadow-sm h-100 rounded-0">
+<div class="card card-body pb-2 px-0 shadow-sm h-100 rounded-0">
 
 	{{{ if !posts.index }}}
 	<!-- main post topic info -->
-	<div class="ps-3 pb-3" component="post/header">
+	<div class="px-3" component="post/header">
 		<div class="">
 			<h4 class="topic-title">
 				<span component="topic/labels">
@@ -14,7 +14,7 @@
 				</span>
 				<span component="topic/title">{title}</span>
 			</h4>
-			<div class="d-flex gap-1 overflow-auto align-items-stretch">
+			<div class="d-flex gap-1 overflow-auto align-items-stretch small">
 				<div class="d-flex gap-1 align-items-center">
 					<div class="lh-1">
 						<a class="badge rounded-1 h-100" style="color:{category.color}; background-color: {category.bgColor};" href="{config.relative_path}/category/{category.slug}">
@@ -36,6 +36,7 @@
 			</div>
 		</div>
 	</div>
+	<hr/>
 	{{{ end }}}
 
 	<div class="d-flex mb-2 ps-3 ps-md-0">
@@ -50,7 +51,7 @@
 
 		<div class="vr d-none d-lg-block text-muted me-3" style="min-width: 2px;"></div>
 
-		<div class="text-wrap text-truncate flex-grow-1">
+		<div class="text-wrap text-truncate flex-grow-1 me-3">
 			<!-- username & timestamp-->
 			<div class="small text-muted d-flex flex-nowrap align-items-center gap-1 mb-2">
 				<!-- profile pic-->
@@ -78,7 +79,7 @@
 	</div>
 
 	<!-- footer -->
-	<div class="post-footer d-flex justify-content-end align-items-end h-100">
+	<div class="post-footer d-flex justify-content-end align-items-end h-100 me-3">
 		<small class="post-tools text-muted d-flex gap-3">
 			<span class="votes">
 				<span class="me-1" component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
