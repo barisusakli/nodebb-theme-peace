@@ -14,7 +14,7 @@
 				</span>
 				<span component="topic/title">{title}</span>
 			</h4>
-			<div class="d-flex gap-1 overflow-auto align-items-stretch small">
+			<div class="d-flex gap-1 overflow-auto align-items-stretch">
 				<div class="d-flex gap-1 align-items-center">
 					<div class="lh-1">
 						<a class="badge rounded-1 h-100" style="color:{category.color}; background-color: {category.bgColor};" href="{config.relative_path}/category/{category.slug}">
