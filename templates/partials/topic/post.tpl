@@ -90,7 +90,7 @@
 
 			<a component="post/reply" href="#" class="user-select-none opacity-75 {{{ if !privileges.topics:reply }}}hidden{{{ end }}}">[[topic:reply]]</a>
 			<a component="post/quote" href="#" class="user-select-none opacity-75 {{{ if !privileges.topics:reply }}}hidden{{{ end }}}">[[topic:quote]]</a>
-			<span component="post/tools" class="dropdown moderator-tools bottom-sheet <!-- IF !posts.display_post_menu -->hidden<!-- ENDIF !posts.display_post_menu -->">
+			<span component="post/tools" class="dropdown moderator-tools bottom-sheet {{{ if !posts.display_post_menu }}}hidden{{{ end }}}">
 				<a class="dropdown-toggle opacity-75" href="#" data-bs-toggle="dropdown"><i class="fa fa-fw fa-gear opacity-75"></i></a>
 				<ul class="dropdown-menu dropdown-menu-end" role="menu"></ul>
 			</span>
