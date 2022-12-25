@@ -3,5 +3,6 @@
     "name": "Peace",
     "description": "A clean theme, optimized for use with Bootswatch skins.",
     "url": "https://github.com/barisusakli/nodebb-theme-peace",
-    "screenshot": "screenshot.png"
+    "screenshot": "screenshot.png",
+    "baseTheme": "nodebb-theme-persona"
 }
