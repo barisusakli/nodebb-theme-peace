@@ -30,7 +30,7 @@
 					<div class="text-wrap text-truncate flex-grow-1 d-flex align-items-center">
 						<div class="w-100" component="post/header">
 							<div class="d-flex flex-column w-100">
-								<h5 component="topic/header" class="title" title="{./title}" style="line-height: normal;">
+								<h5 component="topic/header" class="title" style="line-height: normal;">
 									<i component="topic/scheduled" class="text-muted fa fa-clock-o {{{ if !topics.scheduled }}}hidden{{{ end }}}" title="[[topic:scheduled]]"></i>
 									<i component="topic/pinned" class="text-muted fa fa-thumb-tack {{{ if (topics.scheduled || !topics.pinned) }}}hidden{{{ end}}}" title="{{{ if !../pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {../pinExpiryISO}]]{{{ end }}}"></i>
 									<i component="topic/locked" class="text-muted fa fa-lock {{{ if !topics.locked }}}hidden{{{ end }}}" title="[[topic:locked]]"></i>

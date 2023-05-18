@@ -1,4 +1,4 @@
-<li component="post" class="posts-list-item card mb-3 {{{if ../deleted }}}deleted{{{ else }}}{{{ if ../topic.deleted }}} deleted{{{ end }}}{{{ end }}}{{{ if ../topic.scheduled }}} scheduled{{{ end }}}" data-pid="{../pid}" data-uid="{../uid}">
+<li component="post" class="posts-list-item card shadow-sm border-0 rounded-3 mb-3 {{{if ../deleted }}}deleted{{{ else }}}{{{ if ../topic.deleted }}} deleted{{{ end }}}{{{ end }}}{{{ if ../topic.scheduled }}} scheduled{{{ end }}}" data-pid="{../pid}" data-uid="{../uid}">
     <div class="card-body">
         <h5><a class="topic-title" href="{config.relative_path}/post/{../pid}">
             <span class="text-muted">{{{ if ../isMainPost }}}<i class="fa fa-book"></i>{{{ else }}}<i class="fa fa-reply"></i>{{{ end }}}</span> {../topic.title}
