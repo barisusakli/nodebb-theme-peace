@@ -1,4 +1,4 @@
-<div class="card card-body pb-2 px-0 shadow-sm h-100 rounded-0">
+<div class="card card-body px-0 shadow-sm h-100 rounded-3 border-0">
 
 	{{{ if !posts.index }}}
 	<!-- main post topic info -->
@@ -14,19 +14,17 @@
 				</span>
 				<span component="topic/title">{title}</span>
 			</h4>
-			<div class="d-flex gap-1 overflow-auto align-items-stretch">
-				<div class="d-flex gap-1 align-items-center">
+			<div class="d-flex gap-1 overflow-auto align-items-start">
+				<div class="d-flex gap-1 align-items-center flex-wrap">
 					<div class="lh-1">
 						<a class="badge rounded-1 h-100" style="color:{category.color}; background-color: {category.bgColor};" href="{config.relative_path}/category/{category.slug}">
 							<i class="fa {category.icon}"></i>&nbsp;{category.name}
 						</a>
 					</div>
 
-					<div class="tags tag-list gap-1 d-flex lh-1 {{{ if !tags.length}}}hidden{{{ end }}}">
-						{{{ each tags }}}
-						<!-- IMPORT partials/topic/tag.tpl -->
-						{{{ end }}}
-					</div>
+					{{{ each tags }}}
+					<!-- IMPORT partials/topic/tag.tpl -->
+					{{{ end }}}
 				</div>
 				<div class="d-flex flex-grow-1 justify-content-end gap-2">
 					<span class="badge border border-muted text-muted rounded-1 d-none d-lg-inline-block"><span class="human-readable-number" title="{postercount}">{postercount}</span> <i class="fa fa-fw fa-user"></i></span>
@@ -36,7 +34,7 @@
 			</div>
 		</div>
 	</div>
-	<hr/>
+	<hr class="mx-3"/>
 	{{{ end }}}
 
 	<div class="d-flex mb-2 ps-3 ps-md-0">
@@ -62,12 +60,12 @@
 				</div>
 				<!-- username -->
 				<div class="text-truncate">
-					<a class="text-muted" href="{{{ if posts.user.userslug }}}{config.elative_path}/user/{posts.user.userslug}{{{ else }}}#{{{ end }}}" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}" title="{posts.user.displayname}">{posts.user.displayname}</a>
+					<a class="text-muted fw-bold" href="{{{ if posts.user.userslug }}}{config.elative_path}/user/{posts.user.userslug}{{{ else }}}#{{{ end }}}" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}" title="{posts.user.displayname}">{posts.user.displayname}</a>
 				</div>
 
 				<!-- timestamp -->
 				<div class="d-flex flex-grow-1 justify-content-end">
-					<a class="permalink text-nowrap" href="{config.relative_path}/post/{posts.pid}"><span class="timeago text-muted opacity-75 text-decoration-underline" title="{posts.timestampISO}"></span></a>
+					<a class="permalink text-nowrap" href="{config.relative_path}/post/{posts.pid}"><span class="timeago text-xs text-muted opacity-75 text-decoration-underline" title="{posts.timestampISO}"></span></a>
 				</div>
 			</div>
 
