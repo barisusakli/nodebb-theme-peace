@@ -78,17 +78,17 @@
 
 	<!-- footer -->
 	<div class="post-footer d-flex justify-content-end align-items-end h-100 me-3">
-		<small class="post-tools text-muted d-flex gap-3">
+		<small class="post-tools text-muted d-flex gap-2">
 			<span class="votes">
 				<span class="me-1" component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
-				<a component="post/upvote" href="#" class="text-muted {{{ if posts.upvoted }}}upvoted{{{ end }}}">
-					<i class="fa fa-heart"></i><i class="fa fa-heart-o"></i>
+				<a component="post/upvote" href="#" class="pe-2 text-muted {{{ if posts.upvoted }}}upvoted{{{ end }}}">
+					<i class="fa fa-heart"></i><i class="fa fa-fw fa-heart-o"></i>
 				</a>
 			</span>
 
-			<a component="post/reply" href="#" class="user-select-none opacity-75 {{{ if !privileges.topics:reply }}}hidden{{{ end }}}">[[topic:reply]]</a>
-			<a component="post/quote" href="#" class="user-select-none opacity-75 {{{ if !privileges.topics:reply }}}hidden{{{ end }}}">[[topic:quote]]</a>
-			<span component="post/tools" class="dropdown moderator-tools bottom-sheet {{{ if !posts.display_post_menu }}}hidden{{{ end }}}">
+			<a component="post/reply" href="#" class="px-2 user-select-none opacity-75 {{{ if !privileges.topics:reply }}}hidden{{{ end }}}"><i class="fa fa-fw fa-reply"></i></a>
+			<a component="post/quote" href="#" class="px-2 user-select-none opacity-75 {{{ if !privileges.topics:reply }}}hidden{{{ end }}}"><i class="fa fa-fw fa-quote-right"></i></a>
+			<span component="post/tools" class="ps-2 dropdown moderator-tools bottom-sheet {{{ if !posts.display_post_menu }}}hidden{{{ end }}}">
 				<a class="dropdown-toggle opacity-75" href="#" data-bs-toggle="dropdown"><i class="fa fa-fw fa-gear opacity-75"></i></a>
 				<ul class="dropdown-menu dropdown-menu-end" role="menu"></ul>
 			</span>
