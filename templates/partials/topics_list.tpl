@@ -53,10 +53,11 @@
 										</div>
 										{{{ end }}}
 
-										{{{ each ./tags }}}
-										<!-- IMPORT partials/topic/tag.tpl -->
-										{{{ end }}}
-
+										<div data-tid="{./tid}" component="topic/tags" class="tags tag-list d-none d-md-inline-flex gap-1 lh-1 {{{ if !./tags.length}}}hidden{{{ end }}}">
+											{{{ each ./tags }}}
+											<!-- IMPORT partials/topic/tag.tpl -->
+											{{{ end }}}
+										</div>
 
 										<div class="lh-1">
 											<span class="timeago badge border border-muted text-muted rounded-1 fw-semibold" title="{./timestampISO}"></span>
