@@ -22,6 +22,15 @@
 					{{{ end }}}
 				</div>
 			</div>
+			<hr class="my-1"/>
+
+			<div class="d-grid" style="grid-template-columns: 1fr 1fr;">
+				{{{ each bootswatchSkinOptions.default }}}
+				<li>
+					<a href="#" class="dropdown-item rounded-1" data-value="{./value}">{./name} <i class="fa fa-fw fa-check {{{ if !./selected }}} invisible {{{ end }}}"></i></a>
+				</li>
+				{{{ end }}}
+			</div>
 		</ul>
 	</div>
 	<div class="d-flex justify-content-center invisible" component="skinSpinner">
