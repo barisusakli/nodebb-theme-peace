@@ -98,6 +98,21 @@ blockquote {
 	margin-left: $spacer;
 	padding-left: $spacer;
 }
+.post-content {
+	> blockquote {
+		> blockquote {
+			> *:not(.blockquote) {
+				display: none;
+			}
+		}
+
+		> blockquote.uncollapsed {
+			> *:not(.blockquote) {
+				display: block;
+			}
+		}
+	}
+}
 
 // only show breadcrumbs on category page
 .breadcrumb {

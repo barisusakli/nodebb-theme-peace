@@ -68,7 +68,7 @@
 			</div>
 
 			<!-- content -->
-			<div class="content flex-grow-1" component="post/content" itemprop="text">
+			<div class="post-content flex-grow-1" component="post/content" itemprop="text">
 				{posts.content}
 			</div>
 		</div>
