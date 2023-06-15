@@ -17,6 +17,13 @@
 					[[pages:post-queue]]
 				</a>
 			</li>
+			{{{ if registrationQueueEnabled }}}
+			<li>
+				<a class="d-inline-flex text-decoration-none" href="{relative_path}/registration-queue">
+					[[pages:registration-queue]]
+				</a>
+			</li>
+			{{{ end }}}
 			<li>
 				<a class="d-inline-flex text-decoration-none" href="{relative_path}/ip-blacklist">
 					[[pages:ip-blacklist]]
