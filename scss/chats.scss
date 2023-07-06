@@ -1,8 +1,45 @@
 // chats need a bit of css
+.page-user-chats  {
+	.navbar {
+		display: none!important;
+	}
+	#panel {
+		max-width: 100%;
+		#content {
+			max-width: 100%;
+		}
+	}
+}
 
 /* Styles common to both full chat and chat modal */
-.chats-full, .chat-modal {
+.chats-full {
 	height: calc(100vh - var(--panel-offset) - $spacer);
+	[component="chat/nav-wrapper"] {
+		width: 240px;
+		[component="chat/public/room"].unread {
+			font-weight: $font-weight-bold;
+		}
+	}
+	.chats-list &.active {
+		background-color: $light;
+	}
+}
+
+body.page-user-chats {
+	overflow: hidden;
+	height: 100%;
+	> #panel {
+		height: 100%;
+		> div {
+			height: 100%;
+			> div {
+				height: 100%;
+				> .container {
+					height: 100%;
+				}
+			}
+		}
+	}
 }
 
 .expanded-chat, .chat-modal {
@@ -28,9 +65,13 @@
 }
 
 /* Mobile handling of chat page */
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
 	.page-user-chats {
 		padding-bottom: 0;
+
+		[component="chat/nav-wrapper"] {
+			width: 100%;
+		}
 
 		[component="chat/nav-wrapper"][data-loaded="1"] {
 			display: none!important;
