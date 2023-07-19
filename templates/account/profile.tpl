@@ -58,28 +58,28 @@
 					<div class="account-stats d-flex gap-2 w-100 justify-content-between">
 						{{{ if !reputation:disabled }}}
 						<div class="stat text-center">
-							<div class="human-readable-number fs-2" title="{reputation}">{reputation}</div>
+							<div class="fs-2" title="{reputation}">{humanReadableNumber(reputation)}</div>
 							<span class="text-muted">[[global:reputation]]</span>
 						</div>
 						{{{ end }}}
 
 						<div class="stat text-center">
-							<div class="human-readable-number fs-2" title="{profileviews}">{profileviews}</div>
+							<div class="fs-2" title="{profileviews}">{humanReadableNumber(profileviews)}</div>
 							<span class="text-muted">[[user:profile_views]]</span>
 						</div>
 
 						<div class="stat text-center">
-							<div><a class="human-readable-number fs-2" title="{counts.posts}" href="{config.relative_path}/user/{userslug}/posts">{counts.posts}</a></div>
+							<div><a class="fs-2" title="{counts.posts}" href="{config.relative_path}/user/{userslug}/posts">{humanReadableNumber(counts.posts)}</a></div>
 							<span class="text-muted">[[global:posts]]</span>
 						</div>
 
 						<div class="stat text-center">
-							<div><a class="human-readable-number fs-2" title="{counts.followers}" href="{config.relative_path}/user/{userslug}/followers">{counts.followers}</a></div>
+							<div><a class="fs-2" title="{counts.followers}" href="{config.relative_path}/user/{userslug}/followers">{humanReadableNumber(counts.followers)}</a></div>
 							<span class="text-muted">[[user:followers]]</span>
 						</div>
 
 						<div class="stat text-center">
-							<div><a class="human-readable-number fs-2" title="{counts.following}" href="{config.relative_path}/user/{userslug}/following">{counts.following}</a></div>
+							<div><a class="fs-2" title="{counts.following}" href="{config.relative_path}/user/{userslug}/following">{humanReadableNumber(counts.following)}</a></div>
 							<span class="text-muted">[[user:following]]</span>
 						</div>
 					</div>

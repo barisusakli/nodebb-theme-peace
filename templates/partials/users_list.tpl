@@ -21,11 +21,11 @@
 					</div>
 					<div class="small mb-1  text-truncate">
 						<div class="text-muted">[[user:reputation]]</div>
-						<strong class="formatted-number" title="{./reputation}">{./reputation}</strong>
+						<strong title="{./reputation}">{formattedNumber(./reputation)}</strong>
 					</div>
 					<div class="small mb-1 text-truncate">
 						<div class="text-muted">[[user:postcount]]</div>
-						<strong class="formatted-number" title="{./postcount}">{./postcount}</strong>
+						<strong title="{./postcount}">{formattedNumber(./postcount)}</strong>
 					</div>
 				</div>
 			</div>
