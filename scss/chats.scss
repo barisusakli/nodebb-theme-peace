@@ -47,7 +47,14 @@ body.page-user-chats {
 	[data-action="minimize"] {
 		display: none!important;
 	}
-	.chat-content .chat-message.deleted {
+	.chat-message {
+		.message-body-wrapper .controls {
+			[data-action="restore"] {
+				display: none;
+			}
+		}
+	}
+	.chat-message.deleted {
 		.message-body-wrapper .controls {
 			[data-action] {
 				display: none;
