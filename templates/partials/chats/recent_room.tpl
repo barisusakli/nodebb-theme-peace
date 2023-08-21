@@ -1,4 +1,4 @@
-<li component="chat/recent/room" data-roomid="{rooms.roomId}" class="{{{ if rooms.unread }}}unread{{{ end }}} card card-body pointer mb-2" style="">
+<li component="chat/recent/room" data-roomid="{rooms.roomId}" class="{{{ if rooms.unread }}}unread{{{ end }}} btn btn-light mb-2 w-100 text-start">
 	<ul class="members list-unstyled">
 	{{{ each rooms.users}}}
 	{{{ if @first }}}
@@ -6,8 +6,6 @@
 		<a href="{config.relative_path}/user/{rooms.users.userslug}">{buildAvatar(rooms.users, "24px", false, "rounded")}</a>
 		<span component="chat/title">{{{ if rooms.roomName }}}{rooms.roomName}{{{ else }}}{rooms.usernames}{{{ end }}}</span>
 	</div>
-	{{{ else }}}
-		<a href="{config.relative_path}/user/{rooms.users.userslug}">{buildAvatar(rooms.users, "24px", true, "rounded")}</a>
 	{{{ end }}}
 	{{{ end }}}
 	</ul>
