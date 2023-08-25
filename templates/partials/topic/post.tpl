@@ -4,7 +4,7 @@
 	<!-- main post topic info -->
 	<div class="px-3" component="post/header">
 		<div class="">
-			<h4 class="topic-title">
+			<h1 class="topic-title fs-4">
 				<span component="topic/labels">
 					<i component="topic/scheduled" class="text-muted fa fa-clock-o {{{ if !scheduled }}}hidden{{{ end }}}" title="[[topic:scheduled]]"></i>
 					<i component="topic/pinned" class="text-muted fa fa-thumb-tack {{{ if (scheduled || !pinned) }}}hidden{{{ end }}}" title="{{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {pinExpiryISO}]]{{{ end }}}"></i>
@@ -13,7 +13,7 @@
 					{{{each icons}}}{@value}{{{end}}}
 				</span>
 				<span component="topic/title">{title}</span>
-			</h4>
+			</h1>
 			<div class="d-flex gap-1 overflow-auto align-items-start">
 				<div class="d-flex gap-1 align-items-center flex-wrap">
 					<div class="lh-1">
