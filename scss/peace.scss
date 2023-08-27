@@ -5,7 +5,9 @@
 html {
 	overflow-y: scroll;
 }
-
+body.skin-noskin {
+	background-color: $gray-100;
+}
 .caret {
     display: inline-block;
     width: 0;
