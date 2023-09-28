@@ -1,5 +1,13 @@
 <div class="topic row">
 	<div class="col-10">
+		{{{ if merger }}}
+		<!-- IMPORT partials/topic/merged-message.tpl -->
+		{{{ end }}}
+
+		{{{ if forker }}}
+		<!-- IMPORT partials/topic/forked-message.tpl -->
+		{{{ end }}}
+
 		{{{ if !scheduled }}}
 		<!-- IMPORT partials/topic/deleted-message.tpl -->
 		{{{ end }}}
