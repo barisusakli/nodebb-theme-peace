@@ -28,5 +28,6 @@
 	<!-- IMPORT partials/loggedout-menu.tpl -->
 	<li class="border-top my-2"></li>
 	<!-- IMPORT partials/manage-menu.tpl -->
+	<li class="border-top my-2"></li>
 	<!-- IMPORT partials/skin-switcher.tpl -->
 </ul>

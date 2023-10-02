@@ -23,11 +23,10 @@
 					</div>
 
 					<div data-tid="{./tid}" component="topic/tags" class="lh-1 tags tag-list d-flex flex-wrap hidden-xs hidden-empty gap-2"><!-- IMPORT partials/topic/tags.tpl --></div>
-				</div>
-				<div class="d-flex flex-grow-1 justify-content-end gap-2">
-					<span class="badge border border-muted text-muted rounded-1 d-none d-lg-inline-block"><span title="{postercount}">{humanReadableNumber(postercount)}</span> <i class="fa fa-fw fa-user"></i></span>
-					<span class="badge border border-muted text-muted rounded-1"><span title="{postcount}">{humanReadableNumber(postcount)}</span> <i class="fa fa-fw fa-pencil"></i></span>
-					<span class="badge border border-muted text-muted rounded-1"><span title="{viewcount}">{humanReadableNumber(viewcount)}</span> <i class="fa fa-fw fa-eye"></i></span>
+
+					<span class="badge border text-muted rounded-1 d-none d-lg-inline-block"><span title="{postercount}">{humanReadableNumber(postercount)}</span> <i class="fa fa-fw fa-user"></i></span>
+					<span class="badge border text-muted rounded-1"><span title="{postcount}">{humanReadableNumber(postcount)}</span> <i class="fa fa-fw fa-pencil"></i></span>
+					<span class="badge border text-muted rounded-1"><span title="{viewcount}">{humanReadableNumber(viewcount)}</span> <i class="fa fa-fw fa-eye"></i></span>
 				</div>
 			</div>
 		</div>
@@ -62,7 +61,7 @@
 				</div>
 
 				<!-- timestamp -->
-				<div class="d-flex flex-grow-1 justify-content-end">
+				<div class="d-flex">
 					<a class="permalink text-nowrap" href="{config.relative_path}/post/{posts.pid}"><span class="timeago text-xs text-muted opacity-75 text-decoration-underline" title="{posts.timestampISO}"></span></a>
 				</div>
 			</div>

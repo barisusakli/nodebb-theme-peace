@@ -1,7 +1,7 @@
 <!-- manage-menu -->
 {{{ if config.loggedIn }}}
 <li class="mb-2">
-	<h6 class="pointer fw-bold d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#manage-collapse" aria-expanded="false">
+	<h6 class="text-uppercase pointer fw-bold d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#manage-collapse" aria-expanded="false">
 	[[global:header.manage]]
 	</h6>
 	<div class="collapse" id="manage-collapse">

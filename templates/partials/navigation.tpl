@@ -1,5 +1,5 @@
 <li class="mb-1">
-	<h6 class="pointer fw-bold d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#navigation-collapse" aria-expanded="true">
+	<h6 class="text-uppercase pointer fw-bold d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#navigation-collapse" aria-expanded="true">
 	[[global:header.navigation]]
 	</h6>
 	<div class="collapse show" id="navigation-collapse">
