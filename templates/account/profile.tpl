@@ -21,7 +21,7 @@
 				{{{ if email }}}
 				<div class="small">
 					<div class="text-muted">[[user:email]]</div>
-					<strong><i class="fa fa-eye-slash {emailClass}" title="[[user:email_hidden]]"></i> {email}</strong>
+					<strong><i class="fa fa-eye-slash {emailClass}" title="[[user:email-hidden]]"></i> {email}</strong>
 				</div>
 				{{{ end }}}
 				{{{ if websiteName }}}
@@ -65,7 +65,7 @@
 
 						<div class="stat text-center">
 							<div class="fs-2" title="{profileviews}">{humanReadableNumber(profileviews)}</div>
-							<span class="text-muted">[[user:profile_views]]</span>
+							<span class="text-muted">[[user:profile-views]]</span>
 						</div>
 
 						<div class="stat text-center">
