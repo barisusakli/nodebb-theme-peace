@@ -39,6 +39,7 @@
 				{{{ if isAdminOrGlobalMod }}}
 				<button class="btn btn-sm btn-link chat-ip-button" title="[[modules:chat.show-ip]]"><i class="fa fa-info-circle"></i></button>
 				{{{ end }}}
+				<button class="btn btn-sm btn-link" data-action="copy-link" title="[[modules:chat.copy-link]]" data-mid="{messages.mid}"><i class="fa fa-link"></i></button>
 			</div>
 		</div>
 	</div>
