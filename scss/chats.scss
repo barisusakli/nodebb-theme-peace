@@ -48,9 +48,21 @@ body.page-user-chats {
 		display: none!important;
 	}
 	.chat-message {
-		.message-body-wrapper .controls {
-			[data-action="restore"], [data-action="unpin"] {
-				display: none;
+		.message-body-wrapper {
+			.controls {
+				opacity: 0;
+				transition: $transition-fade;
+				&:has([aria-expanded="true"]) {
+					opacity: 1;
+				}
+				[data-action="restore"], [data-action="unpin"] {
+					display: none;
+				}
+			}
+			&:hover {
+				.controls {
+					opacity: 1;
+				}
 			}
 		}
 	}
@@ -61,7 +73,7 @@ body.page-user-chats {
 			}
 
 			[data-action="restore"] {
-				display: inline;
+				display: block;
 			}
 		}
 
@@ -76,7 +88,7 @@ body.page-user-chats {
 			}
 
 			[data-action="unpin"] {
-				display: inline;
+				display: block;
 			}
 		}
 	}
