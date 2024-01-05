@@ -1,33 +1,6 @@
 // chats need a bit of css
-.page-user-chats  {
-	.navbar {
-		display: none!important;
-	}
-	#panel {
-		max-width: 100%;
-		#content {
-			max-width: 100%;
-		}
-	}
-}
-
-/* Styles common to both full chat and chat modal */
-.chats-full {
-	height: calc(100vh - var(--panel-offset) - $spacer);
-	[component="chat/nav-wrapper"] {
-		width: 240px;
-		[component="chat/public/room"].unread {
-			font-weight: $font-weight-bold;
-		}
-	}
-	.chats-list &.active {
-		background-color: $light;
-	}
-}
 
 body.page-user-chats {
-	overflow: hidden;
-	height: 100%;
 	> #panel {
 		height: 100%;
 		> div {
@@ -36,94 +9,33 @@ body.page-user-chats {
 				height: 100%;
 				> .container {
 					height: 100%;
+
 				}
 			}
+		}
+	}
+
+	#panel {
+		max-width: 100%;
+		#content {
+			max-width: 100%;
+		}
+	}
+	#content {
+		.chats-full {
+			padding-top: 0!important;
 		}
 	}
 }
 
-.expanded-chat, .chat-modal {
-	// no taskbar so hide minimize button
-	[data-action="minimize"] {
-		display: none!important;
-	}
-	.chat-message {
-		.message-body-wrapper {
-			.controls {
-				opacity: 0;
-				transition: $transition-fade;
-				&:has([aria-expanded="true"]) {
-					opacity: 1;
-				}
-				[data-action="restore"], [data-action="unpin"] {
-					display: none;
-				}
-			}
-			&:hover {
-				.controls {
-					opacity: 1;
-				}
-			}
-		}
-	}
-	.chat-message.deleted {
-		.message-body-wrapper .controls {
-			[data-action] {
-				display: none;
-			}
-
-			[data-action="restore"] {
-				display: block;
-			}
-		}
-
-		.message-body {
-			opacity: 0.3;
-		}
-	}
-	.chat-message.pinned {
-		.message-body-wrapper .controls {
-			[data-action="pin"] {
-				display: none;
-			}
-
-			[data-action="unpin"] {
-				display: block;
-			}
-		}
-	}
-}
-
-/* Mobile handling of chat page */
 @include media-breakpoint-down(md) {
-	.page-user-chats {
-		padding-bottom: 0;
-
-		[component="chat/nav-wrapper"] {
-			width: 100%;
-		}
-
-		[component="chat/nav-wrapper"][data-loaded="1"] {
-			display: none!important;
-		}
-
-		[component="chat/nav-wrapper"][data-loaded="0"] + [component="chat/main-wrapper"] {
-			display: none!important;
-		}
-
-		[component="chat/messages"] {
-			width: calc(100vw - $grid-gutter-width);
-		}
-	}
-
-	[data-action="pop-out"] {
-		display: none!important;
+	.page-user-chats #content {
+		padding-top: 0!important;
 	}
 }
 
-/* Mobile handling of chat modal */
-@include media-breakpoint-down(sm) {
-	.chat-modal {
-		z-index: $zindex-popover + 10;
+.page-user-chats.chat-loaded {
+	.navbar {
+		display: none!important;
 	}
 }
