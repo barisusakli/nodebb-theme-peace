@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-peace",
-  "version": "2.1.26",
+  "version": "2.2.0",
   "nbbpm": {
     "compatibility": "^3.5.0"
   },
