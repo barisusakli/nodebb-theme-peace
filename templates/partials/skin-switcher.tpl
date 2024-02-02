@@ -1,14 +1,14 @@
 <li class="mb-1 d-flex align-items-center">
 	<div class="dropup me-2" component="skinSwitcher">
-		<button class="btn btn-sm btn-outline-secondary" data-bs-toggle="dropdown" aria-expanded="false">Change Skin</button>
-		<ul class="dropdown-menu overflow-auto">
+		<button class="btn btn-sm btn-outline-secondary" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Change Skin</button>
+		<ul class="dropdown-menu overflow-auto" role="menu">
 			<div class="d-flex">
 				<div>
 					<li class="dropdown-header">Light</li>
 					<div class="d-grid" style="grid-template-columns: 1fr 1fr;">
 						{{{ each bootswatchSkinOptions.light }}}
 						<li>
-							<a href="#" class="dropdown-item" data-value="{./value}">{./name} <i class="fa fa-fw fa-check {{{ if !./selected }}} invisible {{{ end }}}"></i></a>
+							<a href="#" class="dropdown-item" data-value="{./value}" role="menuitem">{./name} <i class="fa fa-fw fa-check {{{ if !./selected }}} invisible {{{ end }}}"></i></a>
 						</li>
 						{{{ end }}}
 					</div>
@@ -17,7 +17,7 @@
 					<li class="dropdown-header">Dark</li>
 					{{{ each bootswatchSkinOptions.dark }}}
 					<li>
-						<a href="#" class="dropdown-item" data-value="{./value}">{./name} <i class="fa fa-fw fa-check {{{ if !./selected }}} invisible {{{ end }}}"></i></a>
+						<a href="#" class="dropdown-item" data-value="{./value}" role="menuitem">{./name} <i class="fa fa-fw fa-check {{{ if !./selected }}} invisible {{{ end }}}"></i></a>
 					</li>
 					{{{ end }}}
 				</div>
@@ -27,12 +27,12 @@
 			<div class="d-grid" style="grid-template-columns: 1fr 1fr;">
 				{{{ each bootswatchSkinOptions.default }}}
 				<li>
-					<a href="#" class="dropdown-item rounded-1" data-value="{./value}">{./name} <i class="fa fa-fw fa-check {{{ if !./selected }}} invisible {{{ end }}}"></i></a>
+					<a href="#" class="dropdown-item rounded-1" data-value="{./value}" role="menuitem">{./name} <i class="fa fa-fw fa-check {{{ if !./selected }}} invisible {{{ end }}}"></i></a>
 				</li>
 				{{{ end }}}
 				{{{ each bootswatchSkinOptions.custom }}}
 				<li>
-					<a href="#" class="dropdown-item rounded-1" data-value="{./value}">{./name} <i class="fa fa-fw fa-check {{{ if !./selected }}} invisible {{{ end }}}"></i></a>
+					<a href="#" class="dropdown-item rounded-1" data-value="{./value}" role="menuitem">{./name} <i class="fa fa-fw fa-check {{{ if !./selected }}} invisible {{{ end }}}"></i></a>
 				</li>
 				{{{ end }}}
 			</div>

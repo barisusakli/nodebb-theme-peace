@@ -23,7 +23,7 @@
 				<span component="nav/content/badge" class="badge bg-info {{{ if !navigation.content }}}hidden {{{end}}}">{navigation.content}</span>
 
 				{{{ if navigation.dropdown }}}
-				<ul class="dropdown-menu">
+				<ul class="dropdown-menu" role="menu">
 					{navigation.dropdownContent}
 				</ul>
 				{{{ end }}}
