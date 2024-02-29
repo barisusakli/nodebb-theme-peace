@@ -19,7 +19,7 @@
 							{buildAvatar(./user, "64px", false, "rounded")}
 						</a>
 					</div>
-					<div class="vr d-none d-lg-block text-muted me-3" style="min-width: 2px;"></div>
+
 					<!-- mobile profile picture -->
 					<div class="d-inline-block d-lg-none mx-2">
 						<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">

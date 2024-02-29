@@ -44,8 +44,6 @@
 			</div>
 		</div>
 
-		<div class="vr d-none d-lg-block text-muted me-3" style="min-width: 2px;"></div>
-
 		<div class="text-wrap text-truncate flex-grow-1 me-3">
 			<!-- username & timestamp-->
 			<div class="small text-muted d-flex flex-nowrap align-items-center gap-1 mb-2">
