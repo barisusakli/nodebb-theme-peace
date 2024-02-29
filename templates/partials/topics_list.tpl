@@ -1,5 +1,5 @@
 <ul component="category" class="topic-list list-unstyled" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}" data-set="{set}">
-	{{{each topics}}}
+	{{{ each topics }}}
 	<li component="category/topic" class="mb-3 category-item {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
 		<div class="d-flex align-items-stretch">
 			<div class="position-relative">
@@ -30,12 +30,7 @@
 					<div class="text-wrap text-truncate flex-grow-1 d-flex align-items-center">
 						<div class="w-100" component="post/header">
 							<div class="d-flex flex-column w-100">
-								<h5 component="topic/header" class="title" style="line-height: normal;">
-									<i component="topic/scheduled" class="text-muted fa fa-clock-o {{{ if !topics.scheduled }}}hidden{{{ end }}}" title="[[topic:scheduled]]"></i>
-									<i component="topic/pinned" class="text-muted fa fa-thumb-tack {{{ if (topics.scheduled || !topics.pinned) }}}hidden{{{ end}}}" title="{{{ if !../pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {../pinExpiryISO}]]{{{ end }}}"></i>
-									<i component="topic/locked" class="text-muted fa fa-lock {{{ if !topics.locked }}}hidden{{{ end }}}" title="[[topic:locked]]"></i>
-									<i component="topic/moved" class="text-muted fa fa-arrow-circle-right {{{ if !topics.oldCid }}}hidden{{{ end }}}" title="[[topic:moved]]"></i>
-									{{{each topics.icons}}}{@value}{{{end}}}
+								<h5 component="topic/header" class="title">
 									{{{ if !topics.noAnchor }}}
 									<a href="{config.relative_path}/topic/{./slug}{{{ if topics.bookmark }}}/{./bookmark}{{{ end }}}">{./title}</a>
 									{{{ else }}}
@@ -44,13 +39,28 @@
 								</h5>
 
 								<div class="d-flex gap-1 opacity-75 align-items-start">
-									<div class="d-flex gap-1 text-truncate align-items-center flex-wrap">
+									<div component="topic/labels" class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100">
+										<span component="topic/scheduled" class="badge border border-gray-300 text-body {{{ if !./scheduled }}}hidden{{{ end }}}">
+											<i class="fa fa-clock-o"></i>
+											<span>[[topic:scheduled]]</span>
+										</span>
+										<span component="topic/pinned" class="badge border border-gray-300 text-body {{{ if (./scheduled || !./pinned) }}}hidden{{{ end }}}">
+											<i class="fa fa-thumb-tack"></i>
+											<span>{{{ if !./pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {isoTimeToLocaleString(./pinExpiryISO, config.userLang)}]]{{{ end }}}</span>
+										</span>
+										<span component="topic/locked" class="badge border border-gray-300 text-body {{{ if !./locked }}}hidden{{{ end }}}">
+											<i class="fa fa-lock"></i>
+											<span>[[topic:locked]]</span>
+										</span>
+										<span class="badge border border-gray-300 text-body {{{ if !./oldCid }}}hidden{{{ end }}}">
+											<i class="fa fa-arrow-circle-right"></i>
+											<span>[[topic:moved]]</span>
+										</span>
+										{{{each ./icons}}}<span class="lh-1">{@value}</span>{{{end}}}
+
+
 										{{{ if !template.category }}}
-										<div class="lh-1">
-											<a class="badge rounded-1 h-100" style="color:{./category.color}; background-color: {./category.bgColor};" href="{config.relative_path}/category/{./category.slug}">
-												<i class="fa {./category.icon}"></i>&nbsp;{./category.name}
-											</a>
-										</div>
+										{function.buildCategoryLabel, ./category, "a", "border"}
 										{{{ end }}}
 
 										<div data-tid="{./tid}" component="topic/tags" class="tags tag-list d-none d-md-inline-flex gap-1 lh-1 {{{ if !./tags.length}}}hidden{{{ end }}}">
@@ -59,13 +69,11 @@
 											{{{ end }}}
 										</div>
 
-										<div class="lh-1">
-											<span class="timeago badge border border-muted text-muted rounded-1 fw-semibold" title="{./timestampISO}"></span>
-										</div>
+										<a href="{config.relative_path}/topic/{./slug}" class="timeago badge border border-gray-300 text-body fw-normal" title="{./timestampISO}"></a>
 									</div>
 									<div class="d-flex flex-grow-1 justify-content-end gap-2">
-										<span class="badge border border-muted text-muted rounded-1 d-none d-lg-inline-block">{./votes} <i class="fa fa-heart"></i></span>
-										<span class="badge border border-muted text-muted rounded-1">{./postcount} <i class="fa fa-pencil"></i></span>
+										<span class="badge border border-gray-300 text-body d-none d-lg-inline-block"><i class="fa fa-heart"></i> {./votes}</span>
+										<span class="badge border border-gray-300 text-body"><i class="fa fa-pencil"></i> {./postcount}</span>
 									</div>
 								</div>
 							</div>

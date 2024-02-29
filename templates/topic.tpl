@@ -12,7 +12,7 @@
 		<!-- IMPORT partials/topic/deleted-message.tpl -->
 		{{{ end }}}
 
-		<ul component="topic" class="posts list-unstyled" data-tid="{tid}">
+		<ul component="topic" class="posts list-unstyled mb-5" data-tid="{tid}">
 			{{{ each posts }}}
 				<li component="post" class="mb-3 {{{ if posts.deleted }}}deleted{{{ end }}}" <!-- IMPORT partials/data/topic.tpl -->>
 					<a component="post/anchor" data-index="{./index}" id="{increment(./index, "1")}"></a>

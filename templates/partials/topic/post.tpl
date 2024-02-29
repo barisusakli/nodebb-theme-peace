@@ -5,29 +5,36 @@
 	<div class="px-3" component="post/header">
 		<div class="">
 			<h1 class="topic-title fs-4">
-				<span component="topic/labels">
-					<i component="topic/scheduled" class="text-muted fa fa-clock-o {{{ if !scheduled }}}hidden{{{ end }}}" title="[[topic:scheduled]]"></i>
-					<i component="topic/pinned" class="text-muted fa fa-thumb-tack {{{ if (scheduled || !pinned) }}}hidden{{{ end }}}" title="{{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {pinExpiryISO}]]{{{ end }}}"></i>
-					<i component="topic/locked" class="text-muted fa fa-lock {{{ if !locked }}}hidden{{{ end }}}" title="[[topic:locked]]"></i>
-					<i class="text-muted fa fa-arrow-circle-right {{{ if !oldCid }}}hidden{{{ end }}}" title="{{{ if privileges.isAdminOrMod }}}[[topic:moved-from, {oldCategory.name}]]{{{ else }}}[[topic:moved]]{{{ end }}}"></i>
-					{{{each icons}}}{@value}{{{end}}}
-				</span>
 				<span component="topic/title">{title}</span>
 			</h1>
 			<div class="d-flex gap-1 overflow-auto align-items-start">
-				<div class="d-flex gap-1 align-items-center flex-wrap">
-					<div class="lh-1">
-						<a class="badge rounded-1 h-100" style="color:{category.color}; background-color: {category.bgColor};" href="{config.relative_path}/category/{category.slug}">
-							<i class="fa {category.icon}"></i>&nbsp;{category.name}
-						</a>
-					</div>
-
-					<div data-tid="{./tid}" component="topic/tags" class="lh-1 tags tag-list d-flex flex-wrap hidden-xs hidden-empty gap-2"><!-- IMPORT partials/topic/tags.tpl --></div>
-
-					<span class="badge border text-muted rounded-1 d-none d-lg-inline-block"><span title="{postercount}">{humanReadableNumber(postercount)}</span> <i class="fa fa-fw fa-user"></i></span>
-					<span class="badge border text-muted rounded-1"><span title="{postcount}">{humanReadableNumber(postcount)}</span> <i class="fa fa-fw fa-pencil"></i></span>
-					<span class="badge border text-muted rounded-1"><span title="{viewcount}">{humanReadableNumber(viewcount)}</span> <i class="fa fa-fw fa-eye"></i></span>
+				<div component="topic/labels" class="d-flex gap-2 flex-wrap {{{ if (!scheduled && (!pinned && (!locked && (!oldCid && !icons.length)))) }}}hidden{{{ end }}}">
+					<span component="topic/scheduled" class="badge badge border border-gray-300 text-body {{{ if !scheduled }}}hidden{{{ end }}}">
+						<i class="fa fa-clock-o"></i>
+						[[topic:scheduled]]
+					</span>
+					<span component="topic/pinned" class="badge badge border border-gray-300 text-body {{{ if (scheduled || !pinned) }}}hidden{{{ end }}}">
+						<i class="fa fa-thumb-tack"></i>
+						{{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {isoTimeToLocaleString(./pinExpiryISO, config.userLang)}]]{{{ end }}}
+					</span>
+					<span component="topic/locked" class="badge badge border border-gray-300 text-body {{{ if !locked }}}hidden{{{ end }}}">
+						<i class="fa fa-lock"></i>
+						[[topic:locked]]
+					</span>
+					<a href="{config.relative_path}/category/{oldCid}" class="badge badge border border-gray-300 text-body text-decoration-none {{{ if !oldCid }}}hidden{{{ end }}}">
+						<i class="fa fa-arrow-circle-right"></i>
+						{{{ if privileges.isAdminOrMod }}}[[topic:moved-from, {oldCategory.name}]]{{{ else }}}[[topic:moved]]{{{ end }}}
+					</a>
+					{{{each icons}}}<span class="lh-1">{@value}</span>{{{end}}}
 				</div>
+
+				{function.buildCategoryLabel, category, "a", "border"}
+
+				<div data-tid="{./tid}" component="topic/tags" class="lh-1 tags tag-list d-flex flex-wrap hidden-xs hidden-empty gap-2"><!-- IMPORT partials/topic/tags.tpl --></div>
+
+				<span class="badge border text-muted rounded-1 d-none d-lg-inline-block"><i class="fa fa-fw fa-user"></i> <span title="{postercount}">{humanReadableNumber(postercount)}</span></span>
+				<span class="badge border text-muted rounded-1"><i class="fa fa-fw fa-pencil"></i> <span title="{postcount}">{humanReadableNumber(postcount)}</span></span>
+				<span class="badge border text-muted rounded-1"><i class="fa fa-fw fa-eye"></i> <span title="{viewcount}">{humanReadableNumber(viewcount)}</span></span>
 			</div>
 		</div>
 	</div>

@@ -28,11 +28,8 @@ body.skin-noskin {
 }
 
 .tag-item {
-	background-color: #808080;
-	color: white;
-	&:hover {
-		color:white;
-	}
+	background-color: $gray-200!important;
+	color: $gray-700!important;
 }
 
 // fix for quartz skin, backdrop-filter breaks layout and

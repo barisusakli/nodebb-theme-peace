@@ -1,35 +1,41 @@
-<div id="users-container" class="row row-cols-2 row-cols-md-4 row-cols-lg-5 users-container list-unstyled">
-	{{{each users}}}
-	<div class="mb-3" data-uid="{users.uid}" style="">
-		<div class="card card-body h-100 text-center border-0 shadow-sm">
-			<div class="mb-2">
-				<a href="{config.relative_path}/user/{users.userslug}">{buildAvatar(users, "100px", false, "rounded")}</a>
+<div id="users-container" class="row row-cols-2 row-cols-md-4 g-3 row-cols-lg-5 users-container mb-4">
+	{{{ each users }}}
+	<a href="{config.relative_path}/user/{./userslug}" class="btn-ghost ff-secondary align-items-start justify-content-start p-2 ff-base">
+		{buildAvatar(@value, "48px", true, "flex-shrink-0")}
+		<div class="d-flex flex-column text-truncate">
+			<div class="fw-semibold text-truncate" title="{./displayname}">{./displayname}</div>
+			<div class="text-xs text-muted text-truncate">@{./username}</div>
+
+			{{{ if section_online }}}
+			<div class="text-xs text-muted text-truncate">
+				<span class="timeago" title="{./lastonlineISO}"></span>
 			</div>
-			<div class="user-info">
-				<div class="text-truncate">
-					<a href="{config.relative_path}/user/{users.userslug}" title="{users.username}">{users.username}</a>
-				</div>
-				<hr/>
-				<div class="profile-meta">
-					<div class="small mb-1 text-truncate">
-						<div class="text-muted">[[user:lastonline]]</div>
-						<strong class="timeago" title="{./lastonlineISO}"></strong>
-					</div>
-					<div class="small mb-1  text-truncate">
-						<div class="text-muted">[[user:joined]]</div>
-						<strong class="timeago" title="{users.joindateISO}"></strong>
-					</div>
-					<div class="small mb-1  text-truncate">
-						<div class="text-muted">[[user:reputation]]</div>
-						<strong title="{./reputation}">{formattedNumber(./reputation)}</strong>
-					</div>
-					<div class="small mb-1 text-truncate">
-						<div class="text-muted">[[user:postcount]]</div>
-						<strong title="{./postcount}">{formattedNumber(./postcount)}</strong>
-					</div>
-				</div>
+			{{{ end }}}
+
+			{{{ if section_joindate }}}
+			<div class="text-xs text-muted text-truncate">
+				<span class="timeago" title="{./joindateISO}"></span>
 			</div>
+			{{{ end }}}
+
+			{{{ if section_sort-reputation }}}
+			<div class="text-xs text-muted text-truncate">
+				<span>{formattedNumber(./reputation)}</span>
+			</div>
+			{{{ end }}}
+
+			{{{ if section_sort-posts }}}
+			<div class="text-xs text-muted text-truncate">
+				<span>{formattedNumber(./postcount)}</span>
+			</div>
+			{{{ end }}}
+
+			{{{ if section_flagged }}}
+			<div class="text-xs text-muted text-truncate">
+				<span>{formattedNumber(./flags)}</span>
+			</div>
+			{{{ end }}}
 		</div>
-	</div>
+	</a>
 	{{{end}}}
 </div>
