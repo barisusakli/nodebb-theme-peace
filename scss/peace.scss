@@ -186,3 +186,12 @@ blockquote {
 		}
 	}
 }
+
+.composer {
+	z-index: 1020!important;
+	border-left: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+	border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+	.resizer {
+		background: none!important;
+	}
+}
