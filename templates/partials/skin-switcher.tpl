@@ -1,6 +1,11 @@
-<li class="mb-1 d-flex align-items-center">
-	<div class="dropup me-2" component="skinSwitcher">
-		<button class="btn btn-sm btn-outline-secondary" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Change Skin</button>
+<li class="d-flex align-items-center">
+	<div class="dropup" component="skinSwitcher">
+		<button class="btn btn-sm btn-outline-secondary" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-color: var(--bs-border-color);"><i class="fa fa-paintbrush"></i></button>
+		<div class="d-flex justify-content-center hidden" component="skinSpinner">
+			<div class="spinner-border text-info" role="status">
+				<span class="visually-hidden">Loading...</span>
+			</div>
+		</div>
 		<ul class="dropdown-menu overflow-auto" role="menu">
 			<div class="d-flex">
 				<div>
@@ -37,10 +42,5 @@
 				{{{ end }}}
 			</div>
 		</ul>
-	</div>
-	<div class="d-flex justify-content-center invisible" component="skinSpinner">
-		<div class="spinner-border text-info" role="status">
-			<span class="visually-hidden">Loading...</span>
-		</div>
 	</div>
 </li>

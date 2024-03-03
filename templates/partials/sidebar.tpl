@@ -19,9 +19,13 @@
 </div>
 {{{ end }}}
 
+<div class="d-flex gap-2 mb-3">
 <!-- IMPORT partials/search.tpl -->
+<!-- IMPORT partials/skin-switcher.tpl -->
+</div>
 
 <ul class="list-unstyled ps-0">
+	<li class="border-top my-2"></li>
 	<!-- IMPORT partials/navigation.tpl -->
 	<li class="border-top my-2"></li>
 	<!-- IMPORT partials/loggedin-menu.tpl -->
@@ -29,5 +33,4 @@
 	<li class="border-top my-2"></li>
 	<!-- IMPORT partials/manage-menu.tpl -->
 	<li class="border-top my-2"></li>
-	<!-- IMPORT partials/skin-switcher.tpl -->
 </ul>

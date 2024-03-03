@@ -29,13 +29,13 @@
 
 	<!-- IMPORT partials/mobile-nav.tpl -->
 	<main id="panel" class="slideout-panel container">
-		<div class="row">
-			<div class="col-lg-2 d-none d-lg-block">
+		<div class="d-flex gap-3 flex-nowrap">
+			<div class="d-none d-lg-block" style="max-width: 200px; min-width: 200px;">
 				<div class="sticky-top pt-4">
 				<!-- IMPORT partials/sidebar.tpl -->
 				</div>
 			</div>
-			<div class="col-12 col-lg-10">
+			<div class="flex-grow-1">
 				<div class="container px-0 px-lg-2 pt-3 pt-lg-4" id="content">
 				<!-- IMPORT partials/noscript/warning.tpl -->
 				<!-- IMPORT partials/noscript/message.tpl -->

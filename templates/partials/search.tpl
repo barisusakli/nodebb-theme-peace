@@ -1,11 +1,11 @@
 {{{ if config.searchEnabled }}}
-<div class="mb-2 position-relative">
+<div class="position-relative flex-grow-1">
 	<form component="search/form" id="search-form" class="d-flex align-items-center" role="search" method="GET">
 		<div component="search/fields" id="search-fields" class="w-100">
 			<div class="input-group flex-nowrap">
 				<input autocomplete="off" type="text" class="form-control form-control-sm border-1" placeholder="[[global:search]]" name="query" value="">
 
-				<button type="submit" class="btn btn-sm btn-outline-secondary">
+				<button type="submit" class="btn btn-sm btn-outline-secondary" style="border-color: var(--bs-border-color);">
 					<i class="fa fa-fw fa-search"></i>
 				</button>
 			</div>
