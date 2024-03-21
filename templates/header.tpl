@@ -35,7 +35,7 @@
 				<!-- IMPORT partials/sidebar.tpl -->
 				</div>
 			</div>
-			<div class="flex-grow-1">
+			<div class="flex-grow-1" style="min-width: 0px;">
 				<div class="container px-0 px-lg-2 pt-3 pt-lg-4" id="content">
 				<!-- IMPORT partials/noscript/warning.tpl -->
 				<!-- IMPORT partials/noscript/message.tpl -->
