@@ -90,7 +90,7 @@
 
 			<a component="post/reply" href="#" class="px-2 user-select-none opacity-75 {{{ if !privileges.topics:reply }}}hidden{{{ end }}}"><i class="fa fa-fw fa-reply"></i></a>
 			<a component="post/quote" href="#" class="px-2 user-select-none opacity-75 {{{ if !privileges.topics:reply }}}hidden{{{ end }}}"><i class="fa fa-fw fa-quote-right"></i></a>
-			<span component="post/tools" class="ps-2 dropdown moderator-tools bottom-sheet {{{ if !posts.display_post_menu }}}hidden{{{ end }}}">
+			<span component="post/tools" class="ps-2 dropdown bottom-sheet {{{ if !posts.display_post_menu }}}hidden{{{ end }}}">
 				<a class="dropdown-toggle opacity-75" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-gear opacity-75"></i></a>
 				<ul class="dropdown-menu dropdown-menu-end" role="menu"></ul>
 			</span>
