@@ -27,7 +27,7 @@
 		<div class="pagination-block flex-grow-1">
 			<div class="ps-1 ps-md-0">
 				<div class="scroller-content d-flex gap-2 flex-column align-items-start">
-					<button class="btn-ghost-sm pagetop" style="padding: 4px;"><i class="fa fa-angle-double-up"></i> <span class="timeago text-xs text-muted text-nowrap d-none d-md-inline-block" title="{./timestampISO}"></span></button>
+					<button class="btn btn-ghost btn-sm d-flex gap-2 align-items-center pagetop" style="padding: 4px;"><i class="fa fa-angle-double-up"></i> <span class="timeago text-xs text-muted text-nowrap d-none d-md-inline-block" title="{./timestampISO}"></span></button>
 					<div class="scroller-container position-relative">
 						<div class="scroller-thumb d-flex gap-2 text-nowrap position-relative" style="height: 40px;">
 							<div class="scroller-thumb-icon bg-primary rounded d-inline-block" style="width:9px; height: 40px;"></div>
@@ -37,7 +37,7 @@
 							</div>
 						</div>
 					</div>
-					<button class="btn-ghost-sm pagebottom" style="padding: 4px;"><i class="fa fa-angle-double-down"></i> <span class="timeago text-xs text-muted text-nowrap d-none d-md-inline-block" title="{./lastposttimeISO}"></span></button>
+					<button class="btn btn-ghost btn-sm d-flex gap-2 align-items-center pagebottom" style="padding: 4px;"><i class="fa fa-angle-double-down"></i> <span class="timeago text-xs text-muted text-nowrap d-none d-md-inline-block" title="{./lastposttimeISO}"></span></button>
 				</div>
 			</div>
 		</div>
