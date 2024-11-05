@@ -31,6 +31,8 @@
 	<!-- IMPORT partials/loggedin-menu.tpl -->
 	<!-- IMPORT partials/loggedout-menu.tpl -->
 	<li class="border-top my-2"></li>
+	{{{ if config.loggedIn }}}
 	<!-- IMPORT partials/manage-menu.tpl -->
 	<li class="border-top my-2"></li>
+	{{{ end }}}
 </ul>
