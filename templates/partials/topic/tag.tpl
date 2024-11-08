@@ -1,1 +1,1 @@
-<a class="tag tag-item tag-class-{./class} badge border border-gray-300 fw-normal text-body rounded-1" href="{config.relative_path}/tags/{./valueEncoded}" data-tag="{./value}">&bull; {./valueEscaped}</a>
+<a class="tag tag-item tag-class-{./class} badge border border-gray-300 fw-normal text-body rounded-1" href="{config.relative_path}/tags/{./valueEncoded}" data-tag="{./value}">{./valueEscaped}</a>

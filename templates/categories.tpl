@@ -4,6 +4,7 @@
 	{{widgets.header.html}}
 	{{{end}}}
 </div>
+<style>[component="categories/category"] .description p { margin-bottom: 0; }</style>
 <div class="row">
 	<div class="<!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
 		{{{ if pagination.pages.length }}}

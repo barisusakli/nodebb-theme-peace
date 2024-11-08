@@ -1,24 +1,17 @@
-{{{each groups}}}
-<div class="col-lg-4 col-md-6 col-sm-12 mb-3" component="groups/summary" data-slug="{groups.slug}">
-	<div class="card h-100">
-		<div class="card-header">
-			<div class="d-flex justify-content-between align-items-center">
-				<h6 class="card-title text-truncate text-capitalize  mb-0"><a href="{config.relative_path}/groups/{groups.slug}">{groups.displayName}</a></h6>
-				<small class="badge bg-info ms-2">{groups.memberCount}</small>
+{{{ each groups }}}
+<div class="col-xl-4 col-lg-6 col-sm-12 mb-3" component="groups/summary" data-slug="{./slug}">
+	<div class="card h-100 border-0">
+		<a href="{config.relative_path}/groups/{./slug}" class="btn btn-ghost border d-block h-100 text-reset text-decoration-none">
+			<div class="card-body d-flex flex-column gap-1 h-100 text-start">
+				<div class="d-flex">
+					<div class="flex-grow-1 fs-6 fw-semibold">{./displayName}</div>
+					<div class="flex-shrink-0">
+						<span class="text-xs badge fw-semibold text-secondary d-none d-lg-inline-block" style="vertical-align: bottom;"><i class="fa fa-group"></i>  {formattedNumber(./memberCount)}</span>
+					</div>
+				</div>
+				<div class="text-sm">{./description}</div>
 			</div>
-		</div>
-		<div class="card-body">
-			<ul class="members d-flex gap-3 list-unstyled flex-wrap">
-				{{{each groups.members}}}
-				<li>
-					<a href="{config.relative_path}/user/{groups.members.userslug}">{buildAvatar(groups.members, "24px", true)}</a>
-				</li>
-				{{{end}}}
-				<!-- IF groups.truncated -->
-				<li class="truncated"><i class="fa fa-ellipsis-h"></i></li>
-				<!-- ENDIF groups.truncated -->
-			</ul>
-		</div>
+		</a>
 	</div>
 </div>
-{{{end}}}
+{{{ end }}}

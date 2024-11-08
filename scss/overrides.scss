@@ -15,7 +15,8 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
-$primary: darken(#428bca, 6.5%) !default;
+// $primary: darken(#428bca, 6.5%) !default;
+$primary: $gray-800 !default;
 $secondary: $gray-600 !default;
 $success: #5cb85c !default;
 $info: #5bc0de !default;

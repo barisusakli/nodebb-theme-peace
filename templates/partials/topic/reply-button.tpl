@@ -1,21 +1,24 @@
-<div component="topic/reply/container" class="btn-group action-bar bottom-sheet <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">
-	<a href="#" class="btn btn-sm btn-outline-primary" component="topic/reply" title="[[topic:reply]]" data-bs-placement="top" role="button"><span class=""><i class="fa fa-fw fa-reply"></i></span></a>
+{{{ if privileges.topics:reply }}}
+<div component="topic/reply/container">
+	<a href="{config.relative_path}/compose?tid={tid}" class="d-flex align-items-center btn btn-sm btn-primary fw-semibold d-flex gap-2" component="topic/reply" data-ajaxify="false" role="button">
+		<i class="fa fa-fw fa-reply" style="line-height: var(--bs-btn-line-height);"></i>
+		<span class="d-none d-xl-inline">[[topic:reply]]</span>
+	</a>
 </div>
+{{{ end }}}
 
-<!-- IF loggedIn -->
-<!-- IF !privileges.topics:reply -->
-<!-- IF locked -->
-<a component="topic/reply/locked" title="[[topic:locked]]" class="btn btn-sm btn-outline-primary" disabled><i class="fa fa-fw fa-lock"></i></a>
-<!-- ENDIF locked -->
-<!-- ENDIF !privileges.topics:reply -->
+{{{ if loggedIn }}}
+	{{{ if !privileges.topics:reply }}}
+		{{{ if locked }}}
+		<a href="#" component="topic/reply/locked" class="d-flex gap-2 align-items-center fw-semibold btn btn-sm btn-primary disabled" disabled><i class="fa fa-lock"></i> [[topic:locked]]</a>
+		{{{ end }}}
+	{{{ end }}}
 
-<!-- IF !locked -->
-<a component="topic/reply/locked" title="[[topic:locked]]" class="btn btn-sm btn-outline-primary hidden" disabled><i class="fa fa-fw fa-lock"></i></a>
-<!-- ENDIF !locked -->
-
-<!-- ELSE -->
-
-<!-- IF !privileges.topics:reply -->
-<a component="topic/reply/guest" title="[[topic:guest-login-reply]]" href="{config.relative_path}/login" class="btn btn-sm btn-outline-primary"><i class="fa fa-fw fa-reply"></i></a>
-<!-- ENDIF !privileges.topics:reply -->
-<!-- ENDIF loggedIn -->
+	{{{ if !locked }}}
+	<a href="#" component="topic/reply/locked" class="d-flex gap-2 align-items-center fw-semibold btn btn-sm btn-primary disabled hidden" disabled><i class="fa fa-lock"></i> [[topic:locked]]</a>
+	{{{ end }}}
+{{{ else }}}
+	{{{ if !privileges.topics:reply }}}
+	<a component="topic/reply/guest" href="{config.relative_path}/login" class="d-flex align-items-center fw-semibold btn btn-sm btn-primary">[[topic:guest-login-reply]]</a>
+	{{{ end }}}
+{{{ end }}}

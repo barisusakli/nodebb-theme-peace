@@ -41,10 +41,10 @@
 	<hr class="mx-3"/>
 	{{{ end }}}
 
-	<div class="d-flex mb-2 ps-3 ps-md-0">
+	<div class="d-flex mb-2 px-3 gap-3">
 		<!-- profile pic-->
 		<div class="d-none d-lg-block">
-			<div class="sticky-top px-3" style="top: 1rem; z-index: 1;">
+			<div class="sticky-top" style="top: 1rem; z-index: 1;">
 				<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 					{buildAvatar(posts.user, "64px", false, "rounded")}
 				</a>
