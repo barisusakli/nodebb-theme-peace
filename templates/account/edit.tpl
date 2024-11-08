@@ -3,19 +3,10 @@
 	<!-- IF sso.length --><div><!-- ENDIF sso.length -->
 		<div class="row">
 			<div class="col-md-3 col-sm-4">
-				<div class="account-picture-block text-center">
-					<div class="row mb-3">
-						<div class="col-12 hidden-xs">
-							<!-- IF picture -->
-							<img id="user-current-picture" class="avatar avatar-rounded rounded" style="--avatar-size: 128px;" src="{picture}" />
-							<!-- ELSE -->
-							<div class="avatar avatar-rounded rounded" style="background-color: {icon:bgColor}; --avatar-size: 128px;">{icon:text}</div>
-							<!-- ENDIF picture -->
-						</div>
-					</div>
+				<div class="text-center">
 					<ul class="list-group mb-3">
 						<!-- IF allowProfilePicture -->
-						<a id="changePictureBtn" href="#" class="list-group-item">[[user:change-picture]]</a>
+						<a component="profile/change/picture" href="#" class="list-group-item">[[user:change-picture]]</a>
 						<!-- ENDIF allowProfilePicture -->
 						<!-- IF !username:disableEdit -->
 						<a href="{config.relative_path}/user/{userslug}/edit/username" class="list-group-item">[[user:change-username]]</a>

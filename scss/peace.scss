@@ -1,6 +1,7 @@
 @import "./sidebar";
 @import "./chats";
 @import "./nprogress";
+@import "./fonts.scss";
 
 html {
 	overflow-y: scroll;
@@ -172,7 +173,8 @@ blockquote {
 	}
 }
 
-.account .categories {
+.page-user-categories .categories {
+	.description p { margin-bottom: 0;}
 	[component="categories/category"] {
 		.depth-1 {
 			padding-left: 50px;

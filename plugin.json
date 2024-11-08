@@ -12,5 +12,8 @@
 	],
 	"modules": {
 		"../admin/plugins/peace.js": "public/admin.js"
+	},
+	"staticDirs": {
+		"roboto": "node_modules/@fontsource/roboto/files"
 	}
 }

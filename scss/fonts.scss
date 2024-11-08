@@ -1,0 +1,14 @@
+@use "@fontsource/roboto/scss/mixins" as Roboto;
+
+
+$weights: $font-weight-light, $font-weight-normal, $font-weight-semibold, $font-weight-bold;
+$subsets: (latin, latin-ext);
+$font-path: "./plugins/nodebb-theme-peace" !default;
+
+@include Roboto.faces(
+	$weights: $weights,
+	$subsets: $subsets,
+	$display: fallback,
+	$directory: "#{$font-path}/roboto"
+);
+

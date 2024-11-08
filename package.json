@@ -17,6 +17,9 @@
     "bootstrap",
     "responsive"
   ],
+  "dependencies": {
+    "@fontsource/roboto": "5.0.15"
+  },
   "contributors": [
     {
       "name": "Barış Soner Uşaklı",

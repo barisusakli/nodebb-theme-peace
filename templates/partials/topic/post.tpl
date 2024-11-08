@@ -33,7 +33,7 @@
 				<div data-tid="{./tid}" component="topic/tags" class="lh-1 tags tag-list d-flex flex-wrap hidden-xs hidden-empty gap-2"><!-- IMPORT partials/topic/tags.tpl --></div>
 
 				<span class="badge border text-muted rounded-1 d-none d-lg-inline-block"><i class="fa fa-fw fa-user"></i> <span title="{postercount}">{humanReadableNumber(postercount)}</span></span>
-				<span class="badge border text-muted rounded-1"><i class="fa fa-fw fa-pencil"></i> <span title="{postcount}">{humanReadableNumber(postcount)}</span></span>
+				<span class="badge border text-muted rounded-1"><i class="fa-regular fa-fw fa-message"></i> <span title="{postcount}">{humanReadableNumber(postcount)}</span></span>
 				<span class="badge border text-muted rounded-1"><i class="fa fa-fw fa-eye"></i> <span title="{viewcount}">{humanReadableNumber(viewcount)}</span></span>
 			</div>
 		</div>

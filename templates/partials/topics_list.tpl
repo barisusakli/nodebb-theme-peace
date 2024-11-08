@@ -39,7 +39,7 @@
 									{{{ end }}}
 								</h5>
 
-								<div class="d-flex gap-1 opacity-75 align-items-start">
+								<div class="d-flex gap-1 align-items-start">
 									<div component="topic/labels" class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100">
 										<span component="topic/scheduled" class="badge border border-gray-300 text-body {{{ if !./scheduled }}}hidden{{{ end }}}">
 											<i class="fa fa-clock-o"></i>
