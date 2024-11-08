@@ -8,7 +8,7 @@
 
 			{{{ if config.loggedIn }}}
 			<div class="topic-main-buttons">
-				<button component="topic/mark-unread" class="btn btn-sm btn-outline-secondary" title="[[topic:mark-unread]]">
+				<button component="topic/mark-unread" class="btn btn-sm btn-ghost text-secondary" title="[[topic:mark-unread]]">
 					<i class="fa fa-fw fa-inbox"></i><span class="visible-sm-inline visible-md-inline visible-lg-inline"></span>
 				</button>
 			</div>

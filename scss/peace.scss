@@ -59,9 +59,9 @@ body.skin-noskin {
 // unread bar on topic list
 .topic-list {
 	.category-item {
-		.unread-bar { width: 3px; right: 0px; }
-		&.unread .unread-bar {
-			background-color: $info;
+		.unread-dot { display: none; }
+		&.unread .unread-dot {
+		 	display: inline-block;
 		}
 	}
 }

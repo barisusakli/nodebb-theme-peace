@@ -1,10 +1,11 @@
 <ul component="category" class="topic-list list-unstyled" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}" data-set="{set}">
 	{{{ each topics }}}
 	<li component="category/topic" class="mb-3 category-item {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
-		<div class="d-flex align-items-stretch">
-			<div class="position-relative">
-				<div class="unread-bar position-absolute h-100"></div>
+		<div class="d-flex align-items-stretch position-relative">
+			<div class="position-absolute top-0 start-0 translate-middle z-1">
+				<i class="unread-dot fa-solid fa-circle fa-beat text-info" style="--fa-animation-duration: 2s;"></i>
 			</div>
+
 			<div class="card card-body shadow-sm h-100 rounded-3 border-0 ps-0" {{{ if showSelect }}}component="topic/select"{{{ end }}}>
 				<link itemprop="url" content="{config.relative_path}/topic/{../slug}" />
 				<meta itemprop="name" content="{function.stripTags, ../title}" />
