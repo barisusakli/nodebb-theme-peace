@@ -140,6 +140,15 @@ blockquote {
 	}
 }
 
+[component="chat/message/body"],
+[component="post/content"],
+[component="topic/teaser"] .post-content,
+[component="category/posts"] .post-content,
+.post-queue.posts-list .post-content {
+	a { text-decoration: underline;}
+}
+
+
 .pagination-block {
 	display: block;
 	transition: opacity 250ms ease-in;

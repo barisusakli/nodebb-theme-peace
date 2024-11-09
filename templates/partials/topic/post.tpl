@@ -7,7 +7,7 @@
 			<h1 class="topic-title fs-4">
 				<span component="topic/title">{title}</span>
 			</h1>
-			<div class="d-flex gap-1 overflow-auto align-items-start">
+			<div class="d-flex flex-wrap gap-1 align-items-start">
 				<div component="topic/labels" class="d-flex gap-2 flex-wrap {{{ if (!scheduled && (!pinned && (!locked && (!oldCid && !icons.length)))) }}}hidden{{{ end }}}">
 					<span component="topic/scheduled" class="badge badge border border-gray-300 text-body {{{ if !scheduled }}}hidden{{{ end }}}">
 						<i class="fa fa-clock-o"></i>
@@ -30,7 +30,7 @@
 
 				{function.buildCategoryLabel, category, "a", "border"}
 
-				<div data-tid="{./tid}" component="topic/tags" class="lh-1 tags tag-list d-flex flex-wrap hidden-xs hidden-empty gap-2"><!-- IMPORT partials/topic/tags.tpl --></div>
+				<div data-tid="{./tid}" component="topic/tags" class="lh-1 tags tag-list d-flex flex-nowrap hidden-xs hidden-empty gap-2"><!-- IMPORT partials/topic/tags.tpl --></div>
 
 				<span class="badge border text-muted rounded-1 d-none d-lg-inline-block"><i class="fa fa-fw fa-user"></i> <span title="{postercount}">{humanReadableNumber(postercount)}</span></span>
 				<span class="badge border text-muted rounded-1"><i class="fa-regular fa-fw fa-message"></i> <span title="{postcount}">{humanReadableNumber(postcount)}</span></span>
@@ -91,7 +91,7 @@
 			<a component="post/reply" href="#" class="px-2 user-select-none opacity-75 {{{ if !privileges.topics:reply }}}hidden{{{ end }}}"><i class="fa fa-fw fa-reply"></i></a>
 			<a component="post/quote" href="#" class="px-2 user-select-none opacity-75 {{{ if !privileges.topics:reply }}}hidden{{{ end }}}"><i class="fa fa-fw fa-quote-right"></i></a>
 			<span component="post/tools" class="ps-2 dropdown bottom-sheet {{{ if !posts.display_post_menu }}}hidden{{{ end }}}">
-				<a class="dropdown-toggle opacity-75" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-gear opacity-75"></i></a>
+				<a class="dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-gear opacity-75"></i></a>
 				<ul class="dropdown-menu dropdown-menu-end" role="menu"></ul>
 			</span>
 		</small>

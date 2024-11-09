@@ -3,7 +3,7 @@
 		<h5 class="offcanvas-title" id="offcanvasLabel">{config.siteTitle}</h5>
 		<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 	</div>
-	<div class="offcanvas-body flex-shrink-1 py-0 overflow-visible">
+	<div class="offcanvas-body flex-shrink-1 py-0 overflow-visible mb-2">
 	<!-- IMPORT partials/search.tpl -->
 	</div>
 	<div class="offcanvas-body py-0 h-100">
@@ -12,11 +12,10 @@
 			<li class="border-top my-2"></li>
 			<!-- IMPORT partials/loggedin-menu.tpl -->
 			<!-- IMPORT partials/loggedout-menu.tpl -->
-			<li class="border-top my-2"></li>
 			<!-- IMPORT partials/manage-menu.tpl -->
 		</ul>
 	</div>
-	<div class="offcanvas-body py-0 overflow-visible">
+	<div class="offcanvas-body py-3 overflow-visible">
 		<!-- IMPORT partials/skin-switcher.tpl -->
 	</div>
 </div>

@@ -23,7 +23,7 @@
 					{./name}
 					</a>
 					<!-- topic count -->
-					<span class="text-xs badge border border-gray-300 fw-semibold text-secondary d-none d-lg-inline-block" style="vertical-align: bottom;"><i class="fa fa-comment-o"></i> {formattedNumber(./totalTopicCount)}</span>
+					<span class="text-xs badge border border-gray-300 fw-semibold text-secondary d-none d-lg-inline-block" style="vertical-align: middle;"><i class="fa fa-comment-o"></i> {formattedNumber(./totalTopicCount)}</span>
 					{{{ end }}}
 				</h4>
 

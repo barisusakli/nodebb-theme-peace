@@ -1,5 +1,5 @@
-<div class="topic row mb-5">
-	<div class="col-10">
+<div class="topic mb-5 d-flex gap-2">
+	<div class="flex-1" style="min-width: 0;">
 		{{{ if merger }}}
 		<!-- IMPORT partials/topic/merged-message.tpl -->
 		{{{ end }}}
@@ -40,7 +40,7 @@
 		<!-- IMPORT partials/paginator.tpl -->
 		{{{ end }}}
 	</div>
-	<div class="col-2 px-0 px-lg-2">
+	<div class="px-0 px-lg-2">
 		<!-- IMPORT partials/topic/sidebar.tpl -->
 	</div>
 </div>
