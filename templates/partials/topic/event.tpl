@@ -2,7 +2,7 @@
 	<div class="timeline-badge">
 		<i class="fa {{{ if ./icon }}}{./icon}{{{ else }}}fa-circle{{{ end }}}"></i>
 	</div>
-	<span class="timeline-text small">
+	<span class="timeline-text text-sm">
 		{./text}
 	</span>
 	{{{ if (privileges.isAdminOrMod && ./id) }}}

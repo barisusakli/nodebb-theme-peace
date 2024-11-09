@@ -21,7 +21,7 @@
 
 		{{{ if brand:logo }}}
 		<a class="navbar-brand me-2" href="{{{ if brand:logo:url }}}{brand:logo:url}{{{ else }}}{relative_path}/{{{ end }}}">
-			<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo d-inline-block align-text-top" src="{brand:logo}?{config.cache-buster}" width="50" height="50"/>
+			<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo d-inline-block align-text-top" src="{brand:logo}?{config.cache-buster}" style="height: 50px; width: auto;"/>
 		</a>
 		{{{ end }}}
 		<div class="text-center">

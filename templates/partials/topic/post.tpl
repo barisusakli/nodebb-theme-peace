@@ -92,7 +92,7 @@
 			<a component="post/quote" href="#" class="px-2 user-select-none opacity-75 {{{ if !privileges.topics:reply }}}hidden{{{ end }}}"><i class="fa fa-fw fa-quote-right"></i></a>
 			<span component="post/tools" class="ps-2 dropdown bottom-sheet {{{ if !posts.display_post_menu }}}hidden{{{ end }}}">
 				<a class="dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-gear opacity-75"></i></a>
-				<ul class="dropdown-menu dropdown-menu-end" role="menu"></ul>
+				<ul class="dropdown-menu dropdown-menu-end p-1 text-sm" role="menu"></ul>
 			</span>
 		</small>
 	</div>

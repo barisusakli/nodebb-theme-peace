@@ -1,46 +1,9 @@
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
-	<!-- IF sso.length --><div><!-- ENDIF sso.length -->
+	<div>
 		<div class="row">
-			<div class="col-md-3 col-sm-4">
-				<div class="text-center">
-					<ul class="list-group mb-3">
-						<!-- IF allowProfilePicture -->
-						<a component="profile/change/picture" href="#" class="list-group-item">[[user:change-picture]]</a>
-						<!-- ENDIF allowProfilePicture -->
-						<!-- IF !username:disableEdit -->
-						<a href="{config.relative_path}/user/{userslug}/edit/username" class="list-group-item">[[user:change-username]]</a>
-						<!-- ENDIF !username:disableEdit -->
-						<!-- IF !email:disableEdit -->
-						<a href="{config.relative_path}/user/{userslug}/edit/email" class="list-group-item">[[user:change-email]]</a>
-						<!-- ENDIF !email:disableEdit -->
-						<!-- IF canChangePassword -->
-						<a href="{config.relative_path}/user/{userslug}/edit/password" class="list-group-item">[[user:change-password]]</a>
-						<!-- ENDIF canChangePassword -->
-						{{{each editButtons}}}
-						<a href="{config.relative_path}{editButtons.link}" class="list-group-item">{editButtons.text}</a>
-						{{{end}}}
-					</ul>
-
-					<!-- IF config.requireEmailConfirmation -->
-					<!-- IF email -->
-					<!-- IF isSelf -->
-					<a id="confirm-email" href="#" class="btn btn-warning <!-- IF email:confirmed -->hide<!-- ENDIF email:confirmed -->">[[user:confirm-email]]</a><br/><br/>
-					<!-- ENDIF isSelf -->
-					<!-- ENDIF email -->
-					<!-- ENDIF config.requireEmailConfirmation -->
-
-					<!-- IF allowAccountDelete -->
-					<!-- IF isSelf -->
-					<a id="deleteAccountBtn" href="#" class="btn btn-danger">[[user:delete-account]]</a><br/><br/>
-					<!-- ENDIF isSelf -->
-					<!-- ENDIF allowAccountDelete -->
-
-				</div>
-			</div>
-
-			<div class="<!-- IF !sso.length -->col-md-9 col-sm-8<!-- ELSE -->col-md-5 col-sm-4<!-- ENDIF !sso.length -->">
-				<div class="card card-body">
+			<div class="col-12 col-xl-6">
+				<div class="card card-body shadow-sm border-0">
 					<form role="form" component="profile/edit/form">
 						<div class="mb-2">
 							<label class="form-label fw-bold" for="fullname">[[user:fullname]]</label>
@@ -62,6 +25,26 @@
 							<label class="form-label fw-bold" for="birthday">[[user:birthday]]</label>
 							<input class="form-control" type="date" id="birthday" name="birthday" value="{birthday}" placeholder="mm/dd/yyyy">
 						</div>
+
+						{{{ each customUserFields }}}
+						<div class="mb-2">
+							<label class="form-label fw-bold" for="{./key}">{./name}</label>
+							{{{ if ((./type == "input-text") || (./type == "input-link")) }}}
+							<input class="form-control" type="text" id="{./key}" name="{./key}" value="{./value}">
+							{{{ end }}}
+
+							{{{ if (./type == "input-number") }}}
+							<input class="form-control" type="number" id="{./key}" name="{./key}" value="{./value}">
+							{{{ end }}}
+							{{{ if (./type == "select") }}}
+							<select class="form-select" id="{./key}" name="{./key}">
+								{{{ each ./select-options}}}
+								<option value="{./value}" {{{ if ./selected }}}selected{{{ end }}}>{./value}</option>
+								{{{ end }}}
+							</select>
+							{{{ end }}}
+						</div>
+						{{{ end }}}
 
 						<div class="mb-2">
 							<label class="form-label fw-bold" for="groupTitle">[[user:grouptitle]]</label>
@@ -105,8 +88,38 @@
 				<hr class="visible-xs visible-sm"/>
 			</div>
 
-			<!-- IF sso.length -->
-			<div class="col-md-4 col-sm-4">
+			<div class="col-12 col-xl-6">
+				<div class="text-center">
+					<ul class="list-group mb-3">
+						<!-- IF allowProfilePicture -->
+						<a component="profile/change/picture" href="#" class="list-group-item">[[user:change-picture]]</a>
+						<!-- ENDIF allowProfilePicture -->
+						<!-- IF !username:disableEdit -->
+						<a href="{config.relative_path}/user/{userslug}/edit/username" class="list-group-item">[[user:change-username]]</a>
+						<!-- ENDIF !username:disableEdit -->
+						<!-- IF !email:disableEdit -->
+						<a href="{config.relative_path}/user/{userslug}/edit/email" class="list-group-item">[[user:change-email]]</a>
+						<!-- ENDIF !email:disableEdit -->
+						<!-- IF canChangePassword -->
+						<a href="{config.relative_path}/user/{userslug}/edit/password" class="list-group-item">[[user:change-password]]</a>
+						<!-- ENDIF canChangePassword -->
+						{{{each editButtons}}}
+						<a href="{config.relative_path}{editButtons.link}" class="list-group-item">{editButtons.text}</a>
+						{{{end}}}
+					</ul>
+
+					{{{ if config.requireEmailConfirmation }}}
+					{{{ if (email && isSelf) }}}
+					<a id="confirm-email" href="#" class="btn btn-warning {{{ if email:confirmed }}}hide{{{ end }}}">[[user:confirm-email]]</a><br/><br/>
+					{{{ end }}}
+					{{{ end }}}
+
+
+					{{{ if (allowAccountDelete && isSelf) }}}
+					<a id="deleteAccountBtn" href="#" class="btn btn-danger">[[user:delete-account]]</a><br/><br/>
+					{{{ end }}}
+				</div>
+				{{{ if sso.length }}}
 				<label>[[user:sso.title]]</label>
 				<div class="list-group">
 					{{{each sso}}}
@@ -122,9 +135,9 @@
 					</div>
 					{{{end}}}
 				</div>
+				{{{ end }}}
 			</div>
-			<!-- ENDIF sso.length -->
 		</div>
-	<!-- IF sso.length --></div><!-- ENDIF sso.length -->
+	</div>
 </div>
 

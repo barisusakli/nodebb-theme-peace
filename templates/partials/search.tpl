@@ -5,7 +5,7 @@
 			<div class="input-group flex-nowrap">
 				<input autocomplete="off" type="text" class="form-control form-control-sm border-1" placeholder="[[global:search]]" name="query" value="">
 
-				<button type="submit" class="btn btn-sm btn-outline-secondary" style="border-color: var(--bs-border-color);">
+				<button type="submit" class="btn btn-sm btn-ghost" style="border-color: var(--bs-border-color);">
 					<i class="fa fa-fw fa-search"></i>
 				</button>
 			</div>
