@@ -37,8 +37,8 @@ body.skin-noskin {
 // post tools dropdowns go behind the card of the next post
 // https://github.com/thomaspark/bootswatch/issues/1199
 .skin-quartz {
-	[component="post"] .card {
-		backdrop-filter: none!important;
+	.card {
+		backdrop-filter: none;
 	}
 
 	.tool-modal .dropdown-menu, .composer .dropdown-menu {
