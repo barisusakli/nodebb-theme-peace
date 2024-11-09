@@ -47,13 +47,13 @@
 				</div>
 				<div class="d-flex flex-column gap-1 flex-grow-1">
 					<a component="notifications/item/link" href="{notifications.path}">{notifications.bodyShort}</a>
-					<span class="timeago text-sm text-secondary" title="{notifications.datetimeISO}"></span>
+					<span class="timeago text-sm text-muted" title="{notifications.datetimeISO}"></span>
 				</div>
 				<div>
 					{{{ if ./nid }}}
 					<button class="mark-read btn btn-ghost btn-sm d-flex align-items-center justify-content-center flex-grow-0 flex-shrink-0 p-1" style="width: 1.5rem; height: 1.5rem;">
 						<i class="unread fa fa-2xs fa-circle text-primary {{{ if ./read }}}hidden{{{ end }}}" aria-label="[[unread:mark-as-read]]"></i>
-						<i class="read fa fa-2xs fa-circle-o text-secondary {{{ if !./read }}}hidden{{{ end }}}" aria-label="[[unread:mark-as-unread]]"></i>
+						<i class="read fa fa-2xs fa-circle-o text-muted {{{ if !./read }}}hidden{{{ end }}}" aria-label="[[unread:mark-as-unread]]"></i>
 					</button>
 					{{{ end }}}
 				</div>

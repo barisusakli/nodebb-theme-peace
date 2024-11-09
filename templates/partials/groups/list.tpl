@@ -6,7 +6,7 @@
 				<div class="d-flex">
 					<div class="flex-grow-1 fs-6 fw-semibold">{./displayName}</div>
 					<div class="flex-shrink-0">
-						<span class="text-xs badge fw-semibold text-secondary d-none d-lg-inline-block" style="vertical-align: bottom;"><i class="fa fa-group"></i>  {formattedNumber(./memberCount)}</span>
+						<span class="text-xs badge fw-semibold text-muted d-none d-lg-inline-block" style="vertical-align: bottom;"><i class="fa fa-group"></i>  {formattedNumber(./memberCount)}</span>
 					</div>
 				</div>
 				<div class="text-sm">{./description}</div>

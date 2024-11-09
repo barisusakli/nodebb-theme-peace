@@ -70,9 +70,9 @@
 											{{{ end }}}
 										</div>
 
-										<a href="{config.relative_path}/topic/{./slug}" class="timeago badge border border-gray-300 text-secondary fw-semibold" title="{./timestampISO}"></a>
-										<span class="badge border border-gray-300 text-secondary fw-semibold "><i class="fa-regular fa-heart"></i> {./votes}</span>
-										<span class="badge border border-gray-300 text-secondary fw-semibold"><i class="fa-regular fa-message"></i> {./postcount}</span>
+										<a href="{config.relative_path}/topic/{./slug}" class="timeago badge border border-gray-300 text-muted fw-semibold" title="{./timestampISO}"></a>
+										<span class="badge border border-gray-300 text-muted fw-semibold "><i class="fa-regular fa-heart"></i> {./votes}</span>
+										<span class="badge border border-gray-300 text-muted fw-semibold"><i class="fa-regular fa-message"></i> {./postcount}</span>
 									</div>
 								</div>
 							</div>

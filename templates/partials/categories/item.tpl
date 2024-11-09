@@ -11,19 +11,18 @@
 			{{{ end }}}
 
 			<div class="w-100">
-				<h4 class="title mb-0 {{{ if ./isSection}}}border-bottom pb-2{{{ end }}}">
+				<h4 class="d-flex justify-content-between align-items-start title mb-0 {{{ if ./isSection}}}border-bottom pb-2{{{ end }}}">
 					{{{ if ./isSection }}}
 					{../name}
 					{{{ else}}}
 					{{{ if ./link }}}
-					<a href="{./link}" itemprop="url">
+					<a href="{./link}" itemprop="url">{./name}</a>
 					{{{ else }}}
-					<a href="{config.relative_path}/category/{./slug}" itemprop="url">
+					<a href="{config.relative_path}/category/{./slug}" itemprop="url">{./name}</a>
 					{{{ end }}}
-					{./name}
-					</a>
+
 					<!-- topic count -->
-					<span class="text-xs badge border border-gray-300 fw-semibold text-secondary d-none d-lg-inline-block" style="vertical-align: middle;"><i class="fa fa-comment-o"></i> {formattedNumber(./totalTopicCount)}</span>
+					<span class="text-xs badge border border-gray-300 fw-semibold text-muted d-none d-lg-inline-block" style="vertical-align: middle;"><i class="fa fa-comment-o"></i> {formattedNumber(./totalTopicCount)}</span>
 					{{{ end }}}
 				</h4>
 

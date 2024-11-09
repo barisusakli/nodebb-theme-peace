@@ -12,9 +12,9 @@
 	<!-- name & groups -->
 	<div class="d-flex flex-column gap-2 flex-fill">
 		<div class="d-flex justify-content-between align-items-center">
-			<h4 class="mb-0">{displayname} <span class="text-secondary">(@{username})</span></h4>
+			<h4 class="mb-0">{displayname} <span class="text-muted">(@{username})</span></h4>
 
-			<button class="btn btn-ghost" data-bs-toggle="dropdown"><i class="fa fa-gear text-secondary"></i></button>
+			<button class="btn btn-ghost" data-bs-toggle="dropdown"><i class="fa fa-gear text-muted"></i></button>
 			<ul class="dropdown-menu dropdown-menu-end p-1" role="menu">
 				<li>
 					<a class="dropdown-item rounded-1" aria-current="page" href="{config.relative_path}/user/{userslug}">[[user:profile]]</a>
@@ -125,7 +125,7 @@
 		{{{ end }}}
 
 		{{{ if aboutme }}}
-		<div component="aboutme" class="aboutme text-secondary text-sm">
+		<div component="aboutme" class="aboutme text-muted text-sm">
 			{aboutmeParsed}
 		</div>
 		{{{ end }}}
