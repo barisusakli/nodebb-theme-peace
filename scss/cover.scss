@@ -1,0 +1,90 @@
+// used in group and account pages
+$profile-cover-height: 175px;
+.cover {
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: $profile-cover-height;
+	background-origin: content-box;
+
+	&:hover {
+		.controls {
+			opacity: 1;
+		}
+	}
+
+	.controls {
+		height: $profile-cover-height;
+		line-height: $profile-cover-height;
+		opacity: 0;
+		@include transition(opacity .15s linear);
+		cursor: pointer;
+		pointer-events: none;
+
+		> * {
+			pointer-events: all;
+		}
+	}
+
+	&.active {
+		&:hover {
+			cursor: move;
+		}
+
+		.controls {
+			> * {
+				display: none;
+			}
+		}
+
+		.save {
+			display: inline-block;
+		}
+	}
+
+	&.saving {
+		.save {
+			display: none;
+		}
+
+		.indicator {
+			display: inline-block;
+		}
+	}
+
+	.save, .indicator {
+		display: inline-block;
+		position: absolute;
+		top: 1em;
+		right: 2em;
+		opacity: 1;
+		padding: 0.5em;
+		font-weight: bold;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.save {
+		display: none;
+	}
+
+	.indicator {
+		display: none;
+	}
+}
+
+.cover > .container {
+	height: $profile-cover-height;
+	position: relative;
+	pointer-events: none;
+	.save {
+		pointer-events: all;
+	}
+	.controls {
+		pointer-events: none;
+		> * {
+			pointer-events: all;
+		}
+	}
+}
