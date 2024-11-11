@@ -17,9 +17,8 @@
 </div>
 {{{ end }}}
 
-<div class="d-flex gap-2 mb-3">
+<div class="d-flex mb-3">
 <!-- IMPORT partials/search.tpl -->
-<!-- IMPORT partials/skin-switcher.tpl -->
 </div>
 
 <ul class="list-unstyled ps-0">

@@ -1,8 +1,8 @@
 @import "./sidebar";
 @import "./chats";
 @import "./nprogress";
-@import "./fonts.scss";
-@import "./cover.scss";
+@import "./fonts";
+@import "./cover";
 
 html {
 	overflow-y: scroll;
@@ -58,13 +58,11 @@ body.skin-noskin {
 	position: static;
 }
 
-// unread bar on topic list
-.topic-list {
-	.category-item {
-		.unread-dot { display: none; }
-		&.unread .unread-dot {
-		 	display: inline-block;
-		}
+// unread dot on topic list
+.topic-list .category-item {
+	.unread-dot { display: none; }
+	&.unread .unread-dot {
+	 	display: inline-block;
 	}
 }
 

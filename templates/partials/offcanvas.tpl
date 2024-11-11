@@ -6,7 +6,7 @@
 	<div class="offcanvas-body flex-shrink-1 py-0 overflow-visible mb-2">
 	<!-- IMPORT partials/search.tpl -->
 	</div>
-	<div class="offcanvas-body py-0 h-100">
+	<div class="offcanvas-body py-0 h-100 overflow-visible">
 		<ul class="list-unstyled">
 			<!-- IMPORT partials/navigation.tpl -->
 			<li class="border-top my-2"></li>
@@ -14,8 +14,5 @@
 			<!-- IMPORT partials/loggedout-menu.tpl -->
 			<!-- IMPORT partials/manage-menu.tpl -->
 		</ul>
-	</div>
-	<div class="offcanvas-body py-3 overflow-visible">
-		<!-- IMPORT partials/skin-switcher.tpl -->
 	</div>
 </div>

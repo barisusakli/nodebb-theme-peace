@@ -7,6 +7,7 @@ body.page-user-chats {
 			height: 100%;
 			> div {
 				height: 100%;
+				padding-bottom: 0px!important;
 				> #content {
 					height: 100%;
 				}
@@ -14,12 +15,6 @@ body.page-user-chats {
 		}
 	}
 
-	#panel {
-		max-width: 100%;
-		#content {
-			max-width: 100%;
-		}
-	}
 	#content {
 		.chats-full {
 			padding-top: 0!important;

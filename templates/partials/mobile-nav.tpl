@@ -1,6 +1,6 @@
 <nav class="d-lg-none navbar sticky-top bg-light border-bottom p-2">
 	<div class="container-fluid justify-content-start">
-		<button class="navbar-toggler me-2 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler py-2 me-2 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 			<span class="fs-6">
 				<small>
