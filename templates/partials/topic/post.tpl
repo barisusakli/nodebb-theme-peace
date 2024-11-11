@@ -53,10 +53,16 @@
 	<div class="d-flex mb-2 px-3 gap-3">
 		<!-- profile pic-->
 		<div class="d-none d-lg-block">
-			<div class="sticky-top" style="top: 1rem; z-index: 1;">
+			<div class="sticky-top d-flex flex-column gap-1" style="top: 1rem; z-index: 1;">
 				<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 					{buildAvatar(posts.user, "64px", false, "rounded")}
 				</a>
+				<div class="text-xs text-muted text-center" title="[[user:postcount]]">
+					<i class="fa-regular fa-message"></i> {formattedNumber(posts.user.postcount)}
+				</div>
+				<div class="text-xs text-muted text-center" title="[[user:reputation]]">
+					<i class="fa-regular fa-star"></i> {formattedNumber(posts.user.reputation)}
+				</div>
 			</div>
 		</div>
 
