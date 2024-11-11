@@ -53,8 +53,8 @@
 	<div class="d-flex mb-2 px-3 gap-3">
 		<!-- profile pic-->
 		<div class="d-none d-lg-block">
-			<div class="sticky-top d-flex flex-column gap-1" style="top: 1rem; z-index: 1;">
-				<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
+			<div class="sticky-top d-flex flex-column" style="top: 1rem; z-index: 1;">
+				<a class="mb-2" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 					{buildAvatar(posts.user, "64px", false, "rounded")}
 				</a>
 				<div class="text-xs text-muted text-center" title="[[user:postcount]]">
