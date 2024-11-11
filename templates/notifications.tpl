@@ -35,13 +35,13 @@
 	<ul component="notifications/list" class="notifications-list list-unstyled" data-nextstart="{nextStart}">
 	{{{each notifications}}}
 		<li data-nid="{notifications.nid}" class="{notifications.readClass} d-flex mb-2 card card-body shadow-sm rounded-3 border-0 {{{ if !./read}}}unread{{{ end }}}" component="notifications/item">
-			<div class="d-flex gap-2">
-				<div>
+			<div class="d-flex gap-3">
+				<div class="align-self-start">
 					{{{ if notifications.from }}}
-					{buildAvatar(notifications.user, "24px", true)}
+					{buildAvatar(notifications.user, "64px", false, "rounded")}
 					{{{ else }}}
 					{{{ if notifications.image }}}
-					<img width="24" height="24" src="{notifications.image}" />
+					<img style="width:auto;height: 64px;object-fit: contain;" src="{notifications.image}" />
 					{{{ end }}}
 					{{{ end }}}
 				</div>
