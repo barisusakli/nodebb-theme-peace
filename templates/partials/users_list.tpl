@@ -1,4 +1,4 @@
-<div id="users-container" class="row row-cols-2 row-cols-md-4 g-3 users-container mb-4">
+<div id="users-container" class="row row-cols-2 row-cols-md-3 row-cols-xl-4 g-3 users-container mb-4">
 	{{{ each users }}}
 	<div>
 		<a href="{config.relative_path}/user/{./userslug}" class="btn btn-ghost card card-body flex-row shadow-sm border-0 d-flex ff-secondary gap-2 text-start justify-content-start p-2 ff-base">

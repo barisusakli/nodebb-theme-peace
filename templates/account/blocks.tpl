@@ -31,7 +31,7 @@
 
 <div class="users row">
 	<div class="alert alert-warning text-center {{{ if users.length }}}hidden{{{ end }}}">[[user:has-no-blocks]]</div>
-	<div id="users-container" class="row row-cols-2 row-cols-md-4 g-3 users-container mb-4">
+	<div id="users-container" class="row row-cols-2 row-cols-md-3 row-cols-xl-4 g-3 users-container mb-4">
 		{{{ each users }}}
 		<div class="d-flex flex-column gap-1">
 			<!-- IMPORT partials/users/item.tpl -->
