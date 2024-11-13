@@ -1,4 +1,4 @@
-<div class="card card-body p-1 shadow-sm border-0 rounded-3 mb-4"">
+<div class="card card-body p-1 shadow-sm border-0 rounded-3 mb-4">
 	<div class="d-flex flex-column flex-fill gap-3">
 		<div class="cover rounded-1 w-100" component="account/cover" style="background-image: url({cover:url}); background-position: {cover:position};">
 			<div class="container">

@@ -66,10 +66,15 @@ body.skin-noskin {
 	}
 }
 
+// deleted topics in topics list
+.topic-list > li.deleted {
+	opacity: 0.65;
+}
+
 // deleted posts in topic
 .topic .posts {
 	> li.deleted {
-		.content {
+		.post-content {
 			opacity: 0.3;
 		}
 		.votes {
