@@ -14,31 +14,31 @@
 			</div>
 
 			<div class="d-flex flex-column flex-md-row justify-content-md-between px-3">
-		<div class="d-flex flex-column">
-			<div class="d-flex align-items-center gap-2">
-				<h3 class="mb-0">{group.displayName}</h3>
-			</div>
-			<div class="d-flex gap-2">
-				{group.descriptionParsed}
-				<div>
-					{{{ if group.private }}}<span class="badge text-bg-light border border-1">[[groups:details.private]]</span>{{{ end }}}
-					{{{ if group.hidden }}}<span class="badge text-bg-light border border-1">[[groups:details.hidden]]</span>{{{ end }}}
+				<div class="d-flex flex-column">
+					<div class="d-flex align-items-center gap-2">
+						<h3 class="mb-0">{group.displayName}</h3>
+					</div>
+					<div class="d-flex gap-2">
+						{group.descriptionParsed}
+						<div>
+							{{{ if group.private }}}<span class="badge text-bg-light border border-1">[[groups:details.private]]</span>{{{ end }}}
+							{{{ if group.hidden }}}<span class="badge text-bg-light border border-1">[[groups:details.hidden]]</span>{{{ end }}}
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
-		<div class="d-flex gap-2 align-items-start">
-			{{{ if loggedIn }}}
-			{function.membershipBtn, group}
-			{{{ end }}}
-			{{{ if isAdmin }}}
-			<a href="{config.relative_path}/admin/manage/groups/{group.nameEncoded}" target="_blank" class="btn btn-light"><i class="fa fa-gear"></i> [[user:edit]]</a>
-			{{{ end }}}
-		</div>
+				<div class="d-flex gap-2 align-items-start">
+					{{{ if loggedIn }}}
+					{function.membershipBtn, group}
+					{{{ end }}}
+					{{{ if isAdmin }}}
+					<a href="{config.relative_path}/admin/manage/groups/{group.nameEncoded}" target="_blank" class="btn btn-light"><i class="fa fa-gear"></i> [[user:edit]]</a>
+					{{{ end }}}
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="text-sm mb-3 nav d-flex flex-row flex-wrap gap-1 justify-content-end">
+	<div class="text-sm mb-3 nav d-flex flex-row flex-wrap gap-1 ">
 		<button data-bs-toggle="tab" data-bs-target="#groups-posts" class="btn btn-ghost btn-sm text-start d-flex align-items-center ff-secondary fw-semibold {{{ if template.groups/details }}}active{{{ end }}}">
 			<div class="flex-grow-1">[[global:posts]]</div>
 		</button>
@@ -74,30 +74,24 @@
 		<div class="flex-grow-1" style="min-width:0;">
 			<div class="tab-content">
 				<div class="tab-pane fade show active" id="groups-posts" role="tabpanel">
-					<h3 class="fw-semibold fs-5">[[global:posts]]</h3>
 					{{{ if !posts.length }}}
 					<div class="alert alert-info my-2">[[groups:details.has-no-posts]]</div>
 					{{{ end }}}
 					<!-- IMPORT partials/posts_list.tpl -->
 				</div>
 				<div class="tab-pane fade" id="groups-members" role="tabpanel">
-					<h3 class="fw-semibold fs-5 mb-3">[[groups:details.members]]</h3>
-
 					<!-- IMPORT partials/groups/memberlist.tpl -->
 				</div>
 				{{{ if group.isOwner }}}
 				<div class="tab-pane fade" id="groups-pending" role="tabpanel">
-					<h3 class="fw-semibold fs-5 mb-3">[[groups:details.pending]]</h3>
 					<!-- IMPORT partials/groups/pending.tpl -->
 				</div>
 
 				<div class="tab-pane fade" id="groups-invited" role="tabpanel">
-					<h3 class="fw-semibold fs-5 mb-3">[[groups:details.invited]]</h3>
 					<!-- IMPORT partials/groups/invited.tpl -->
 				</div>
 
 				<div class="tab-pane fade" id="groups-admin" role="tabpanel">
-					<h3 class="fw-semibold fs-5 mb-3">[[groups:details.owner-options]]</h3>
 					<!-- IMPORT partials/groups/admin.tpl -->
 				</div>
 				{{{ end }}}
