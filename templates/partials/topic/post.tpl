@@ -8,8 +8,8 @@
 				<h1 class="topic-title mb-0 fs-4">
 					<span component="topic/title">{title}</span>
 				</h1>
-				<div class="d-flex flex-wrap gap-1 align-items-start">
-					<div component="topic/labels" class="d-flex gap-2 flex-wrap {{{ if (!scheduled && (!pinned && (!locked && (!oldCid && !icons.length)))) }}}hidden{{{ end }}}">
+				<div class="d-flex flex-wrap gap-2 align-items-start">
+					<div component="topic/labels" class="d-flex gap-1 flex-wrap {{{ if (!scheduled && (!pinned && (!locked && (!oldCid && !icons.length)))) }}}hidden{{{ end }}}">
 						<span component="topic/scheduled" class="badge badge border border-gray-300 text-body {{{ if !scheduled }}}hidden{{{ end }}}">
 							<i class="fa fa-clock-o"></i>
 							[[topic:scheduled]]
@@ -31,11 +31,13 @@
 
 					{function.buildCategoryLabel, category, "a", "border"}
 
-					<div data-tid="{./tid}" component="topic/tags" class="lh-1 tags tag-list d-flex flex-nowrap hidden-xs hidden-empty gap-2"><!-- IMPORT partials/topic/tags.tpl --></div>
+					<div data-tid="{./tid}" component="topic/tags" class="lh-1 tags tag-list d-flex flex-nowrap hidden-xs hidden-empty gap-1"><!-- IMPORT partials/topic/tags.tpl --></div>
 
-					<span class="badge border text-muted rounded-1 d-none d-lg-inline-block"><i class="fa fa-fw fa-user"></i> <span title="{postercount}">{humanReadableNumber(postercount)}</span></span>
-					<span class="badge border text-muted rounded-1"><i class="fa-regular fa-fw fa-message"></i> <span title="{postcount}">{humanReadableNumber(postcount)}</span></span>
-					<span class="badge border text-muted rounded-1"><i class="fa fa-fw fa-eye"></i> <span title="{viewcount}">{humanReadableNumber(viewcount)}</span></span>
+					<div class="d-flex flex-nowrap gap-1">
+						<span class="badge border text-muted rounded-1 d-none d-lg-inline-block"><i class="fa fa-fw fa-user"></i> <span title="{postercount}">{humanReadableNumber(postercount)}</span></span>
+						<span class="badge border text-muted rounded-1"><i class="fa-regular fa-fw fa-message"></i> <span title="{postcount}">{humanReadableNumber(postcount)}</span></span>
+						<span class="badge border text-muted rounded-1"><i class="fa fa-fw fa-eye"></i> <span title="{viewcount}">{humanReadableNumber(viewcount)}</span></span>
+					</div>
 				</div>
 			</div>
 			<div class="d-flex gap-2 justify-content-end align-items-center hidden-empty" component="topic/thumb/list">
