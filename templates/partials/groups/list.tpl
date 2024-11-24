@@ -4,7 +4,7 @@
 		<a href="{config.relative_path}/groups/{./slug}" class="card-header border-bottom-0 pointer d-block list-cover" style="{{{ if ./cover:thumb:url }}}background-image: url({./cover:thumb:url});background-size: cover; min-height: 125px; background-position: {./cover:position};{{{ end }}}background-color: var(--bs-gray-200);" aria-label="[[aria:group-page-link-for, {./displayName}]]"></a>
 		<a href="{config.relative_path}/groups/{./slug}" class="d-block h-100 text-reset text-decoration-none">
 			<div class="card-body d-flex flex-column gap-1 h-100">
-				<div class="d-flex">
+				<div class="d-flex align-items-center">
 					<div class="flex-grow-1 fs-6 fw-semibold">{./displayName}</div>
 					<div class="flex-shrink-0 text-sm"><i class="text-muted fa-solid fa-user"></i> {formattedNumber(./memberCount)}</div>
 				</div>
