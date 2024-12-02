@@ -3,7 +3,7 @@
 		<h5 class="offcanvas-title" id="offcanvasLabel">{config.siteTitle}</h5>
 		<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 	</div>
-	<div class="offcanvas-body flex-shrink-1 py-0 overflow-visible mb-2">
+	<div class="offcanvas-body flex-shrink-1 py-0 overflow-visible mb-3">
 	<!-- IMPORT partials/search.tpl -->
 	</div>
 	<div class="offcanvas-body py-0 h-100 overflow-visible">

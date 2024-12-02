@@ -26,7 +26,7 @@
 
 			<!-- name & groups -->
 			<div class="d-flex flex-column gap-2 flex-fill">
-				<div class="d-flex justify-content-between align-items-center">
+				<div class="d-flex justify-content-between align-items-center bottom-sheet">
 					<h4 class="mb-0">{displayname} <span class="text-muted">(@{username})</span></h4>
 
 					<button class="btn btn-ghost" data-bs-toggle="dropdown"><i class="fa fa-gear text-muted"></i></button>
