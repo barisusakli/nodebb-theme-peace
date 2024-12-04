@@ -8,16 +8,16 @@ $(document).ready(function() {
 	$('[component="skinSwitcher"]').on('click', '.dropdown-item', function () {
 		const skin = $(this).attr('data-value');
 		$('[component="skinSwitcher"] .dropdown-item .fa-check').addClass('invisible');
+		$('[component="skinSwitcher"] i.fa-paintbrush').addClass('fa-fade');
 		$(this).find('.fa-check').removeClass('invisible');
 		require(['forum/account/settings'], function (accountSettings) {
-			$('[component="skinSpinner"]').removeClass('invisible');
 			accountSettings.changeSkin(skin);
 		});
 	});
 
 	require(['hooks'], function (hooks) {
 		hooks.on('action:skin.change', function (hookData) {
-			$('[component="skinSpinner"]').addClass('invisible');
+			$('[component="skinSwitcher"] i.fa-paintbrush').removeClass('fa-fade');
 		});
 
 		hooks.on('action:notification.updateCount', function (payload) {
