@@ -1,8 +1,8 @@
-<div class="card card-body px-0 shadow-sm h-100 rounded-3 border-0">
+<div class="card card-body px-3 shadow-sm h-100 rounded-3 border-0">
 
 	{{{ if !posts.index }}}
 	<!-- main post topic info -->
-	<div class="px-3" component="post/header">
+	<div class="" component="post/header">
 		<div class="d-flex gap-3 flew-wrap align-items-start">
 			<div class="d-flex flex-column gap-2 flex-grow-1">
 				<h1 class="topic-title mb-0 fs-4">
@@ -49,10 +49,10 @@
 			</div>
 		</div>
 	</div>
-	<hr class="mx-3"/>
+	<hr class=""/>
 	{{{ end }}}
 
-	<div class="d-flex mb-2 px-3 gap-3">
+	<div class="d-flex mb-2 gap-3">
 		<!-- profile pic-->
 		<div class="d-none d-lg-block">
 			<div class="sticky-top d-flex flex-column" style="top: 1rem; z-index: 1;">
@@ -92,12 +92,17 @@
 			<div class="post-content flex-grow-1" component="post/content" itemprop="text">
 				{posts.content}
 			</div>
+
+			<!-- signature -->
+			{{{ if posts.user.signature }}}
+			<div component="post/signature" data-uid="{posts.user.uid}" class="d-inline-block text-xs text-muted mt-3 pt-3 border-top" style="border-top-style: dashed!important;">{posts.user.signature}</div>
+			{{{ end }}}
 		</div>
 	</div>
 
 	<!-- footer -->
-	<div class="post-footer d-flex justify-content-end align-items-end h-100 me-3">
-		<small class="post-tools text-muted d-flex gap-2">
+	<div class="post-footer d-flex justify-content-end align-items-end ">
+		<div class="post-tools text-muted d-flex gap-2 text-sm">
 			<span class="votes">
 				<span class="me-1" component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
 				<a component="post/upvote" href="#" class="pe-2 text-muted {{{ if posts.upvoted }}}upvoted{{{ end }}}">
@@ -111,6 +116,6 @@
 				<a class="dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fw fa-gear opacity-75"></i></a>
 				<ul class="dropdown-menu dropdown-menu-end p-1 text-sm" role="menu"></ul>
 			</span>
-		</small>
+		</div>
 	</div>
 </div>
