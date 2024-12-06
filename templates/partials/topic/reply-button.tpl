@@ -11,7 +11,7 @@
 	{{{ if !privileges.topics:reply }}}
 		{{{ if locked }}}
 		<a href="#" component="topic/reply/locked" class="d-flex gap-2 align-items-center fw-semibold btn btn-sm btn-primary disabled" disabled>
-			<i class="fa fa-lock" style="line-height: var(--bs-btn-line-height);"></i>
+			<i class="fa fa-fw fa-lock" style="line-height: var(--bs-btn-line-height);"></i>
 			<span class="d-none d-xl-inline">[[topic:locked]]</span>
 		</a>
 		{{{ end }}}
@@ -19,14 +19,14 @@
 
 	{{{ if !locked }}}
 	<a href="#" component="topic/reply/locked" class="d-flex gap-2 align-items-center fw-semibold btn btn-sm btn-primary disabled hidden" disabled>
-		<i class="fa fa-lock" style="line-height: var(--bs-btn-line-height);"></i>
+		<i class="fa fa-fw fa-lock" style="line-height: var(--bs-btn-line-height);"></i>
 		<span class="d-none d-xl-inline">[[topic:locked]]</span>
 	</a>
 	{{{ end }}}
 {{{ else }}}
 	{{{ if !privileges.topics:reply }}}
 	<a component="topic/reply/guest" href="{config.relative_path}/login" class="d-flex gap-2 align-items-center fw-semibold btn btn-sm btn-primary">
-		<i class="fa fa-sign-in" style="line-height: var(--bs-btn-line-height);"></i>
+		<i class="fa fa-fw fa-sign-in" style="line-height: var(--bs-btn-line-height);"></i>
 		<span class="d-none d-xl-inline">[[topic:guest-login-reply]]</span>
 	</a>
 	{{{ end }}}
