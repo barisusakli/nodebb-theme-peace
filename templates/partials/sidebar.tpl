@@ -22,7 +22,6 @@
 </div>
 
 <ul class="list-unstyled ps-0">
-	<li class="border-top my-2"></li>
 	<!-- IMPORT partials/navigation.tpl -->
 	<li class="border-top my-2"></li>
 	<!-- IMPORT partials/loggedin-menu.tpl -->
