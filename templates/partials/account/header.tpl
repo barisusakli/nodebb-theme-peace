@@ -17,11 +17,13 @@
 		<div class="d-flex ps-3 pb-3 gap-3">
 			<!-- avatar -->
 			<div class="avatar-wrapper text-center flex-shrink-1">
-				{{{ if picture}}}
-				<img src="{picture}" class="avatar avatar-rounded rounded" style="--avatar-size: 128px;" />
-				{{{ else }}}
-				<div class="avatar avatar-rounded rounded" style="background-color: {icon:bgColor}; --avatar-size: 128px;" title="{username}">{icon:text}</div>
-				{{{ end }}}
+				<a href="{config.relative_path}/user/{userslug}">
+					{{{ if picture}}}
+					<img src="{picture}" class="avatar avatar-rounded rounded" style="--avatar-size: 128px;" />
+					{{{ else }}}
+					<div class="avatar avatar-rounded rounded" style="background-color: {icon:bgColor}; --avatar-size: 128px;" title="{username}">{icon:text}</div>
+					{{{ end }}}
+				</a>
 			</div>
 
 			<!-- name & groups -->

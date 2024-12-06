@@ -25,7 +25,7 @@
 	{{{ end }}}
 {{{ else }}}
 	{{{ if !privileges.topics:reply }}}
-	<a component="topic/reply/guest" href="{config.relative_path}/login" class="d-flex align-items-center fw-semibold btn btn-sm btn-primary">
+	<a component="topic/reply/guest" href="{config.relative_path}/login" class="d-flex gap-2 align-items-center fw-semibold btn btn-sm btn-primary">
 		<i class="fa fa-sign-in" style="line-height: var(--bs-btn-line-height);"></i>
 		<span class="d-none d-xl-inline">[[topic:guest-login-reply]]</span>
 	</a>

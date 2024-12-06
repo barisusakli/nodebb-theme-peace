@@ -2,7 +2,7 @@
 
 	{{{ if !posts.index }}}
 	<!-- main post topic info -->
-	<div class="" component="post/header">
+	<div component="post/header">
 		<div class="d-flex gap-3 flew-wrap align-items-start">
 			<div class="d-flex flex-column gap-2 flex-grow-1">
 				<h1 class="topic-title mb-0 fs-4">
@@ -49,7 +49,7 @@
 			</div>
 		</div>
 	</div>
-	<hr class=""/>
+	<hr/>
 	{{{ end }}}
 
 	<div class="d-flex mb-2 gap-3">
