@@ -63,7 +63,7 @@
 					<i class="fa-regular fa-message"></i> {formattedNumber(posts.user.postcount)}
 				</div>
 				<div class="text-xs text-muted text-center" title="[[user:reputation]]">
-					<i class="fa-regular fa-star"></i> {formattedNumber(posts.user.reputation)}
+					<i class="fa-regular fa-heart"></i> {formattedNumber(posts.user.reputation)}
 				</div>
 			</div>
 		</div>
