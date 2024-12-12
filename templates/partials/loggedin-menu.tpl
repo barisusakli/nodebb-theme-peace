@@ -5,7 +5,9 @@
 		<h6 class="mb-0 text-uppercase pointer fw-bold rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
 			[[global:header.account]]
 		</h6>
+		{{{ if !config.disableCustomUserSkins }}}
 		<!-- IMPORT partials/skin-switcher.tpl -->
+		{{{ end }}}
 	</div>
 
 	<div class="collapse show" id="account-collapse">
