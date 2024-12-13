@@ -1,8 +1,6 @@
 // only overrides to bs5 variables here
 
-$navbar-nav-link-padding-x: 0.875rem!default;
-
-// persona colors
+// peace colors
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -15,7 +13,6 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
-// $primary: darken(#428bca, 6.5%) !default;
 $primary: $gray-800 !default;
 $secondary: $gray-600 !default;
 $success: #5cb85c !default;

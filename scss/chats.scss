@@ -10,14 +10,11 @@ body.page-user-chats {
 				padding-bottom: 0px!important;
 				> #content {
 					height: 100%;
+					.chats-full {
+		 				padding-top: 0!important;
+					}
 				}
 			}
-		}
-	}
-
-	#content {
-		.chats-full {
-			padding-top: 0!important;
 		}
 	}
 }
