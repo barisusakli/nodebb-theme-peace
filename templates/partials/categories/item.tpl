@@ -36,20 +36,20 @@
 
 					<!-- children -->
 					{{{ if (!config.hideSubCategories && ./children.length ) }}}
-					<div class="category-children row row-cols-1 row-cols-md-2 g-2 my-1 w-100">
+					<ul class="list-unstyled category-children row row-cols-1 row-cols-md-2 g-2 my-1 w-100">
 						{{{ each ./children }}}
 						{{{ if !./isSection }}}
-						<div class="category-children-item">
+						<li class="category-children-item">
 							{buildCategoryIcon(@value, "24px", "rounded-1")}
 							{{{ if ./link }}}
 							<a href="{./link}">{./name}</a></span>
 							{{{ else }}}
 							<a href="{config.relative_path}/category/{../slug}">{../name}</a>
 							{{{ end }}}
-						</div>
+						</li>
 						{{{ end }}}
 						{{{ end }}}
-					</div>
+					</ul>
 					{{{ end }}}
 				</div>
 			</div>
