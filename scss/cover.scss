@@ -6,10 +6,8 @@ $profile-cover-height: 175px;
 	height: $profile-cover-height;
 	background-origin: content-box;
 
-	&:hover {
-		.controls {
-			opacity: 1;
-		}
+	&:hover .controls, .controls:focus-within {
+		opacity: 1;
 	}
 
 	.controls {
