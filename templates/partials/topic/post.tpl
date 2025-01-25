@@ -9,7 +9,7 @@
 					<span component="topic/title">{title}</span>
 				</h1>
 				<div class="d-flex flex-wrap gap-2 align-items-start">
-					<div component="topic/labels" class="d-flex gap-1 flex-wrap {{{ if (!scheduled && (!pinned && (!locked && (!oldCid && !icons.length)))) }}}hidden{{{ end }}}">
+					<div component="topic/labels" class="d-flex gap-1 flex-wrap {{{ if (!scheduled && (!pinned && (!locked && (!icons.length && (!oldCid || (oldCid == "-1")))))) }}}hidden{{{ end }}}">
 						<span component="topic/scheduled" class="badge badge border border-gray-300 text-body {{{ if !scheduled }}}hidden{{{ end }}}">
 							<i class="fa fa-clock-o"></i>
 							[[topic:scheduled]]
