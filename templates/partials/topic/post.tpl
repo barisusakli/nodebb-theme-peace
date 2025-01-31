@@ -3,7 +3,7 @@
 	{{{ if !posts.index }}}
 	<!-- main post topic info -->
 	<div component="post/header">
-		<div class="d-flex gap-3 flew-wrap align-items-start">
+		<div class="d-flex gap-3 flex-wrap align-items-start">
 			<div class="d-flex flex-column gap-2 flex-grow-1">
 				<h1 class="topic-title mb-0 fs-4">
 					<span component="topic/title">{title}</span>
@@ -40,7 +40,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="d-flex gap-2 justify-content-end align-items-center hidden-empty" component="topic/thumb/list">
+			<div class="d-flex flex-wrap gap-2 justify-content-end align-items-center hidden-empty" component="topic/thumb/list">
 				{{{ each thumbs }}}
 				<a class="d-inline-block h-100" href="{./url}">
 					<img class="rounded-1 h-100 bg-light" style="max-width: 4rem; object-fit: contain;" src="{./url}" />
