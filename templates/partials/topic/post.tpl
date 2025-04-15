@@ -37,6 +37,9 @@
 						<span class="badge border text-muted rounded-1 d-none d-lg-inline-block"><i class="fa fa-fw fa-user"></i> <span title="{postercount}">{humanReadableNumber(postercount)}</span></span>
 						<span class="badge border text-muted rounded-1"><i class="fa-regular fa-fw fa-message"></i> <span title="{postcount}">{humanReadableNumber(postcount)}</span></span>
 						<span class="badge border text-muted rounded-1"><i class="fa fa-fw fa-eye"></i> <span title="{viewcount}">{humanReadableNumber(viewcount)}</span></span>
+						{{{ if followercount }}}
+						<span class="badge border text-muted rounded-1"><i class="fa fa-fw fa-bell-o"></i> <span title="{viewcount}">{humanReadableNumber(followercount)}</span></span>
+						{{{ end }}}
 					</div>
 				</div>
 			</div>
