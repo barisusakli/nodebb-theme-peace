@@ -1,8 +1,6 @@
-"use strict";
+'use strict';
 
-/*globals ajaxify, config, utils, NProgress*/
-
-$(document).ready(function() {
+$(document).ready(function () {
 	setupNProgress();
 
 	$('[component="skinSwitcher"]').on('click', '.dropdown-item', function () {
@@ -16,7 +14,7 @@ $(document).ready(function() {
 	});
 
 	require(['hooks'], function (hooks) {
-		hooks.on('action:skin.change', function (hookData) {
+		hooks.on('action:skin.change', function () {
 			$('[component="skinSwitcher"] i.fa-paintbrush').removeClass('fa-fade');
 		});
 
@@ -31,7 +29,7 @@ $(document).ready(function() {
 				.toggleClass('hidden', !payload.count);
 		});
 		hooks.on('action:unread.updateCount', function (payload) {
-			const href=  $('a[href="' + config.relative_path + payload.url + '"].navigation-link')
+			const href = $('a[href="' + config.relative_path + payload.url + '"].navigation-link');
 			const el = href.parent().find('[component="nav/content/badge"]');
 			if (el.length) {
 				el.text(payload.count)
