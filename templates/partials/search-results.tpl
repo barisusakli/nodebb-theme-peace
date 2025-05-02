@@ -19,7 +19,7 @@
 		<div class="card-body">
 			<div class="mb-2">
 				<a href="{config.relative_path}/user/{./user.userslug}">{buildAvatar(./user, "24px", true)}</a>
-				<a class="topic-title fw-semibold fs-5" href="{config.relative_path}/post/{posts.pid}">{./topic.title}</a>
+				<a class="topic-title fw-semibold fs-5" href="{config.relative_path}/post/{encodeURIComponent(./pid)}">{./topic.title}</a>
 			</div>
 
 			<small class="post-info">

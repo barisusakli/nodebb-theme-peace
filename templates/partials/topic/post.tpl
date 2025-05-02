@@ -87,7 +87,7 @@
 
 				<!-- timestamp -->
 				<div class="d-flex">
-					<a class="permalink text-nowrap" href="{config.relative_path}/post/{posts.pid}"><span class="timeago text-xs text-muted opacity-75 text-decoration-underline" title="{posts.timestampISO}"></span></a>
+					<a class="permalink text-nowrap" href="{config.relative_path}/post/{encodeURIComponent(posts.pid)}"><span class="timeago text-xs text-muted opacity-75 text-decoration-underline" title="{posts.timestampISO}"></span></a>
 				</div>
 			</div>
 
