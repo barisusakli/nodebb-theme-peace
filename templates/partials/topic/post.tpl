@@ -44,11 +44,7 @@
 				</div>
 			</div>
 			<div class="d-flex flex-wrap gap-2 justify-content-end align-items-center hidden-empty" component="topic/thumb/list">
-				{{{ each thumbs }}}
-				<a class="d-inline-block" href="{./url}">
-					<img class="rounded-1 bg-light" style="width:auto; max-width: 4rem; height: 3.33rem;object-fit: contain;" src="{./url}" />
-				</a>
-				{{{ end }}}
+				<!-- IMPORT partials/topic/thumbs.tpl -->
 			</div>
 		</div>
 	</div>
