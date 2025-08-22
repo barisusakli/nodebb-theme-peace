@@ -21,7 +21,7 @@
     "responsive"
   ],
   "dependencies": {
-    "@fontsource/roboto": "5.0.15"
+    "@fontsource/roboto": "5.2.6"
   },
   "devDependencies": {
     "eslint": "9.25.1",
