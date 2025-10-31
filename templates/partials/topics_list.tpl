@@ -60,7 +60,7 @@
 										{{{each ./icons}}}<span class="lh-1">{@value}</span>{{{end}}}
 
 
-										{{{ if !template.category }}}
+										{{{ if (!template.category || (cid != ./cid)) }}}
 										{function.buildCategoryLabel, ./category, "a", "border"}
 										{{{ end }}}
 
