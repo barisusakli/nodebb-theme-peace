@@ -20,9 +20,11 @@
 				<a href="{config.relative_path}/notifications" class="btn btn-sm btn-ghost">[[user:notifications]]</a> <span component="notification/badge" class="badge bg-info {{{ if !unreadCount.notification }}}hidden{{{ end }}}">{unreadCount.notification}</span>
 			</li>
 
+			{{{ if canChat }}}
 			<li class="d-flex justify-content-between align-items-center">
 				<a href="{config.relative_path}/user/{user.userslug}/chats{{{ if user.lastRoomId }}}/{user.lastRoomId}{{{ end }}}" class="btn btn-sm btn-ghost">[[pages:chats]]</a> <span component="chat/badge" class="badge bg-info {{{ if !unreadCount.chat }}}hidden{{{ end }}}">{unreadCount.chat}</span>
 			</li>
+			{{{ end }}}
 
 			<li component="user/logout">
 				<a href="#" class="btn btn-sm btn-ghost">[[global:logout]]</a>
