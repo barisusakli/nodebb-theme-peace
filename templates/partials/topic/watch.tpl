@@ -1,6 +1,6 @@
 {{{ if config.loggedIn }}}
-<div class="btn-group bottom-sheet" component="topic/watch">
-	<button class="btn btn-ghost btn-sm ff-secondary d-flex gap-2 dropdown-toggle" data-bs-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="false">
+<div class="dropdown bottom-sheet" component="topic/watch">
+	<button class="btn btn-ghost btn-sm ff-secondary d-flex gap-2 dropdown-toggle w-100" data-bs-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="false">
 		<span component="topic/following/menu" class="d-flex gap-2 align-items-center{{{ if !isFollowing }}} hidden{{{ end }}}">
 			<i class="flex-shrink-0 fa fa-fw fa-bell-o text-primary" style="line-height: var(--bs-btn-line-height);"></i>
 			<span class="d-none d-xl-inline fw-semibold">[[topic:watching]]</span>
