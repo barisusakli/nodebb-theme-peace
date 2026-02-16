@@ -3,6 +3,8 @@ Peace theme for NodeBB
 
 Peace is a simple theme with a sidebar navigation, it comes with a builtin bootswatch theme switcher.
 
+Demo: https://peace.nodebb.org
+
 ## Screenshots
 ### Categories
 <img height="450" src="screenshots/categories.png"> <img height="450" src="screenshots/categories-m.png">
