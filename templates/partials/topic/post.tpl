@@ -68,7 +68,7 @@
 					</div>
 				</div>
 
-				<div class="user-group-badges d-flex flex-wrap align-items-center" style="gap: 0.125rem;">
+				<div class="user-group-badges d-flex flex-wrap align-items-center justify-content-center" style="gap: 0.125rem;">
 					{{{ each ./user.selectedGroups }}}
 					<a data-bs-toggle="tooltip" title="{./userTitle}" href="{config.relative_path}/groups/{./slug}" class="badge p-0 rounded-circle d-flex align-items-center justify-content-center" style="width:20px; height: 20px; color:{./textColor};background-color: {./labelColor};"><i class="fa fa-sm {{{ if ./icon }}}{./icon}{{{else}}}fa-nbb-none{{{ end }}}"></i></a>
 					{{{ end }}}
