@@ -143,7 +143,7 @@
 				</div>
 
 				{{{ if selectedGroup.length }}}
-				<div class="text-sm">
+				<div class="text-sm d-flex gap-1 flex-wrap">
 					{{{ each selectedGroup }}}
 					{{{ if ./slug }}}
 					<!-- IMPORT partials/groups/badge.tpl -->

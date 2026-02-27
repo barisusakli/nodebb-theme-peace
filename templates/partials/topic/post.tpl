@@ -53,16 +53,25 @@
 
 	<div class="d-flex mb-2 gap-3">
 		<!-- profile pic-->
-		<div class="d-none d-lg-block">
-			<div class="sticky-top d-flex flex-column" style="top: 1rem; z-index: 1;">
-				<a class="mb-2" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
+		<div class="d-none d-lg-block flex-0">
+			<div class="sticky-top d-flex flex-column gap-2" style="top: 1rem; z-index: 1; min-width: 0;">
+				<a class="" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 					{buildAvatar(posts.user, "64px", false, "rounded")}
 				</a>
-				<div class="text-xs text-muted text-center" title="[[user:postcount]]">
-					<i class="fa-regular fa-message"></i> {formattedNumber(posts.user.postcount)}
+
+				<div class="d-flex flex-column">
+					<div class="text-xs text-muted text-center" title="[[user:postcount]]">
+						<i class="fa-regular fa-message"></i> {formattedNumber(posts.user.postcount)}
+					</div>
+					<div class="text-xs text-muted text-center" title="[[user:reputation]]">
+						<i class="fa-regular fa-heart"></i> {formattedNumber(posts.user.reputation)}
+					</div>
 				</div>
-				<div class="text-xs text-muted text-center" title="[[user:reputation]]">
-					<i class="fa-regular fa-heart"></i> {formattedNumber(posts.user.reputation)}
+
+				<div class="user-group-badges d-flex flex-wrap align-items-center" style="gap: 0.125rem;">
+					{{{ each ./user.selectedGroups }}}
+					<a data-bs-toggle="tooltip" title="{./userTitle}" href="{config.relative_path}/groups/{./slug}" class="badge rounded-circle d-flex align-items-center justify-content-center" style="width:20px; height: 20px; color:{./textColor};background-color: {./labelColor};"><i class="fa fa-sm {{{ if ./icon }}}{./icon}{{{else}}}fa-nbb-none{{{ end }}}"></i></a>
+					{{{ end }}}
 				</div>
 			</div>
 		</div>

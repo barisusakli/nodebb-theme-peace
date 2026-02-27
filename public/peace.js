@@ -50,6 +50,12 @@ $(document).ready(function () {
 		});
 	});
 
+	$(window).on('action:ajaxify.end', function () {
+		if (ajaxify.data.template.topic) {
+			$('.user-group-badges [data-bs-toggle="tooltip"]').tooltip();
+		}
+	});
+
 	function setupNProgress() {
 		require(['nprogress'], function (NProgress) {
 			if (NProgress) {
