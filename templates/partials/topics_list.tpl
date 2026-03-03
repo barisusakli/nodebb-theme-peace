@@ -6,14 +6,14 @@
 				<i class="unread-dot fa-solid fa-circle fa-beat text-info" style="--fa-animation-duration: 2s;"></i>
 			</div>
 
-			<div class="card card-body shadow-sm h-100 rounded-3 border-0 ps-0" {{{ if showSelect }}}component="topic/select"{{{ end }}}>
+			<div class="card card-body hover-shadow h-100 rounded-3 border-0 ps-0" {{{ if showSelect }}}component="topic/select"{{{ end }}}>
 				<link itemprop="url" content="{config.relative_path}/topic/{../slug}" />
 				<meta itemprop="name" content="{function.stripTags, ../title}" />
 				<meta itemprop="itemListOrder" content="descending" />
 				<meta itemprop="position" content="{../index}" />
 				<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
 
-				<div class="d-flex">
+				<div class="d-flex align-items-start">
 					<!-- profile pic-->
 					<div class="d-none d-lg-block px-3">
 						<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
@@ -82,7 +82,7 @@
 					{{{ if ./thumbs.length }}}
 					<a class="topic-thumbs position-relative text-decoration-none flex-shrink-0 d-none d-xl-block" href="{config.relative_path}/topic/{./slug}{{{ if ./bookmark }}}/{./bookmark}{{{ end }}}" aria-label="[[topic:thumb-image]]">
 						<img class="topic-thumb rounded-1 bg-light" style="width:auto;max-width: 5.33rem;height: 3.33rem;object-fit: contain;" src="{./thumbs.0.url}" alt=""/>
-						<span data-numthumbs="{./thumbs.length}" class="px-1 position-absolute bottom-0 end-0 badge rounded-0 border fw-semibold text-bg-light" style="z-index: 1; border-top-left-radius: 0.25rem!important; border-bottom-right-radius: 0.25rem!important;">{./thumbs.length}</span>
+						<span data-numthumbs="{./thumbs.length}" class="px-1 position-absolute bottom-0 end-0 badge rounded-1 opacity-75 fw-semibold text-bg-light" style="margin: 0.125rem; z-index: 1;">{./thumbs.length}</span>
 					</a>
 					{{{ end }}}
 				</div>

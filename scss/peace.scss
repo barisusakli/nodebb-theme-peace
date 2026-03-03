@@ -212,3 +212,13 @@ blockquote {
 		background: none!important;
 	}
 }
+
+.hover-shadow {
+	transition: $transition-base;
+	box-shadow: $box-shadow-sm;
+
+	&:hover {
+		transform: translateY(-0.125rem);
+		box-shadow: $box-shadow;
+	}
+}

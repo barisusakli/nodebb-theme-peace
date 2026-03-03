@@ -1,5 +1,5 @@
 <li component="categories/category" data-cid="{./cid}" class="category-{./cid} mb-3
-{{{ if !./isSection }}}card card-body shadow-sm rounded-3 border-0{{{ end }}}">
+{{{ if !./isSection }}}card card-body hover-shadow rounded-3 border-0{{{ end }}}">
 	<meta itemprop="name" content="{./name}">
 
 	{{{ if ./isSection }}}
