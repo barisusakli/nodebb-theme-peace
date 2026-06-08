@@ -1,7 +1,7 @@
 <div component="groups/container" class="groups details">
 	<div class="card card-body p-1 shadow-sm border-0 rounded-3 mb-4">
 		<div class="d-flex flex-column flex-fill gap-3">
-			<div class="cover rounded-1 w-100" component="groups/cover" style="background-image: url({group.cover:url}); background-position: {group.cover:position};">
+			<div class="cover rounded-1 w-100" component="groups/cover" style="background-image: url({group.cover:url}); background-position: {escape(group.cover:position)};">
 				{{{ if group.isOwner }}}
 				<div class="controls text-center">
 					<span class="upload p-2 m-2 rounded-1 text-bg-light opacity-75"><i class="fa fa-fw fa-upload"></i></span>

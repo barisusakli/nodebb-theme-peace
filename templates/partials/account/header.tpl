@@ -1,6 +1,6 @@
 <div class="card card-body p-1 shadow-sm border-0 rounded-3 mb-4">
 	<div class="d-flex flex-column flex-fill gap-3">
-		<div class="cover rounded-1 w-100" component="account/cover" style="background-image: url({cover:url}); background-position: {cover:position};">
+		<div class="cover rounded-1 w-100" component="account/cover" style="background-image: url({cover:url}); background-position: {escape(cover:position)};">
 			<div class="container">
 				{{{ if (allowCoverPicture && canEdit) }}}
 				<div class="controls text-center">
@@ -18,11 +18,7 @@
 			<!-- avatar -->
 			<div class="avatar-wrapper text-center flex-shrink-1">
 				<a href="{config.relative_path}/user/{userslug}">
-					{{{ if picture}}}
-					<img src="{picture}" class="avatar avatar-rounded rounded" style="--avatar-size: 128px;" />
-					{{{ else }}}
-					<div class="avatar avatar-rounded rounded" style="background-color: {icon:bgColor}; --avatar-size: 128px;" title="{username}">{icon:text}</div>
-					{{{ end }}}
+					{buildAvatar(@value, "128px", false, "rounded")}
 				</a>
 			</div>
 
