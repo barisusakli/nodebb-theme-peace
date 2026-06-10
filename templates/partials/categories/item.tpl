@@ -25,7 +25,7 @@
 							<div class="content">
 								<div class="d-flex gap-3">
 									<div class="fs-3">
-										{buildCategoryIcon(@value, "64px", "rounded-1")}
+										{{buildCategoryIcon(@value, "64px", "rounded-1")}}
 									</div>
 
 									<div class="d-flex align-items-center flex-1">
@@ -63,7 +63,7 @@
 	<div class="content">
 		<div class="d-flex gap-3">
 			<div class="fs-3">
-				{buildCategoryIcon(@value, "64px", "rounded-1")}
+				{{buildCategoryIcon(@value, "64px", "rounded-1")}}
 			</div>
 
 			<div class="d-flex align-items-center flex-1">
@@ -96,7 +96,7 @@
 						{{{ each ./children }}}
 						{{{ if !./isSection }}}
 						<li class="category-children-item">
-							{buildCategoryIcon(@value, "24px", "rounded-1")}
+							{{buildCategoryIcon(@value, "24px", "rounded-1")}}
 							{{{ if ./link }}}
 							<a href="{./link}">{./name}</a></span>
 							{{{ else }}}

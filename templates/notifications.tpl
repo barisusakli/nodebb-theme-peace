@@ -41,7 +41,7 @@
 			<div class="d-flex gap-3">
 				<div class="align-self-start">
 					{{{ if notifications.from }}}
-					{buildAvatar(notifications.user, "64px", false, "rounded")}
+					{{buildAvatar(notifications.user, "64px", false, "rounded")}}
 					{{{ else }}}
 					{{{ if notifications.image }}}
 					<img style="width:auto;height: 64px;object-fit: contain;" src="{notifications.image}" />

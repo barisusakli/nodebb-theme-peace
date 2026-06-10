@@ -18,14 +18,14 @@
 	<div class="topic-row card shadow-sm border-0 mb-3">
 		<div class="card-body">
 			<div class="mb-2">
-				<a href="{config.relative_path}/user/{./user.userslug}">{buildAvatar(./user, "24px", true)}</a>
+				<a href="{config.relative_path}/user/{./user.userslug}">{{buildAvatar(./user, "24px", true)}}</a>
 				<a class="topic-title fw-semibold fs-5" href="{config.relative_path}/post/{encodeURIComponent(./pid)}">{./topic.title}</a>
 			</div>
 
 			<small class="post-info">
 				<a href="{config.relative_path}/category/{./category.slug}">
 					<div class="category-item d-inline-block">
-						{buildCategoryIcon(./category, "24px", "rounded-circle")}
+						{{buildCategoryIcon(./category, "24px", "rounded-circle")}}
 						{./category.name}
 					</div>
 				</a> &bull;

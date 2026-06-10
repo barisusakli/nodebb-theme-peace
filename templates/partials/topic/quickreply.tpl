@@ -2,7 +2,7 @@
 <div component="topic/quickreply/container" class="d-flex gap-1 quick-reply">
 	<div class="icon hidden-xs px-3">
 		<a data-uid="{loggedInUser.uid}" href="{{{ if loggedInUser.userslug }}}{config.relative_path}/user/{loggedInUser.userslug}{{{ else }}}#{{{ end }}}">
-			{buildAvatar(loggedInUser, "64px", false, "rounded", "user/picture")}
+			{{buildAvatar(loggedInUser, "64px", false, "rounded", "user/picture")}}
 		</a>
 	</div>
 	<div class="flex-grow-1">

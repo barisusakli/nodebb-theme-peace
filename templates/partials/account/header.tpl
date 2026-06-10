@@ -18,7 +18,7 @@
 			<!-- avatar -->
 			<div class="avatar-wrapper text-center flex-shrink-1">
 				<a href="{config.relative_path}/user/{userslug}">
-					{buildAvatar(@value, "128px", false, "rounded")}
+					{{buildAvatar(@value, "128px", false, "rounded")}}
 				</a>
 			</div>
 

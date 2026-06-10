@@ -29,7 +29,7 @@
 						{{{each icons}}}<span class="lh-1">{@value}</span>{{{end}}}
 					</div>
 
-					{function.buildCategoryLabel, category, "a", "border"}
+					{{buildCategoryLabel(category, "a", "border")}}
 
 					<div data-tid="{./tid}" component="topic/tags" class="lh-1 tags tag-list d-flex flex-nowrap hidden-xs hidden-empty gap-1"><!-- IMPORT partials/topic/tags.tpl --></div>
 
@@ -56,7 +56,7 @@
 		<div class="d-none d-lg-block flex-0">
 			<div class="sticky-top d-flex flex-column gap-2" style="top: 1rem; z-index: 1; min-width: 0;">
 				<a class="" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
-					{buildAvatar(posts.user, "64px", false, "rounded")}
+					{{buildAvatar(posts.user, "64px", false, "rounded")}}
 				</a>
 
 				<div class="d-flex flex-column">
@@ -82,7 +82,7 @@
 				<!-- profile pic-->
 				<div class="d-inline-block d-lg-none">
 					<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
-						{buildAvatar(./user, "24px", false, "rounded")}
+						{{buildAvatar(./user, "24px", false, "rounded")}}
 					</a>
 				</div>
 				<!-- username -->
@@ -98,7 +98,7 @@
 
 			<!-- content -->
 			<div class="post-content flex-grow-1" component="post/content" itemprop="text">
-				{posts.content}
+				{{posts.content}}
 			</div>
 
 			<!-- signature -->

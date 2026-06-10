@@ -17,14 +17,14 @@
 					<!-- profile pic-->
 					<div class="d-none d-lg-block px-3">
 						<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
-							{buildAvatar(./user, "64px", false, "rounded")}
+							{{buildAvatar(./user, "64px", false, "rounded")}}
 						</a>
 					</div>
 
 					<!-- mobile profile picture -->
 					<div class="d-inline-block d-lg-none mx-2">
 						<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
-							{buildAvatar(./user, "24px", false, "rounded")}
+							{{buildAvatar(./user, "24px", false, "rounded")}}
 						</a>
 					</div>
 
@@ -61,7 +61,7 @@
 
 
 										{{{ if (!template.category || (cid != ./cid)) }}}
-										{function.buildCategoryLabel, ./category, "a", "border"}
+										{{buildCategoryLabel(./category, "a", "border")}}
 										{{{ end }}}
 
 										<div data-tid="{./tid}" component="topic/tags" class="tags tag-list d-none d-md-inline-flex gap-1 lh-1 {{{ if !./tags.length}}}hidden{{{ end }}}">
