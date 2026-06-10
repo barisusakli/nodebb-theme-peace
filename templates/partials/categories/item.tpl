@@ -13,7 +13,7 @@
 
 					<!-- description -->
 					{{{ if ./descriptionParsed }}}
-					<div class="description text-muted flex-grow-1">{./descriptionParsed}</div>
+					<div class="description text-muted flex-grow-1">{{./descriptionParsed}}</div>
 					{{{ end }}}
 
 					<!-- children -->
@@ -43,7 +43,7 @@
 
 											<!-- description -->
 											{{{ if ./descriptionParsed }}}
-											<div class="description text-muted flex-grow-1">{./descriptionParsed}</div>
+											<div class="description text-muted flex-grow-1">{{./descriptionParsed}}</div>
 											{{{ end }}}
 										</div>
 									</div>
@@ -86,7 +86,7 @@
 
 					<!-- description -->
 					{{{ if ./descriptionParsed }}}
-					<div class="description text-muted flex-grow-1">{./descriptionParsed}</div>
+					<div class="description text-muted flex-grow-1">{{./descriptionParsed}}</div>
 					{{{ end }}}
 
 

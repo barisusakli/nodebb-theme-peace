@@ -19,7 +19,7 @@
 						<h3 class="mb-0">{generateGroupDisplayName(group)}</h3>
 					</div>
 					<div class="d-flex gap-2">
-						{group.descriptionParsed}
+						{{group.descriptionParsed}}
 						<div class="pb-3">
 							{{{ if group.private }}}<span class="badge text-bg-light border border-1">[[groups:details.private]]</span>{{{ end }}}
 							{{{ if group.hidden }}}<span class="badge text-bg-light border border-1">[[groups:details.hidden]]</span>{{{ end }}}
