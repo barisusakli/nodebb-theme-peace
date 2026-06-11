@@ -8,7 +8,7 @@
 			<div class="d-flex align-items-center flex-1">
 				<div class="w-100">
 					<h4 class="fs-3 d-flex justify-content-between align-items-start title mb-0 pb-2">
-						{../name}
+						{{escapeTxHtml(./name)}}
 					</h4>
 
 					<!-- description -->
@@ -32,9 +32,9 @@
 										<div class="w-100">
 											<h4 class="d-flex justify-content-between align-items-start title mb-0">
 												{{{ if ./link }}}
-												<a href="{./link}" itemprop="url">{./name}</a>
+												<a href="{{escapeTxHtml(./link)}}" itemprop="url">{{escapeTxHtml(./name)}}</a>
 												{{{ else }}}
-												<a href="{config.relative_path}/category/{./slug}" itemprop="url">{./name}</a>
+												<a href="{config.relative_path}/category/{./slug}" itemprop="url">{{escapeTxHtml(./name)}}</a>
 												{{{ end }}}
 
 												<!-- topic count -->
@@ -73,9 +73,9 @@
 						{../name}
 						{{{ else}}}
 						{{{ if ./link }}}
-						<a href="{./link}" itemprop="url">{./name}</a>
+						<a href="{{escapeTxHtml(./link)}}" itemprop="url">{{escapeTxHtml(./name)}}</a>
 						{{{ else }}}
-						<a href="{config.relative_path}/category/{./slug}" itemprop="url">{./name}</a>
+						<a href="{config.relative_path}/category/{./slug}" itemprop="url">{{escapeTxHtml(./name)}}</a>
 						{{{ end }}}
 
 						<!-- topic count -->
@@ -98,9 +98,9 @@
 						<li class="category-children-item">
 							{{buildCategoryIcon(@value, "24px", "rounded-1")}}
 							{{{ if ./link }}}
-							<a href="{./link}">{./name}</a></span>
+							<a href="{{escapeTxHtml(./link)}}">{{escapeTxHtml(./name)}}</a></span>
 							{{{ else }}}
-							<a href="{config.relative_path}/category/{./slug}">{./name}</a>
+							<a href="{config.relative_path}/category/{./slug}">{{escapeTxHtml(./name)}}</a>
 							{{{ end }}}
 						</li>
 						{{{ end }}}
