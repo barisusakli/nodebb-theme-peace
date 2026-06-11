@@ -8,7 +8,7 @@
 
 			<div class="card card-body hover-shadow h-100 rounded-3 border-0 ps-0" {{{ if showSelect }}}component="topic/select"{{{ end }}}>
 				<link itemprop="url" content="{config.relative_path}/topic/{../slug}" />
-				<meta itemprop="name" content="{{escapeTxHtml(./title)}}" />
+				<meta itemprop="name" content="{{generateTopicTitle(./title)}}" />
 				<meta itemprop="itemListOrder" content="descending" />
 				<meta itemprop="position" content="{../index}" />
 				<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
@@ -33,9 +33,9 @@
 							<div class="d-flex flex-column w-100">
 								<h5 component="topic/header" class="title">
 									{{{ if !topics.noAnchor }}}
-									<a href="{config.relative_path}/topic/{./slug}{{{ if topics.bookmark }}}/{./bookmark}{{{ end }}}">{{escapeTxHtml(./title)}}</a>
+									<a href="{config.relative_path}/topic/{./slug}{{{ if topics.bookmark }}}/{./bookmark}{{{ end }}}">{{generateTopicTitle(./title)}}</a>
 									{{{ else }}}
-									<span>{{escapeTxHtml(./title)}}</span>
+									<span>{{generateTopicTitle(./title)}}</span>
 									{{{ end }}}
 								</h5>
 
