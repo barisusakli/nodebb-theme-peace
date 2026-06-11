@@ -1,4 +1,5 @@
-<div class="topic mb-5 d-flex gap-2">
+<div class="topic mb-5 d-flex gap-2" itemid="{url}" itemscope itemtype="https://schema.org/DiscussionForumPosting">
+	<!-- IMPORT partials/topic/meta-tags.tpl -->
 	<div class="flex-1" style="min-width: 0;">
 		{{{ if merger }}}
 		<!-- IMPORT partials/topic/merged-message.tpl -->

@@ -6,7 +6,7 @@
 		<div class="d-flex gap-3 flex-wrap align-items-start">
 			<div class="d-flex flex-column gap-2 flex-grow-1">
 				<h1 class="topic-title mb-0 fs-4">
-					<span component="topic/title">{title}</span>
+					<span component="topic/title">{{escapeTxHtml(title)}}</span>
 				</h1>
 				<div class="d-flex flex-wrap gap-2 align-items-start">
 					<div component="topic/labels" class="d-flex gap-1 flex-wrap {{{ if (!scheduled && (!pinned && (!locked && (!icons.length && (!oldCid || (oldCid == "-1")))))) }}}hidden{{{ end }}}">
@@ -103,7 +103,7 @@
 
 			<!-- signature -->
 			{{{ if posts.user.signature }}}
-			<div component="post/signature" data-uid="{posts.user.uid}" class="d-inline-block text-xs text-muted mt-3 pt-3 border-top" style="border-top-style: dashed!important;">{posts.user.signature}</div>
+			<div component="post/signature" data-uid="{posts.user.uid}" class="d-inline-block text-xs text-muted mt-3 pt-3 border-top" style="border-top-style: dashed!important;">{{posts.user.signature}}</div>
 			{{{ end }}}
 		</div>
 	</div>
