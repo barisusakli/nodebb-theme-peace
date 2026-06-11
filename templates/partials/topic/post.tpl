@@ -6,7 +6,7 @@
 		<div class="d-flex gap-3 flex-wrap align-items-start">
 			<div class="d-flex flex-column gap-2 flex-grow-1">
 				<h1 class="topic-title mb-0 fs-4">
-					<span component="topic/title">{{escapeTxHtml(title)}}</span>
+					<span component="topic/title">{title}</span>
 				</h1>
 				<div class="d-flex flex-wrap gap-2 align-items-start">
 					<div component="topic/labels" class="d-flex gap-1 flex-wrap {{{ if (!scheduled && (!pinned && (!locked && (!icons.length && (!oldCid || (oldCid == "-1")))))) }}}hidden{{{ end }}}">

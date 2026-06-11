@@ -32,7 +32,7 @@
 										<div class="w-100">
 											<h4 class="d-flex justify-content-between align-items-start title mb-0">
 												{{{ if ./link }}}
-												<a href="{{escapeTxHtml(./link)}}" itemprop="url">{./name}</a>
+												<a href="{./link}" itemprop="url">{./name}</a>
 												{{{ else }}}
 												<a href="{config.relative_path}/category/{./slug}" itemprop="url">{./name}</a>
 												{{{ end }}}
@@ -73,7 +73,7 @@
 						{../name}
 						{{{ else}}}
 						{{{ if ./link }}}
-						<a href="{{escapeTxHtml(./link)}}" itemprop="url">{./name}</a>
+						<a href="{./link}" itemprop="url">{./name}</a>
 						{{{ else }}}
 						<a href="{config.relative_path}/category/{./slug}" itemprop="url">{./name}</a>
 						{{{ end }}}
@@ -98,7 +98,7 @@
 						<li class="category-children-item">
 							{{buildCategoryIcon(@value, "24px", "rounded-1")}}
 							{{{ if ./link }}}
-							<a href="{{escapeTxHtml(./link)}}">{./name}</a></span>
+							<a href="{./link}">{./name}</a></span>
 							{{{ else }}}
 							<a href="{config.relative_path}/category/{./slug}">{./name}</a>
 							{{{ end }}}
