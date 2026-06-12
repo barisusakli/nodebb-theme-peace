@@ -131,7 +131,7 @@
 								<!-- IF @first -->
 								<li role="separator" class="dropdown-divider"></li>
 								<!-- ENDIF @first -->
-								<li id="{profile_links.id}" class="plugin-link <!-- IF profile_links.public -->public<!-- ELSE -->private<!-- ENDIF profile_links.public -->"><a class="dropdown-item rounded-1" href="{config.relative_path}/user/{userslug}/{profile_links.route}" role="menuitem"><!-- IF ../icon --><i class="fa fa-fw {profile_links.icon}"></i> <!-- END -->{profile_links.name}</a></li>
+								<li id="{./id}" class="plugin-link {{{ if ./public }}}public{{{ else }}}private{{{ end }}}"><a class="dropdown-item rounded-1" href="{config.relative_path}/user/{userslug}/{profile_links.route}" role="menuitem">{{{ if ./icon }}}<i class="fa fa-fw {profile_links.icon}"></i> {{{ end }}}{tx(profile_links.name)}</a></li>
 								{{{end}}}
 							</ul>
 						</div>
