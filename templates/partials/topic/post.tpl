@@ -98,7 +98,7 @@
 
 			<!-- content -->
 			<div class="post-content flex-grow-1" component="post/content" itemprop="text">
-				{{posts.content}}
+				{{txEscape(posts.content)}}
 			</div>
 
 			<!-- signature -->
