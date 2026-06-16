@@ -14,7 +14,7 @@
         </div>
 
         <div component="post/content" class="content">
-            {{../content}}
+            {{tx(../content)}}
         </div>
 
         <a class="" href="{config.relative_path}/category/{./category.slug}">
