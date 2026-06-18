@@ -13,7 +13,7 @@
 					<i class="fa fa-fw text-muted hidden {navigation.iconClass}" data-content="{navigation.content}"></i>
 					{{{ end }}}
 					{{{ if navigation.text }}}
-					<span class="">{navigation.text}</span>
+					<span class="">{tx(navigation.text)}</span>
 					{{{ end }}}
 					<span component="nav/content/badge" class="badge bg-info {{{ if !navigation.content }}}hidden {{{end}}}">{navigation.content}</span>
 					{{{ if navigation.dropdown}}}

@@ -57,8 +57,8 @@
 											<i class="fa fa-arrow-circle-right"></i>
 											<span>[[topic:moved]]</span>
 										</span>
-										{{{each ./icons}}}<span class="lh-1">{@value}</span>{{{end}}}
 
+										{{{ each ./icons }}}<!-- IMPORT partials/topic/icon.tpl -->{{{ end }}}
 
 										{{{ if (!template.category || (cid != ./cid)) }}}
 										{{buildCategoryLabel(./category, "a", "border")}}
