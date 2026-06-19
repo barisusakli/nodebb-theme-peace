@@ -5,7 +5,7 @@
         </a></h5>
 
         <div class="post-info small d-flex align-items-center mb-2">
-            <a class="me-2" href="{config.relative_path}/user/{../user.userslug}">{buildAvatar(../user, "24px", true, "not-responsive rounded")}</a>
+            <a class="me-2" href="{config.relative_path}/user/{../user.userslug}">{{buildAvatar(../user, "24px", true, "not-responsive rounded")}}</a>
 
             <span class="post-author">
                 <a href="{config.relative_path}/user/{../user.userslug}">{../user.displayname}</a>
@@ -14,7 +14,7 @@
         </div>
 
         <div component="post/content" class="content">
-            {../content}
+            {{tx(../content)}}
         </div>
 
         <a class="" href="{config.relative_path}/category/{./category.slug}">

@@ -1,7 +1,7 @@
 <div component="groups/container" class="groups details">
 	<div class="card card-body p-1 shadow-sm border-0 rounded-3 mb-4">
 		<div class="d-flex flex-column flex-fill gap-3">
-			<div class="cover rounded-1 w-100" component="groups/cover" style="background-image: url({group.cover:url}); background-position: {escape(group.cover:position)};">
+			<div class="cover rounded-1 w-100" component="groups/cover" style="background-image: url({group.cover:url}); background-position: {group.cover:position};">
 				{{{ if group.isOwner }}}
 				<div class="controls text-center">
 					<span class="upload p-2 m-2 rounded-1 text-bg-light opacity-75"><i class="fa fa-fw fa-upload"></i></span>
@@ -19,7 +19,7 @@
 						<h3 class="mb-0">{generateGroupDisplayName(group)}</h3>
 					</div>
 					<div class="d-flex gap-2">
-						{group.descriptionParsed}
+						{{group.descriptionParsed}}
 						<div class="pb-3">
 							{{{ if group.private }}}<span class="badge text-bg-light border border-1">[[groups:details.private]]</span>{{{ end }}}
 							{{{ if group.hidden }}}<span class="badge text-bg-light border border-1">[[groups:details.hidden]]</span>{{{ end }}}
@@ -28,7 +28,7 @@
 				</div>
 				<div class="d-flex gap-2 align-items-start">
 					{{{ if loggedIn }}}
-					{function.membershipBtn, group}
+					{{membershipBtn(group)}}
 					{{{ end }}}
 					{{{ if isAdmin }}}
 					<a href="{config.relative_path}/admin/manage/groups/{group.slug}" target="_blank" class="btn btn-light"><i class="fa fa-gear"></i> [[user:edit]]</a>

@@ -8,7 +8,7 @@
 
 			<div class="card card-body hover-shadow h-100 rounded-3 border-0 ps-0" {{{ if showSelect }}}component="topic/select"{{{ end }}}>
 				<link itemprop="url" content="{config.relative_path}/topic/{../slug}" />
-				<meta itemprop="name" content="{function.stripTags, ../title}" />
+				<meta itemprop="name" content="{./title}" />
 				<meta itemprop="itemListOrder" content="descending" />
 				<meta itemprop="position" content="{../index}" />
 				<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
@@ -17,14 +17,14 @@
 					<!-- profile pic-->
 					<div class="d-none d-lg-block px-3">
 						<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
-							{buildAvatar(./user, "64px", false, "rounded")}
+							{{buildAvatar(./user, "64px", false, "rounded")}}
 						</a>
 					</div>
 
 					<!-- mobile profile picture -->
 					<div class="d-inline-block d-lg-none mx-2">
 						<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
-							{buildAvatar(./user, "24px", false, "rounded")}
+							{{buildAvatar(./user, "24px", false, "rounded")}}
 						</a>
 					</div>
 
@@ -57,11 +57,11 @@
 											<i class="fa fa-arrow-circle-right"></i>
 											<span>[[topic:moved]]</span>
 										</span>
-										{{{each ./icons}}}<span class="lh-1">{@value}</span>{{{end}}}
 
+										{{{ each ./icons }}}<!-- IMPORT partials/topic/icon.tpl -->{{{ end }}}
 
 										{{{ if (!template.category || (cid != ./cid)) }}}
-										{function.buildCategoryLabel, ./category, "a", "border"}
+										{{buildCategoryLabel(./category, "a", "border")}}
 										{{{ end }}}
 
 										<div data-tid="{./tid}" component="topic/tags" class="tags tag-list d-none d-md-inline-flex gap-1 lh-1 {{{ if !./tags.length}}}hidden{{{ end }}}">

@@ -8,12 +8,12 @@
 			<div class="d-flex align-items-center flex-1">
 				<div class="w-100">
 					<h4 class="fs-3 d-flex justify-content-between align-items-start title mb-0 pb-2">
-						{../name}
+						{./name}
 					</h4>
 
 					<!-- description -->
 					{{{ if ./descriptionParsed }}}
-					<div class="description text-muted flex-grow-1">{./descriptionParsed}</div>
+					<div class="description text-muted flex-grow-1">{{./descriptionParsed}}</div>
 					{{{ end }}}
 
 					<!-- children -->
@@ -25,7 +25,7 @@
 							<div class="content">
 								<div class="d-flex gap-3">
 									<div class="fs-3">
-										{buildCategoryIcon(@value, "64px", "rounded-1")}
+										{{buildCategoryIcon(@value, "64px", "rounded-1")}}
 									</div>
 
 									<div class="d-flex align-items-center flex-1">
@@ -43,7 +43,7 @@
 
 											<!-- description -->
 											{{{ if ./descriptionParsed }}}
-											<div class="description text-muted flex-grow-1">{./descriptionParsed}</div>
+											<div class="description text-muted flex-grow-1">{{./descriptionParsed}}</div>
 											{{{ end }}}
 										</div>
 									</div>
@@ -63,7 +63,7 @@
 	<div class="content">
 		<div class="d-flex gap-3">
 			<div class="fs-3">
-				{buildCategoryIcon(@value, "64px", "rounded-1")}
+				{{buildCategoryIcon(@value, "64px", "rounded-1")}}
 			</div>
 
 			<div class="d-flex align-items-center flex-1">
@@ -86,7 +86,7 @@
 
 					<!-- description -->
 					{{{ if ./descriptionParsed }}}
-					<div class="description text-muted flex-grow-1">{./descriptionParsed}</div>
+					<div class="description text-muted flex-grow-1">{{./descriptionParsed}}</div>
 					{{{ end }}}
 
 
@@ -96,7 +96,7 @@
 						{{{ each ./children }}}
 						{{{ if !./isSection }}}
 						<li class="category-children-item">
-							{buildCategoryIcon(@value, "24px", "rounded-1")}
+							{{buildCategoryIcon(@value, "24px", "rounded-1")}}
 							{{{ if ./link }}}
 							<a href="{./link}">{./name}</a></span>
 							{{{ else }}}

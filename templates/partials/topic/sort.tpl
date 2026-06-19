@@ -1,7 +1,7 @@
 <div class="dropdown bottom-sheet" component="thread/sort">
 	<button class="btn btn-ghost btn-sm ff-secondary d-flex gap-2 align-items-center dropdown-toggle w-100" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="[[aria:post-sort-option, {sortOptionLabel}]]">
 		<i class="fa fa-fw fa-arrow-down-wide-short text-primary" style="line-height: var(--bs-btn-line-height);"></i>
-		<span class="d-none d-xl-inline fw-semibold">{sortOptionLabel}</span>
+		<span class="d-none d-xl-inline fw-semibold">{tx(sortOptionLabel)}</span>
 	</button>
 
 	<ul class="dropdown-menu dropdown-menu-end p-1 text-sm" role="menu">

@@ -1,6 +1,6 @@
 <div class="card card-body p-1 shadow-sm border-0 rounded-3 mb-4">
 	<div class="d-flex flex-column flex-fill gap-3">
-		<div class="cover rounded-1 w-100" component="account/cover" style="background-image: url({cover:url}); background-position: {escape(cover:position)};">
+		<div class="cover rounded-1 w-100" component="account/cover" style="background-image: url({cover:url}); background-position: {cover:position};">
 			<div class="container">
 				{{{ if (allowCoverPicture && canEdit) }}}
 				<div class="controls text-center">
@@ -18,7 +18,7 @@
 			<!-- avatar -->
 			<div class="avatar-wrapper text-center flex-shrink-1">
 				<a href="{config.relative_path}/user/{userslug}">
-					{buildAvatar(@value, "128px", false, "rounded")}
+					{{buildAvatar(@value, "128px", false, "rounded")}}
 				</a>
 			</div>
 
@@ -131,7 +131,7 @@
 								<!-- IF @first -->
 								<li role="separator" class="dropdown-divider"></li>
 								<!-- ENDIF @first -->
-								<li id="{profile_links.id}" class="plugin-link <!-- IF profile_links.public -->public<!-- ELSE -->private<!-- ENDIF profile_links.public -->"><a class="dropdown-item rounded-1" href="{config.relative_path}/user/{userslug}/{profile_links.route}" role="menuitem"><!-- IF ../icon --><i class="fa fa-fw {profile_links.icon}"></i> <!-- END -->{profile_links.name}</a></li>
+								<li id="{./id}" class="plugin-link {{{ if ./public }}}public{{{ else }}}private{{{ end }}}"><a class="dropdown-item rounded-1" href="{config.relative_path}/user/{userslug}/{profile_links.route}" role="menuitem">{{{ if ./icon }}}<i class="fa fa-fw {profile_links.icon}"></i> {{{ end }}}{tx(profile_links.name)}</a></li>
 								{{{end}}}
 							</ul>
 						</div>
@@ -150,7 +150,7 @@
 
 				{{{ if aboutme }}}
 				<div component="aboutme" class="aboutme text-muted text-sm">
-					{aboutmeParsed}
+					{{txEscape(aboutmeParsed)}}
 				</div>
 				{{{ end }}}
 			</div>

@@ -10,26 +10,27 @@
 				</h1>
 				<div class="d-flex flex-wrap gap-2 align-items-start">
 					<div component="topic/labels" class="d-flex gap-1 flex-wrap {{{ if (!scheduled && (!pinned && (!locked && (!icons.length && (!oldCid || (oldCid == "-1")))))) }}}hidden{{{ end }}}">
-						<span component="topic/scheduled" class="badge badge border border-gray-300 text-body {{{ if !scheduled }}}hidden{{{ end }}}">
+						<span component="topic/scheduled" class="badge border border-gray-300 text-body {{{ if !scheduled }}}hidden{{{ end }}}">
 							<i class="fa fa-clock-o"></i>
 							[[topic:scheduled]]
 						</span>
-						<span component="topic/pinned" class="badge badge border border-gray-300 text-body {{{ if (scheduled || !pinned) }}}hidden{{{ end }}}">
+						<span component="topic/pinned" class="badge border border-gray-300 text-body {{{ if (scheduled || !pinned) }}}hidden{{{ end }}}">
 							<i class="fa fa-thumb-tack"></i>
 							{{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {isoTimeToLocaleString(./pinExpiryISO, config.userLang)}]]{{{ end }}}
 						</span>
-						<span component="topic/locked" class="badge badge border border-gray-300 text-body {{{ if !locked }}}hidden{{{ end }}}">
+						<span component="topic/locked" class="badge border border-gray-300 text-body {{{ if !locked }}}hidden{{{ end }}}">
 							<i class="fa fa-lock"></i>
 							[[topic:locked]]
 						</span>
-						<a href="{config.relative_path}/category/{oldCid}" class="badge badge border border-gray-300 text-body text-decoration-none {{{ if !oldCid }}}hidden{{{ end }}}">
+						<a href="{config.relative_path}/category/{oldCid}" class="badge border border-gray-300 text-body text-decoration-none {{{ if !oldCid }}}hidden{{{ end }}}">
 							<i class="fa fa-arrow-circle-right"></i>
 							{{{ if privileges.isAdminOrMod }}}[[topic:moved-from, {oldCategory.name}]]{{{ else }}}[[topic:moved]]{{{ end }}}
 						</a>
-						{{{each icons}}}<span class="lh-1">{@value}</span>{{{end}}}
+
+						{{{ each icons }}}<!-- IMPORT partials/topic/icon.tpl -->{{{ end }}}
 					</div>
 
-					{function.buildCategoryLabel, category, "a", "border"}
+					{{buildCategoryLabel(category, "a", "border")}}
 
 					<div data-tid="{./tid}" component="topic/tags" class="lh-1 tags tag-list d-flex flex-nowrap hidden-xs hidden-empty gap-1"><!-- IMPORT partials/topic/tags.tpl --></div>
 
@@ -56,7 +57,7 @@
 		<div class="d-none d-lg-block flex-0">
 			<div class="sticky-top d-flex flex-column gap-2" style="top: 1rem; z-index: 1; min-width: 0;">
 				<a class="" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
-					{buildAvatar(posts.user, "64px", false, "rounded")}
+					{{buildAvatar(posts.user, "64px", false, "rounded")}}
 				</a>
 
 				<div class="d-flex flex-column">
@@ -82,7 +83,7 @@
 				<!-- profile pic-->
 				<div class="d-inline-block d-lg-none">
 					<a href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
-						{buildAvatar(./user, "24px", false, "rounded")}
+						{{buildAvatar(./user, "24px", false, "rounded")}}
 					</a>
 				</div>
 				<!-- username -->
@@ -98,12 +99,12 @@
 
 			<!-- content -->
 			<div class="post-content flex-grow-1" component="post/content" itemprop="text">
-				{posts.content}
+				{{txEscape(posts.content)}}
 			</div>
 
 			<!-- signature -->
 			{{{ if posts.user.signature }}}
-			<div component="post/signature" data-uid="{posts.user.uid}" class="d-inline-block text-xs text-muted mt-3 pt-3 border-top" style="border-top-style: dashed!important;">{posts.user.signature}</div>
+			<div component="post/signature" data-uid="{posts.user.uid}" class="d-inline-block text-xs text-muted mt-3 pt-3 border-top" style="border-top-style: dashed!important;">{{txEscape(posts.user.signature)}}</div>
 			{{{ end }}}
 		</div>
 	</div>
