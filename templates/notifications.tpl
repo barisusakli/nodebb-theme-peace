@@ -5,7 +5,7 @@
 	<div class="d-flex gap-2 justify-content-end" role="toolbar">
 		<div class="dropdown me-2">
 			<button class="btn btn-ghost btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				{{{ if selectedFilter }}}{selectedFilter.name}{{{ end}}} <span class="caret"></span>
+				{{{ if selectedFilter }}}{tx(selectedFilter.name)}{{{ end}}} <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu dropdown-menu-end p-1" role="menu">
 				{{{ each filters }}}
@@ -49,7 +49,12 @@
 					{{{ end }}}
 				</div>
 				<div class="d-flex flex-column gap-1 flex-grow-1">
-					<a component="notifications/item/link" href="{notifications.path}">{notifications.bodyShort}</a>
+					<a component="notifications/item/link" href="{notifications.path}">{{./bodyShort}}</a>
+					{{{ if ./bodyLong}}}
+					<div class="text-secondary text-sm line-clamp-2 text-contain hidden-blockquote hidden-pre hidden-first-child-br">
+						{{./bodyLong}}
+					</div>
+					{{{ end }}}
 					<span class="timeago text-sm text-muted" title="{notifications.datetimeISO}"></span>
 				</div>
 				<div>

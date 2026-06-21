@@ -3,7 +3,7 @@ $profile-cover-height: 175px;
 .cover {
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: $profile-cover-height;
+	height: $profile-cover-height!important;
 	background-origin: content-box;
 
 	&:hover .controls, .controls:focus-within {
@@ -11,8 +11,8 @@ $profile-cover-height: 175px;
 	}
 
 	.controls {
-		height: $profile-cover-height;
-		line-height: $profile-cover-height;
+		height: $profile-cover-height!important;
+		line-height: $profile-cover-height!important;
 		opacity: 0;
 		@include transition(opacity .15s linear);
 		cursor: pointer;
@@ -51,11 +51,10 @@ $profile-cover-height: 175px;
 
 	.save, .indicator {
 		display: inline-block;
-		position: absolute;
-		top: 1em;
-		right: 2em;
+		position: absolute !important;
+		right: 2em !important;
 		opacity: 1;
-		padding: 0.5em;
+		padding: 0.5em !important;
 		font-weight: bold;
 
 		&:hover {

@@ -1,6 +1,6 @@
 <div class="card card-body p-1 shadow-sm border-0 rounded-3 mb-4">
 	<div class="d-flex flex-column flex-fill gap-3">
-		<div class="cover rounded-1 w-100" component="account/cover" style="background-image: url({cover:url}); background-position: {cover:position};">
+		<div class="cover position-static rounded-1 w-100" component="account/cover" style="background-image: url({cover:url}); background-position: {cover:position};">
 			<div class="container">
 				{{{ if (allowCoverPicture && canEdit) }}}
 				<div class="controls text-center">
@@ -16,10 +16,15 @@
 
 		<div class="d-flex ps-3 pb-3 gap-3">
 			<!-- avatar -->
-			<div class="avatar-wrapper text-center flex-shrink-1">
+			<div class="avatar-wrapper position-relative hover-parent text-center flex-shrink-1">
 				<a href="{config.relative_path}/user/{userslug}">
 					{{buildAvatar(@value, "128px", false, "rounded")}}
 				</a>
+				{{{ if (allowProfilePicture && isSelfOrAdminOrGlobalModerator)}}}
+				<a href="#" component="profile/change/picture" class="d-none d-md-block pointer p-2 rounded-1 text-bg-light position-absolute top-50 start-50 translate-middle hover-opacity-75">
+					<span><i class="fa fa-fw fa-upload"></i></span>
+				</a>
+				{{{ end }}}
 			</div>
 
 			<!-- name & groups -->
