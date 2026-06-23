@@ -99,7 +99,7 @@
 
 			<!-- content -->
 			<div class="post-content flex-grow-1" component="post/content" itemprop="text">
-				{{renderContent(posts.content, posts.deleted)}}
+				{{{ if posts.txContent }}}{{tx(posts.content)}}{{{ else }}}{{txEscape(posts.content)}}{{{ end }}}
 			</div>
 
 			<!-- signature -->
