@@ -33,7 +33,7 @@
 							<div class="d-flex flex-column w-100">
 								<h5 component="topic/header" class="title">
 									{{{ if !topics.noAnchor }}}
-									<a href="{config.relative_path}/topic/{./slug}{{{ if topics.bookmark }}}/{./bookmark}{{{ end }}}">{{renderTitle(./title, ./deleted)}</a>
+									<a href="{config.relative_path}/topic/{./slug}{{{ if topics.bookmark }}}/{./bookmark}{{{ end }}}">{{renderTitle(./title, ./deleted)}}</a>
 									{{{ else }}}
 									<span>{{renderTitle(./title, ./deleted)}}</span>
 									{{{ end }}}
