@@ -43,19 +43,19 @@
 									<div component="topic/labels" class="d-flex gap-1 text-truncate align-items-center flex-wrap w-100">
 										<span component="topic/scheduled" class="badge border border-gray-300 text-body {{{ if !./scheduled }}}hidden{{{ end }}}">
 											<i class="fa fa-clock-o"></i>
-											<span>[[topic:scheduled]]</span>
+											<span>{{tx("topic:scheduled")}}</span>
 										</span>
 										<span component="topic/pinned" class="badge border border-gray-300 text-body {{{ if (./scheduled || !./pinned) }}}hidden{{{ end }}}">
 											<i class="fa fa-thumb-tack"></i>
-											<span>{{{ if !./pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {isoTimeToLocaleString(./pinExpiryISO, config.userLang)}]]{{{ end }}}</span>
+											<span>{{{ if !./pinExpiry }}}{{tx("topic:pinned")}}{{{ else }}}{{tx("topic:pinned-with-expiry", isoTimeToLocaleString(./pinExpiryISO, config.userLang))}}{{{ end }}}</span>
 										</span>
 										<span component="topic/locked" class="badge border border-gray-300 text-body {{{ if !./locked }}}hidden{{{ end }}}">
 											<i class="fa fa-lock"></i>
-											<span>[[topic:locked]]</span>
+											<span>{{tx("topic:locked")}}</span>
 										</span>
 										<span class="badge border border-gray-300 text-body {{{ if !./oldCid }}}hidden{{{ end }}}">
 											<i class="fa fa-arrow-circle-right"></i>
-											<span>[[topic:moved]]</span>
+											<span>{{tx("topic:moved")}}</span>
 										</span>
 
 										{{{ each ./icons }}}<!-- IMPORT partials/topic/icon.tpl -->{{{ end }}}
@@ -80,7 +80,7 @@
 					</div>
 
 					{{{ if ./thumbs.length }}}
-					<a class="topic-thumbs position-relative text-decoration-none flex-shrink-0 d-none d-xl-block" href="{config.relative_path}/topic/{./slug}{{{ if ./bookmark }}}/{./bookmark}{{{ end }}}" aria-label="[[topic:thumb-image]]">
+					<a class="topic-thumbs position-relative text-decoration-none flex-shrink-0 d-none d-xl-block" href="{config.relative_path}/topic/{./slug}{{{ if ./bookmark }}}/{./bookmark}{{{ end }}}" aria-label="{{tx("topic:thumb-image")}}">
 						<img class="topic-thumb rounded-1 bg-light" style="width:auto;max-width: 5.33rem;height: 3.33rem;object-fit: contain;" src="{./thumbs.0.url}" alt=""/>
 						<span data-numthumbs="{./thumbs.length}" class="px-1 position-absolute bottom-0 end-0 badge rounded-1 opacity-75 fw-semibold text-bg-light" style="margin: 0.125rem; z-index: 1;">{./thumbs.length}</span>
 					</a>

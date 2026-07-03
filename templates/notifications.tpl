@@ -25,14 +25,14 @@
 
 		<button component="notifications/mark_all" class="btn btn-ghost btn-sm" type="button">
 			<i class="fa fa-eye"></i>
-			[[notifications:mark-all-read]]
+			{{tx("notifications:mark-all-read")}}
 		</button>
 	</div>
 
 	<hr />
 
 	<div class="alert alert-info {{{ if notifications.length }}}hidden{{{ end }}}">
-		[[notifications:no-notifs]]
+		{{tx("notifications:no-notifs")}}
 	</div>
 
 	<ul component="notifications/list" class="notifications-list list-unstyled" data-nextstart="{nextStart}">
@@ -60,8 +60,8 @@
 				<div>
 					{{{ if ./nid }}}
 					<button class="mark-read btn btn-ghost btn-sm d-flex align-items-center justify-content-center flex-grow-0 flex-shrink-0 p-1" style="width: 1.5rem; height: 1.5rem;">
-						<i class="unread fa fa-2xs fa-circle text-primary {{{ if ./read }}}hidden{{{ end }}}" aria-label="[[unread:mark-as-read]]"></i>
-						<i class="read fa fa-2xs fa-circle-o text-muted {{{ if !./read }}}hidden{{{ end }}}" aria-label="[[unread:mark-as-unread]]"></i>
+						<i class="unread fa fa-2xs fa-circle text-primary {{{ if ./read }}}hidden{{{ end }}}" aria-label="{{tx("unread:mark-as-read")}}"></i>
+						<i class="read fa fa-2xs fa-circle-o text-muted {{{ if !./read }}}hidden{{{ end }}}" aria-label="{{tx("unread:mark-as-unread")}}"></i>
 					</button>
 					{{{ end }}}
 				</div>

@@ -3,7 +3,7 @@
 	<form component="search/form" id="search-form" class="d-flex align-items-center" role="search" method="GET">
 		<div component="search/fields" id="search-fields" class="w-100">
 			<div class="position-relative">
-				<input autocomplete="off" type="text" class="form-control form-control-sm border-1" placeholder="[[global:search]]" name="query" value="">
+				<input autocomplete="off" type="text" class="form-control form-control-sm border-1" placeholder="{{tx("global:search")}}" name="query" value="">
 
 				<button type="submit" class="border-0 position-absolute end-0 top-50 translate-middle-y" style="background: none;">
 					<i class="fa fa-fw fa-search opacity-75"></i>
