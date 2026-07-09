@@ -1,6 +1,6 @@
 <li class="mb-1">
 	<h6 class="mb-0 text-uppercase pointer fw-bold rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#navigation-collapse" aria-expanded="true">
-	[[global:header.navigation]]
+	{{tx("global:header.navigation")}}
 	</h6>
 	<div class="collapse show" id="navigation-collapse">
 		<ul id="main-nav" class="btn-toggle-nav list-unstyled fw-normal pb-1 small">

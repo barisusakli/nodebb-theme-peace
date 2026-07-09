@@ -3,17 +3,17 @@
 	<button class="btn btn-ghost btn-sm ff-secondary d-flex gap-2 dropdown-toggle w-100" data-bs-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="false">
 		<span component="topic/following/menu" class="d-flex gap-2 align-items-center{{{ if !isFollowing }}} hidden{{{ end }}}">
 			<i class="flex-shrink-0 fa fa-fw fa-bell-o text-primary" style="line-height: var(--bs-btn-line-height);"></i>
-			<span class="d-none d-xl-inline fw-semibold">[[topic:watching]]</span>
+			<span class="d-none d-xl-inline fw-semibold">{{tx("topic:watching")}}</span>
 		</span>
 
 		<span component="topic/not-following/menu" class="d-flex gap-2 align-items-center{{{ if !isNotFollowing}}} hidden{{{ end }}}">
 			<i class="flex-shrink-0 fa fa-fw fa-bell-slash-o text-primary" style="line-height: var(--bs-btn-line-height);"></i>
-			<span class="d-none d-xl-inline fw-semibold">[[topic:not-watching]]</span>
+			<span class="d-none d-xl-inline fw-semibold">{{tx("topic:not-watching")}}</span>
 		</span>
 
 		<span component="topic/ignoring/menu" class="d-flex gap-2 align-items-center{{{ if !isIgnoring }}} hidden{{{ end }}}">
 			<i class="flex-shrink-0 fa fa-fw fa-eye-slash text-primary" style="line-height: var(--bs-btn-line-height);"></i>
-			<span class="d-none d-xl-inline fw-semibold">[[topic:ignoring]]</span>
+			<span class="d-none d-xl-inline fw-semibold">{{tx("topic:ignoring")}}</span>
 		</span>
 	</button>
 	<ul class="dropdown-menu dropdown-menu-end p-1 text-sm" role="menu">
@@ -22,9 +22,9 @@
 				<div class="flex-grow-1 d-flex flex-column">
 					<span class="d-flex align-items-center gap-2">
 						<i class="flex-shrink-0 fa fa-fw fa-bell-o text-muted"></i>
-						<span class="flex-grow-1 fw-semibold">[[topic:watching]]</span>
+						<span class="flex-grow-1 fw-semibold">{{tx("topic:watching")}}</span>
 					</span>
-					<div class="help-text text-muted text-xs">[[topic:watching.description]]</div>
+					<div class="help-text text-muted text-xs">{{tx("topic:watching.description")}}</div>
 				</div>
 				<span class="flex-shrink-0"><i component="topic/following/check" class="fa fa-fw {{{ if isFollowing }}}fa-check{{{ end }}}"></i></span>
 			</a>
@@ -35,9 +35,9 @@
 				<div class="flex-grow-1 d-flex flex-column">
 					<span class="d-flex align-items-center gap-2">
 						<i class="flex-shrink-0 fa fa-fw fa-bell-slash-o text-muted"></i>
-						<span class="flex-grow-1 fw-semibold">[[topic:not-watching]]</span>
+						<span class="flex-grow-1 fw-semibold">{{tx("topic:not-watching")}}</span>
 					</span>
-					<div class="help-text text-muted text-xs">[[topic:not-watching.description]]</div>
+					<div class="help-text text-muted text-xs">{{tx("topic:not-watching.description")}}</div>
 				</div>
 				<span class="flex-shrink-0"><i component="topic/not-following/check" class="fa fa-fw {{{ if isNotFollowing }}}fa-check{{{ end }}}"></i></span>
 			</a>
@@ -48,9 +48,9 @@
 				<div class="flex-grow-1 d-flex flex-column">
 					<span class="d-flex align-items-center gap-2">
 						<i class="flex-shrink-0 fa fa-fw fa-eye-slash text-muted"></i>
-						<span class="flex-grow-1 fw-semibold">[[topic:ignoring]]</span>
+						<span class="flex-grow-1 fw-semibold">{{tx("topic:ignoring")}}</span>
 					</span>
-					<div class="help-text text-muted text-xs">[[topic:ignoring.description]]</div>
+					<div class="help-text text-muted text-xs">{{tx("topic:ignoring.description")}}</div>
 				</div>
 				<span class="flex-shrink-0"><i component="topic/ignoring/check" class="fa fa-fw {{{ if isIgnoring }}}fa-check{{{ end }}}"></i></span>
 			</a>

@@ -12,19 +12,19 @@
 					<div component="topic/labels" class="d-flex gap-1 flex-wrap {{{ if (!scheduled && (!pinned && (!locked && (!icons.length && (!oldCid || (oldCid == "-1")))))) }}}hidden{{{ end }}}">
 						<span component="topic/scheduled" class="badge border border-gray-300 text-body {{{ if !scheduled }}}hidden{{{ end }}}">
 							<i class="fa fa-clock-o"></i>
-							[[topic:scheduled]]
+							{{tx("topic:scheduled")}}
 						</span>
 						<span component="topic/pinned" class="badge border border-gray-300 text-body {{{ if (scheduled || !pinned) }}}hidden{{{ end }}}">
 							<i class="fa fa-thumb-tack"></i>
-							{{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {isoTimeToLocaleString(./pinExpiryISO, config.userLang)}]]{{{ end }}}
+							{{{ if !pinExpiry }}}{{tx("topic:pinned")}}{{{ else }}}{{tx("topic:pinned-with-expiry", isoTimeToLocaleString(./pinExpiryISO, config.userLang))}}{{{ end }}}
 						</span>
 						<span component="topic/locked" class="badge border border-gray-300 text-body {{{ if !locked }}}hidden{{{ end }}}">
 							<i class="fa fa-lock"></i>
-							[[topic:locked]]
+							{{tx("topic:locked")}}
 						</span>
 						<a href="{config.relative_path}/category/{oldCid}" class="badge border border-gray-300 text-body text-decoration-none {{{ if !oldCid }}}hidden{{{ end }}}">
 							<i class="fa fa-arrow-circle-right"></i>
-							{{{ if privileges.isAdminOrMod }}}[[topic:moved-from, {oldCategory.name}]]{{{ else }}}[[topic:moved]]{{{ end }}}
+							{{{ if privileges.isAdminOrMod }}}{{tx("topic:moved-from", oldCategory.name)}}{{{ else }}}{{tx("topic:moved")}}{{{ end }}}
 						</a>
 
 						{{{ each icons }}}<!-- IMPORT partials/topic/icon.tpl -->{{{ end }}}
@@ -61,10 +61,10 @@
 				</a>
 
 				<div class="d-flex flex-column">
-					<div class="text-xs text-muted text-center" title="[[user:postcount]]">
+					<div class="text-xs text-muted text-center" title="{{tx("user:postcount")}}">
 						<i class="fa-regular fa-message"></i> {formattedNumber(posts.user.postcount)}
 					</div>
-					<div class="text-xs text-muted text-center" title="[[user:reputation]]">
+					<div class="text-xs text-muted text-center" title="{{tx("user:reputation")}}">
 						<i class="fa-regular fa-heart"></i> {formattedNumber(posts.user.reputation)}
 					</div>
 				</div>

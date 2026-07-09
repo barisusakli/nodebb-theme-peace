@@ -3,7 +3,7 @@
 	<div class="alert alert-info">{{tx("search:results-matching", matchCount, txEscape(search_query), time)}} </div>
 	{{{ else }}}
 	{{{ if search_query }}}
-	<div class="alert alert-warning">[[search:no-matches]]</div>
+	<div class="alert alert-warning">{{tx("search:no-matches")}}</div>
 	{{{ end }}}
 	{{{ end }}}
 
