@@ -157,7 +157,7 @@
 
 				{{{ if aboutme }}}
 				<div component="aboutme" class="aboutme text-muted text-sm">
-					{{txEscape(aboutmeParsed)}}
+					{{aboutmeParsed}}
 				</div>
 				{{{ end }}}
 			</div>

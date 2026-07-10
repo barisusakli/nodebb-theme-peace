@@ -99,12 +99,12 @@
 
 			<!-- content -->
 			<div class="post-content flex-grow-1" component="post/content" itemprop="text">
-				{{{ if posts.txContent }}}{{tx(posts.content)}}{{{ else }}}{{txEscape(posts.content)}}{{{ end }}}
+				{{{ if posts.txContent }}}{{tx(posts.content)}}{{{ else }}}{{posts.content}}{{{ end }}}
 			</div>
 
 			<!-- signature -->
 			{{{ if posts.user.signature }}}
-			<div component="post/signature" data-uid="{posts.user.uid}" class="d-inline-block text-xs text-muted mt-3 pt-3 border-top" style="border-top-style: dashed!important;">{{txEscape(posts.user.signature)}}</div>
+			<div component="post/signature" data-uid="{posts.user.uid}" class="d-inline-block text-xs text-muted mt-3 pt-3 border-top" style="border-top-style: dashed!important;">{{posts.user.signature}}</div>
 			{{{ end }}}
 		</div>
 	</div>
