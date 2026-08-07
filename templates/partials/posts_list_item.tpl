@@ -8,7 +8,7 @@
             <a class="me-2" href="{config.relative_path}/user/{../user.userslug}">{{buildAvatar(../user, "24px", true, "not-responsive rounded")}}</a>
 
             <span class="post-author">
-                <a href="{config.relative_path}/user/{../user.userslug}">{../user.displayname}</a>
+                <a href="{config.relative_path}/user/{../user.userslug}">{{txDisplayname(../user)}}</a>
                 <span class="timeago" title="{../timestampISO}"></span>
             </span>
         </div>
