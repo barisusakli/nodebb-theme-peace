@@ -2,7 +2,7 @@
   "name": "nodebb-theme-peace",
   "version": "3.1.2",
   "nbbpm": {
-    "compatibility": "^4.15.0"
+    "compatibility": "^4.15.1"
   },
   "description": "Peace theme for NodeBB",
   "main": "lib/library.js",
