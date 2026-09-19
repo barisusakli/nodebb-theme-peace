@@ -88,7 +88,7 @@
 				</div>
 				<!-- username -->
 				<div class="text-truncate">
-					<a class="text-muted fw-bold" href="{{{ if posts.user.userslug }}}{config.elative_path}/user/{posts.user.userslug}{{{ else }}}#{{{ end }}}" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}" title="{{txDisplayname(posts.user)}}">{txDisplayname(posts.user)}}</a>
+					<a class="text-muted fw-bold" href="{{{ if posts.user.userslug }}}{config.elative_path}/user/{posts.user.userslug}{{{ else }}}#{{{ end }}}" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}" title="{{txDisplayname(posts.user)}}">{{txDisplayname(posts.user)}}</a>
 				</div>
 
 				<!-- timestamp -->
