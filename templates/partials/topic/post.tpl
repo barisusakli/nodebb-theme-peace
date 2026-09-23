@@ -1,3 +1,5 @@
+<!-- IMPORT partials/topic/post-meta-tags.tpl -->
+
 <div class="card card-body px-3 shadow-sm h-100 rounded-3 border-0">
 
 	{{{ if !posts.index }}}
@@ -88,7 +90,7 @@
 				</div>
 				<!-- username -->
 				<div class="text-truncate">
-					<a class="text-muted fw-bold" href="{{{ if posts.user.userslug }}}{config.elative_path}/user/{posts.user.userslug}{{{ else }}}#{{{ end }}}" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}" title="{{txDisplayname(posts.user)}}">{{txDisplayname(posts.user)}}</a>
+					<a class="text-muted fw-bold" href="{{{ if posts.user.userslug }}}{config.relative_path}/user/{posts.user.userslug}{{{ else }}}#{{{ end }}}" data-username="{posts.user.username}" data-uid="{posts.user.uid}" title="{{txDisplayname(posts.user)}}">{{txDisplayname(posts.user)}}</a>
 				</div>
 
 				<!-- timestamp -->

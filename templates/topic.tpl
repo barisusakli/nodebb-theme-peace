@@ -18,9 +18,6 @@
 				<li component="post" class="mb-3 {{{ if posts.deleted }}}deleted{{{ end }}}" <!-- IMPORT partials/data/topic.tpl -->>
 					<a component="post/anchor" data-index="{./index}" id="{increment(./index, "1")}"></a>
 
-					<meta itemprop="datePublished" content="{posts.relativeTime}">
-					<meta itemprop="dateModified" content="{posts.relativeEditTime}">
-
 					<!-- IMPORT partials/topic/post.tpl -->
 				</li>
 
